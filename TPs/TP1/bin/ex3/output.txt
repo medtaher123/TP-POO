@@ -1,0 +1,15 @@
+intList: [5, 10, 5, 10, 5, 15]
+Index of 10 in intList: 1
+intList contains 10: true
+stringList: [Hello, World, !]
+After removing 'World': [Hello, !]
+intList after adding more elements: [5, 10, 5, 10, 5, 15, 20, 30, 40]
+intList after removing all '10': [5, 5, 5, 15, 20, 30, 40]
+intList after setting index 1 to '25': [5, 25, 5, 15, 20, 30, 40]
+intList after reversing: [40, 30, 20, 15, 5, 25, 5]
+intList after removing redundancy: [40, 30, 20, 15, 5, 25]
+intList after sort: [5, 15, 20, 25, 30, 40]
+Copy of intList: [5, 15, 20, 25, 30, 40]
+intList after resizing to 4: [5, 15, 20, 25]
+intList after resizing to 8: [5, 15, 20, 25, null, null, null, null]
+intList after clearing: []
