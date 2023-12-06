@@ -1,0 +1,58 @@
+user can be subscribed or not, only subscribed users can book. (subscriptions last a year, the date of the subsciptions is stored in user class)
+
+users are not allowed to book if they have a non returned book
+
+multiples genres, (genres list are saved somewhere?)
+
+load all the data from the start, or a fur et a mesure?
+
+discount for Students  
+
+fees are associated with late returns or lost/damaged books. 
+
+
+borrowing books can only be done through the cachier: 
+
+	-all persons with an account (users) can:
+		manage their account (modify name, password, institution ...)
+		
+
+
+	-members (adherant) can:
+		view available book lists
+		view their booking history
+		
+		
+		
+ 	-employees can:
+ 		view all users public data,
+ 		handle subscriptions, (enregistre payement)
+ 		add new user accounts (creation de comptes)
+ 		handle bookings and returns,
+ 		
+ 	-admins can:
+ 		view all data, modify some data, like fees
+		modify users passwords,
+		 		   
+
+
+fees:
+	subscription fees (normal/students)
+	late return fees ( fees per day)
+	damage and loss fees
+other data:
+	period to return the book
+	max booked books per user at the same time	
+	
+
+interface:
+	-login:
+		user,password
+	-
+	
+	
+timeout of inactivity --> logout
+	
+		
+npx json-server --watch db.json --static image
+		
