@@ -1,0 +1,7 @@
+Books in the library:
+Novel A
+TextBook B
+Student with Library Card ID 123 is borrowing Novel A
+Teacher with Library Card ID 456 is borrowing TextBook B
+Student with Library Card ID 123 is returning Novel A
+Teacher with Library Card ID 456 is returning TextBook B
