@@ -21,3 +21,14 @@ https://json-generator.com/
       
   }
 ]
+
+
+bookCopies: 
+[
+  '{{repeat(100, 300)}}',
+  {
+    id: '{{objectId()}}',
+    bookId: '{{integer(1,100)}}',
+    isAvailable: 'true',
+  }
+]

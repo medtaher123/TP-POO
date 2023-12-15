@@ -6,28 +6,30 @@ import java.util.Arrays;
 
 import authentification.AuthenticationSystem;
 import authentification.AuthenticationSystem.AuthenticationException;
+import helpers.ConsoleHelper;
 import models.User;
 import services.UsersService;
 
 public class LoginPage extends Page {
+
 	@Override
-	public void display() {
+	protected String getTitle() {
+		return "Login";
+	}
+	
+	@Override
+	public void printContent() {
 
-		ConsoleHelper.printCenteredString("Login", '*');
-		ConsoleHelper.printNewLines(3);
-
-		try { //TODO to remove (just for testing
+		try { //TODO to remove (just for testing)
 			System.out.println("automatic login!");
 			AuthenticationSystem.login("holtpickett@accupharm.com", "laboreduis");
 		} catch (AuthenticationException e1) {
 			e1.printStackTrace();
 		}
-		
-		while (!AuthenticationSystem.isLoggedIn()) {
-			System.out.println("email: ");
-			String email = ConsoleHelper.scanner.nextLine();
-			System.out.println("password: ");
-			String password = ConsoleHelper.scanner.nextLine();
+	
+		while (!AuthenticationSystem.isLoggedIn()) {//SQL injection vulnerability xd (not really SQL)
+			String email = ConsoleHelper.input("email"); 
+			String password = ConsoleHelper.input("password"); 
 			try {
 				AuthenticationSystem.login(email, password);
 			} catch (AuthenticationException e) {
@@ -37,5 +39,6 @@ public class LoginPage extends Page {
 		System.out.println("sucsesfully logged in!!");
 		PageManager.callPage(new WelcomePage());
 	}
+
 
 }

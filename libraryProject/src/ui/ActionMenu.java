@@ -15,7 +15,7 @@ public class ActionMenu {
 	private String message;
 	private Scanner scanner;
 
-	public final static Action PREV_PAGE_ACTION = new Action(){
+	public final static Action PREV_PAGE_ACTION = new Action() {
 
 		@Override
 		public String getDescription() {
@@ -25,30 +25,34 @@ public class ActionMenu {
 		@Override
 		public void execute() {
 			PageManager.prevPage();
-			
-		}};
-	
+
+		}
+	};
+
 	public ActionMenu(Action[] actions, Action closingAction, String message) {
 		this.actions = actions;
 		this.closingAction = closingAction;
 		this.message = message;
 		this.scanner = new Scanner(System.in);
 	}
+
 	public ActionMenu(Action[] actions, Action closingAction) {
-		this(actions,closingAction,"Enter the index of the action to perform: ");
+		this(actions, closingAction, "Enter the index of the action to perform: ");
 	}
-	
+
 	public ActionMenu(Action[] actions) {
 		this(actions, null);
 	}
 
 	private void displayActions() {
-		//System.out.println("Available Actions:");
-		for (int i = 0; i < actions.length; i++) {
-			System.out.println(i + 1 + ": " + actions[i].getDescription());
+		// System.out.println("Available Actions:");
+		if (actions != null) {
+			for (int i = 0; i < actions.length; i++) {
+				System.out.println(i + 1 + ": " + actions[i].getDescription());
+			}
 		}
 		if (closingAction != null)
-			System.out.println("0: " + closingAction.getDescription());
+			System.out.println("\n0: " + closingAction.getDescription()+"\n");
 	}
 
 	private void executeAction(int index) {
@@ -63,7 +67,7 @@ public class ActionMenu {
 	}
 
 	private boolean choiceIsValid(int index) {
-		return (index > 0 && index < actions.length + 1) || (closingAction!=null && index==0);
+		return (index > 0 && index < actions.length + 1) || (closingAction != null && index == 0);
 	}
 
 	private int getUserChoice() {
@@ -75,7 +79,7 @@ public class ActionMenu {
 		scanner.close();
 	}
 
-	public void execute() {
+	public int execute() {
 		displayActions();
 		int choice = getUserChoice();
 
@@ -86,6 +90,7 @@ public class ActionMenu {
 		}
 		executeAction(choice);
 		closeScanner();
+		return choice;
 	}
 
 }

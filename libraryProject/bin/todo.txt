@@ -41,7 +41,7 @@ fees:
 	late return fees ( fees per day)
 	damage and loss fees
 other data:
-	period to return the book
+		
 	max booked books per user at the same time	
 	
 
@@ -54,5 +54,15 @@ interface:
 timeout of inactivity --> logout
 	
 		
-npx json-server --watch db.json --static image
+npx json-server --watch db.json
+	--static image
 		
+
+To implement in next version:		
+	_save the address in an .ini file
+	_manage account (change account info/ update password)
+	_implement account recovery feature (through admin only --or maybe employees also--)
+	_add a connect as guest feature (no login required)
+	_add the possibility to cancel when entering some data (stuck in infinite loop until entering valid data)
+
+

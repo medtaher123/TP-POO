@@ -11,10 +11,15 @@ import java.net.HttpURLConnection;
 import java.net.URL;
 
 public abstract class DatabaseService {
+	//TODO: add to doc: services are the classes that communicate with the database json-server
+	//TODO: add to doc: chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
 	public static final String BASE_API_URL = "http://localhost:3000";
 	public static final String USERS_API_URL = BASE_API_URL + "/users";
 	public static final String BOOKS_API_URL = BASE_API_URL + "/books";
-
+	public static final String BOOK_COPIES_API_URL = BASE_API_URL + "/bookCopies";
+	public static final String BOOKINGS_API_URL = BASE_API_URL + "/bookings";
+	public static final String SETTINGS_API_URL = BASE_API_URL + "/settings";
+	
 	private static final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
 	
 	public static String sendHttpRequest(String requestMethod, String apiUrl, String requestBody) {
@@ -46,7 +51,7 @@ public abstract class DatabaseService {
 				in.close();
 
 				// Gson gson = new Gson();
-				System.out.println("responssse: " + response);
+				//System.out.println("responssse: " + response);
 				// return gson.fromJson(response.toString(), JsonElement.class);
 				return response.toString();
 			} else {

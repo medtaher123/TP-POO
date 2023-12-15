@@ -33,17 +33,13 @@ public class BooksService extends DatabaseService {
 		return gson.fromJson(DatabaseService.sendHttpRequest("PUT", DatabaseService.BOOKS_API_URL + "/" + book.getId(),book), Book.class);
 	}
 	
-	/*public static User getBookByEmail(String email) {
-		User[] t = getAllUsers("email="+email);
-		return t.length>0? t[0]:null;
-	}*/
-	public static Book addBook(Book newUser) {
-		return new Gson().fromJson(DatabaseService.sendHttpRequest("POST", DatabaseService.BOOKS_API_URL, newUser), Book.class);
+	public static Book addBook(Book newBook) {
+		return new Gson().fromJson(DatabaseService.sendHttpRequest("POST", DatabaseService.BOOKS_API_URL, newBook), Book.class);
 	}
 	
 	public static boolean DeleteBookById(String id) {
 		DatabaseService.sendHttpRequest("DELETE", DatabaseService.USERS_API_URL + "/" + id);
-		return true; //TODO: return status instead
+		return true; 
 	}
 	
 	

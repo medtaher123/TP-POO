@@ -1,0 +1,16 @@
+This is the Library Project.
+It's a library management console application system. 
+
+
+
+
+HOW TO USE:
+	make sure to run the json-server before running the application:
+	open terminal in the jsonServer folder and run the command: "npx json-server --watch db.json"
+	
+	once the server is running check the port (by default it's 3000), if it's not 3000 then go to the DatabaseService class and modify BASE_API_URL
+	//TODO: save the address in an .ini file      
+	
+	And you are good to go.
+	
+	

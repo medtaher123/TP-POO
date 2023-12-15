@@ -1,20 +1,100 @@
 package models;
+
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.Date;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
-public class Booking extends Model{
-	public static List<Booking> bookingHistory= new ArrayList<Booking>();
-    private int bookingId;
-    private int userId;
-    private int bookId;
-    private Date bookingDate;
-    private Date returnDate;
-    // Other booking-related attributes
+import exceptions.BookingAlreadyReturnedException;
+import exceptions.BookingNotReturnedException;
+import helpers.DateHelper;
+import services.BookCopiesService;
+import services.BookingsService;
+import services.BooksService;
 
-    // Methods for handling book borrowing, returning, fines, etc.
-    // ...
+public class Booking extends Model {
+	private String id;
+	private String userId;
+	private String bookId;
+	private Date bookingDate;
+	private Date returnDeadline;
+	private Date returnDate;
+	private boolean isDamaged;
+	private boolean feesPayed;
+	
+	private Booking(String userId, String bookId, Date bookingDate) {
+		this.userId = userId;
+		this.bookId = bookId;
+		this.bookingDate = bookingDate;
+	}
 
-    // Getters, setters, and other methods
-    // ...
+	public static Booking newBooking(String userId, String bookId) {
+		return BookingsService.addBooking(new Booking(userId, bookId, new Date()));
+	}// TODO: add to doc: created a static method to create booking handling the
+		// instantiation process internally without exposing the constructor to add
+		// additional logic before initialization and because the final resulting object
+		// is the result of a request from the server (this allows the automatic
+		// creation of an unique id and using it in the newly created object)
+
+	public Booking returnBooking() {
+		if (returnDate != null) {
+			throw new BookingAlreadyReturnedException(
+					"book has already been returned.\nbookingId=" + id + " bookId: " + bookId);
+		}
+		returnDate = new Date();
+		return BookingsService.updateBooking(this);
+	}
+
+	public String getId() {
+		return id;
+	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public String getBookId() {
+		return bookId;
+	}
+
+	public Date getBookingDate() {
+		return bookingDate;
+	}
+
+	public Date getReturnDate() {
+		return returnDate;
+	}
+	
+	public boolean isReturned() {
+		return returnDate!=null;
+	}
+	
+	public BookCopy getBookCopy() {
+		return BookCopiesService.getBookCopyById(bookId);		
+	}
+	public Book getBook() {
+		return BooksService.getBookById(getBookCopy().getBookId());
+	}
+	public boolean isLate() {
+		if(isReturned())
+			return returnDeadline.compareTo(returnDate)<0;
+		return  returnDeadline.compareTo(DateHelper.getTodayStartOfDay())<0;
+	}
+	public long getReturnLatency() {
+		Date date = returnDate!=null?returnDate:DateHelper.getTodayStartOfDay();
+		long differenceInMillis = date.getTime() - returnDeadline.getTime();
+        return TimeUnit.MILLISECONDS.toDays(differenceInMillis);
+	}
+	
+	public String getStatus() {
+		if(isReturned())
+			return "returned " + DateHelper.format(returnDate) + " | " + (isLate()? getReturnLatency() + " days late" : "returned on time" ) + " | status " + (isDamaged?"DAMAGED":"not damaged");
+		return "notReturned " + " | deadline " + DateHelper.format(returnDeadline) + " | " + (isLate()? getReturnLatency() + " days late" : "returned on time" );
+	}
+	
+	public String getLongDisplay() {
+		return DateHelper.format(bookingDate) + " | " + getBook().getShortDisplay() + " | " + getStatus();
+	}
+
 }

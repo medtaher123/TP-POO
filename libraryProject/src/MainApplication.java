@@ -2,7 +2,10 @@ import java.util.Date;
 
 import com.google.gson.Gson;
 
+import models.Booking;
 import models.User;
+import services.BookCopiesService;
+import services.BookingsService;
 import services.DatabaseService;
 import services.UsersService;
 import ui.LoginPage;
@@ -23,7 +26,9 @@ public class MainApplication {
 		//System.out.println("\nccc\n" + UsersService.getAllUsers("firstName=Shelly") + "\nss\n");
 		//LoginPage loginPage = new LoginPage();
 		//loginPage.display();
+		//Booking[] b =  BookingsService.getUsersActiveBookings(null);
 		PageManager.restartApp();
+	
 		
 	}
 }
