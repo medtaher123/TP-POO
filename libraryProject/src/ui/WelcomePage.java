@@ -60,7 +60,7 @@ public class WelcomePage extends Page {
 
 			@Override
 			public void execute() {
-				PageManager.callPage(new BookingListPage(true));
+				PageManager.callPage(new UserBookingListPage(true));
 			}
 		},
 		new Action() {
@@ -71,7 +71,7 @@ public class WelcomePage extends Page {
 
 			@Override
 			public void execute() {
-				PageManager.callPage(new BookingListPage(false));
+				PageManager.callPage(new UserBookingListPage(false));
 			}
 		}
 	};
@@ -106,7 +106,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
-					//TODO: register booking Page ;
+					PageManager.callPage(new RegisterBookingPage());
 				}
 			},
 			new Action() {
@@ -117,10 +117,22 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
+					PageManager.callPage(new NotFoundPage());
 					//TODO: book return Page ;
 				}
+			},
+			new Action() {
+				@Override
+				public String getDescription() {
+					return "consult Book bookings history";
+				}
+
+				@Override
+				public void execute() {
+					PageManager.callPage(new NotFoundPage());
+					//TODO: Book history Page ;
+				}
 			}
-			
 	};
 	Action[] adminActions = {
 			new Action() {
@@ -131,6 +143,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
+					PageManager.callPage(new NotFoundPage());
 					//TODO: manage settings Page ;
 				}
 			},
@@ -142,6 +155,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
+					PageManager.callPage(new NotFoundPage());
 					//TODO: account recovery Page ;
 				}
 			},
@@ -153,6 +167,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
+					PageManager.callPage(new NotFoundPage());
 					//TODO: new account Page ;
 				}
 			},
@@ -164,6 +179,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
+					PageManager.callPage(new NotFoundPage());
 					//TODO: delete account Page ;
 				}
 			}

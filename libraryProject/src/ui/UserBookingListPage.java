@@ -6,14 +6,14 @@ import models.Booking;
 import services.BookingsService;
 import services.BooksService;
 
-public class BookingListPage extends BackOnlyPage {
+public class UserBookingListPage extends BackOnlyPage {
 
 	private boolean showHistory = false;
 
-	public BookingListPage() {
+	public UserBookingListPage() {
 	}
 
-	public BookingListPage(boolean showHistory) {
+	public UserBookingListPage(boolean showHistory) {
 		this.showHistory = showHistory;
 	}
 

@@ -2,6 +2,7 @@ package ui;
 
 import java.util.Date;
 
+import Managers.BarcodeScannerSimulator;
 import Managers.SettingsManager;
 import Managers.UserManager;
 import helpers.ConsoleHelper;
@@ -14,7 +15,7 @@ public class SubscriptionRenewalPage extends BackOnlyPage {
 	@Override
 	void printContent() {
 		System.out.println("User must pay " + SettingsManager.getSettings().getSubscriptionFee() + " dt to renew subscription.");
-		User user = readUser();
+		User user = BarcodeScannerSimulator.scanUser();
 		if(user.getType()!=User.UserType.MEMBER) {
 			System.out.println("User " + user.getShortDisplay() + " is not a member (" + user.getType() + ")");
 		}
@@ -32,13 +33,5 @@ public class SubscriptionRenewalPage extends BackOnlyPage {
 		return "Renew Subscription";
 	}
 
-	private User readUser() {
-		System.out.println("**simulating a barcode scanner (users have their id on a barcode on their card)**\n**BIIP**\nyou can open the db.json file to get a user id for testing (make sure that user is a member:  \"type\": \"M\"  ) ");
-		while(true) {
-			User user = UsersService.getUserById(ConsoleHelper.input("userId"));
-			if(user!=null)
-				return user;
-			System.out.println("user not found");
-		}
-	}
+	
 }

@@ -1,7 +1,9 @@
 This is the Library Project.
 It's a library management console application system. 
 
-
+I tried to use all the OOP concepts we saw in class, although the project is not typical.
+ 
+  
 
 
 HOW TO USE:
@@ -14,3 +16,48 @@ HOW TO USE:
 	And you are good to go.
 	
 	
+	
+Project Overview
+Provide a brief summary of your project, its objectives, and its significance.
+
+Development Choices
+
+-Json-server:
+I wanted to create some sort of database, so the easiest solution I came up with was a json-server as a backend.
+It's a fast solution since all the logic behind it is taken care of by the server (no need for database handling).
+And most importantly, it's easier to set up than a database for anyone who wants to try the application.
+  
+Explain the technologies, frameworks, or libraries you utilized.
+Justify why you chose them over alternatives.
+
+Design Patterns
+
+Describe any design patterns implemented in your project.
+Explain their usage and benefits in your context.
+
+Project Structure
+
+Explain the structure of your project.
+Describe the organization of classes, modules, and how they interconnect.
+
+Key Features
+
+List and describe the main features of your application.
+Highlight any innovative or challenging aspects.
+
+Challenges Faced
+
+The project structure was not very clear at the beginning. I tried many solutions before choosing this one. Especially for the Page system (ui).
+The project took a lot of time, but I enjoyed doing it.
+Discuss any obstacles or difficulties encountered during development.
+Explain how you overcame them or proposed solutions.
+
+Testing and Quality Assurance
+
+Detail your testing methodologies (unit tests, integration tests, etc.).
+Mention any quality assurance measures taken.
+
+Conclusion
+
+Summarize the project's outcome.
+Reflect on the lessons learned and improvements made.

@@ -33,6 +33,12 @@ public class ConsoleHelper {
 		System.out.print(inputField+": ");
 		return scanner.nextLine();
 	}
+	
+	public static boolean readBoolean(String message) {
+		System.out.print(message+" (y/n)");
+		char input = scanner.nextLine().charAt(0);
+		return input=='y' || input =='Y';
+	}
 	@SuppressWarnings("deprecation")
 	public static Date readDate(String inputField) {
 		boolean success = false;

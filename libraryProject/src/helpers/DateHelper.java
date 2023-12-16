@@ -48,6 +48,11 @@ public class DateHelper {
 	}
 
 	public static Date addDays(Date date, int days) {
-		return new Date(date.getTime() + (1000 * 60 * 60 * 24) * days);
+		Calendar calendar = Calendar.getInstance();
+		calendar.setTime(date); 
+		calendar.add(Calendar.DATE, days);
+		
+		return calendar.getTime();
+		
 	}
 }

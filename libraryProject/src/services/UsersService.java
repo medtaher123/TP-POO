@@ -46,9 +46,7 @@ public class UsersService extends DatabaseService {
 		return true; //TODO: return status instead
 	}
 	
-	public static boolean EmailIsAvailable(String email) {
-		return getUserByEmail(email)==null;
-	}
+	
 	
 	
 	

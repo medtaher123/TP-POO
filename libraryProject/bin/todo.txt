@@ -57,6 +57,8 @@ timeout of inactivity --> logout
 npx json-server --watch db.json
 	--static image
 		
+add bookings history of book
+
 
 To implement in next version:		
 	_save the address in an .ini file

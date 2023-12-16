@@ -4,6 +4,8 @@ import java.util.Date;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
+import Managers.SettingsManager;
+import Managers.UserManager;
 import helpers.ConsoleHelper;
 import models.User;
 import services.UsersService;
@@ -12,6 +14,7 @@ public class newMemberPage extends BackOnlyPage {
 	// TODO: add to doc: the same email can't be used in 2 different accounts
 	@Override
 	void printContent() {
+		System.out.println("User must pay " + SettingsManager.getSettings().getSubscriptionFee() + " dt for subscription.");
 		Scanner scanner = new Scanner(System.in);
 		String firstName = ConsoleHelper.input("First name");
 		String lastName = ConsoleHelper.input("Last name");
@@ -23,7 +26,7 @@ public class newMemberPage extends BackOnlyPage {
 				System.out.println("Email Not Valid!");
 				continue;
 			}
-			if (!UsersService.EmailIsAvailable(email)) {
+			if (!UserManager.EmailIsAvailable(email)) {
 				System.out.println("Email already used by another account!");
 				continue;
 			}
@@ -38,15 +41,14 @@ public class newMemberPage extends BackOnlyPage {
 		String company = ConsoleHelper.input("Company");
 		String password = "0000";
 
-	
-		User newUser = new User(firstName, lastName, birthDate, User.UserType.MEMBER, new Date(), gender, email, company, phone, address, null,password);
-		
 
-		newUser = UsersService.addUser(newUser);
+		boolean subscriptionPayed = ConsoleHelper.readBoolean("Did the user pay the subscription?");
+		User newUser = UserManager.createNewUser(firstName, lastName, birthDate, User.UserType.MEMBER, gender, email, company, phone, address, password, subscriptionPayed);
+		
 
 		System.out.println(newUser == null
 				? "adding new User Failed. Please try again. If the problem persists please contact your system administrator."
-				: "New User created successfully.\nUser must pay " + 5 + "dt\n");
+				: "New User created successfully.\n");
 
 	}
 
