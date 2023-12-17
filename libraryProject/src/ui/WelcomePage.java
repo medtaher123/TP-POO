@@ -117,7 +117,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new NotFoundPage());
+					PageManager.callPage(new BookingReturnPage());
 					//TODO: book return Page ;
 				}
 			},

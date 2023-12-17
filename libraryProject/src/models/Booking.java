@@ -21,21 +21,52 @@ public class Booking extends Model {
 	private Date returnDeadline;
 	private Date returnDate;
 	private boolean isDamaged;
-	private boolean feesPayed;
 	
-	private Booking(String userId, String bookId, Date bookingDate) {
+	public Booking(String userId, String bookId, Date bookingDate) {
 		this.userId = userId;
 		this.bookId = bookId;
 		this.bookingDate = bookingDate;
 	}
 
-	public static Booking newBooking(String userId, String bookId) {
+	/*public static Booking newBooking(String userId, String bookId) {
 		return BookingsService.addBooking(new Booking(userId, bookId, new Date()));
-	}// TODO: add to doc: created a static method to create booking handling the
+	}*/// TODO: add to doc: created a static method to create booking handling the
 		// instantiation process internally without exposing the constructor to add
 		// additional logic before initialization and because the final resulting object
 		// is the result of a request from the server (this allows the automatic
 		// creation of an unique id and using it in the newly created object)
+
+	public boolean isDamaged() {
+		return isDamaged;
+	}
+
+	public void setDamaged(boolean isDamaged) {
+		this.isDamaged = isDamaged;
+	}
+
+	public Date getReturnDeadline() {
+		return returnDeadline;
+	}
+
+	public void setId(String id) {
+		this.id = id;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public void setBookId(String bookId) {
+		this.bookId = bookId;
+	}
+
+	public void setBookingDate(Date bookingDate) {
+		this.bookingDate = bookingDate;
+	}
+
+	public void setReturnDate(Date returnDate) {
+		this.returnDate = returnDate;
+	}
 
 	public Booking returnBooking() {
 		if (returnDate != null) {
@@ -81,10 +112,10 @@ public class Booking extends Model {
 			return returnDeadline.compareTo(returnDate)<0;
 		return  returnDeadline.compareTo(DateHelper.getTodayStartOfDay())<0;
 	}
-	public long getReturnLatency() {
+	public int getReturnLatency() {
 		Date date = returnDate!=null?returnDate:DateHelper.getTodayStartOfDay();
 		long differenceInMillis = date.getTime() - returnDeadline.getTime();
-        return TimeUnit.MILLISECONDS.toDays(differenceInMillis);
+        return (int) TimeUnit.MILLISECONDS.toDays(differenceInMillis);
 	}
 	
 	public String getStatus() {
@@ -95,6 +126,10 @@ public class Booking extends Model {
 	
 	public String getLongDisplay() {
 		return DateHelper.format(bookingDate) + " | " + getBook().getShortDisplay() + " | " + getStatus();
+	}
+
+	public void setReturnDeadline(Date deadline) {
+		returnDeadline = deadline;		
 	}
 
 }

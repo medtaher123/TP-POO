@@ -5,6 +5,7 @@ import java.util.Date;
 import helpers.DateHelper;
 import models.User;
 import models.User.UserType;
+import services.BookingsService;
 import services.UsersService;
 
 public class UserManager {
@@ -26,4 +27,11 @@ public class UserManager {
 		return UsersService.getUserByEmail(email)==null;
 	}
 	
+	public static boolean haveUnreturnedLateBooks(User user) {
+		return BookingsService.getUsersActiveLateBookings(user.getId()).length > 0 ;
+	}
+
+	public static boolean reachedBookingLimit(User user) {
+		return BookingsService.getUsersActiveBookings(user.getId()).length >= SettingsManager.getSettings().getBookingLimit() ;
+	}
 }

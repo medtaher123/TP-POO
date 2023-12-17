@@ -2,12 +2,13 @@ package models;
 
 public class Settings extends Model {
 	private String defaultDateFormat;
-	private int maxReturnDays;
-	private int lateReturnFeesPerDay;
-	private int damagedBookFees;
-	private int lostBookFees;
+	private int bookingMaxDuration;
+	private int lateReturnFeePerDay;
+	private int damagedBookFee;
+	private int lostBookFee;
 	private int subscriptionDuration;
 	private int subscriptionFee;
+	private int bookingLimit;
 
 	public String getDefaultDateFormat() {
 		return defaultDateFormat;
@@ -17,16 +18,16 @@ public class Settings extends Model {
 		this.defaultDateFormat = defaultDateFormat;
 	}
 
-	public int getMaxReturnDays() {
-		return maxReturnDays;
+	public int getBookingMaxDuration() {
+		return bookingMaxDuration;
 	}
 
-	public void setMaxReturnDays(int maxReturnDays) {
-		this.maxReturnDays = maxReturnDays;
+	public void setMaxReturnDays(int bookingMaxDuration) {
+		this.bookingMaxDuration = bookingMaxDuration;
 	}
 
 	public int getLateReturnFeesPerDay() {
-		return lateReturnFeesPerDay;
+		return lateReturnFeePerDay;
 	}
 
 	public int getSubscriptionDuration() {
@@ -34,14 +35,18 @@ public class Settings extends Model {
 	}
 
 	public int getDamagedBookFees() {
-		return damagedBookFees;
+		return damagedBookFee;
 	}
 
 	public int getLostBookFees() {
-		return lostBookFees;
+		return lostBookFee;
 	}
 
 	public int getSubscriptionFee() {
 		return subscriptionFee;
+	}
+
+	public int getBookingLimit() {
+		return bookingLimit;
 	}
 }

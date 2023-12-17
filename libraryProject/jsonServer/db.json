@@ -2740,15 +2740,25 @@
       "bookingDate": "2023-11-29",
       "returnDeadline": "2023-12-05",
       "returnDate": "2023-12-10"
+    },
+    {
+      "id": "xZSVes9d",
+      "userId": "65639da52dbada64bd3642ae",
+      "bookId": "6578cfb2229606ba82b02135",
+      "bookingDate": "2023-12-17",
+      "returnDeadline": "2020-12-24",
+      "returnDate": "2023-12-17",
+      "isDamaged": true
     }
   ],
   "settings": {
     "defaultDateFormat": "yyyy-MM-dd",
-    "maxReturnDays": 12,
     "lateReturnFeePerDay": 1,
     "damagedBookFee": 10,
     "lostBookFee": 25,
     "subscriptionDuration": 365,
-    "subscriptionFee": 10
+    "subscriptionFee": 10,
+    "bookingLimit": 5,
+    "bookingMaxDuration": 7
   }
 }

@@ -15,6 +15,7 @@ public class SubscriptionRenewalPage extends BackOnlyPage {
 	@Override
 	void printContent() {
 		System.out.println("User must pay " + SettingsManager.getSettings().getSubscriptionFee() + " dt to renew subscription.");
+		System.out.println("(make sure that user is a member:  \"type\": \"M\"  ) ");
 		User user = BarcodeScannerSimulator.scanUser();
 		if(user.getType()!=User.UserType.MEMBER) {
 			System.out.println("User " + user.getShortDisplay() + " is not a member (" + user.getType() + ")");

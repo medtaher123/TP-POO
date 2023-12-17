@@ -52,10 +52,24 @@ The project took a lot of time, but I enjoyed doing it.
 Discuss any obstacles or difficulties encountered during development.
 Explain how you overcame them or proposed solutions.
 
-Testing and Quality Assurance
+Testing
 
-Detail your testing methodologies (unit tests, integration tests, etc.).
-Mention any quality assurance measures taken.
+To test different functionalities of the application, you can browse the menus for different user types.
+And to simulate different scenarios, you can manually modify the db.json file, (the objects structures are self explanatory, just make sure there is no conflict _ there are no database checks).
+
+
+here are some accounts for testing:
+	ADMIN:
+		email: shellytalley@plasmox.com
+		password: incididuntincididunt
+	Employee:
+		email: maxwellthornton@frosnex.com
+		password: animirure
+	MEMBER: 
+		email: reesedale@gadtron.com
+		password: mollitnostrud
+			
+
 
 Conclusion
 
