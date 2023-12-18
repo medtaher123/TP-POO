@@ -4,6 +4,9 @@ import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonObject;
+
+import helpers.IniFileReader;
+
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
 import java.io.OutputStream;
@@ -13,7 +16,8 @@ import java.net.URL;
 public abstract class DatabaseService {
 	//TODO: add to doc: services are the classes that communicate with the database json-server
 	//TODO: add to doc: chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
-	public static final String BASE_API_URL = "http://localhost:3000";
+	public static final String BASE_API_URL =  IniFileReader.getBaseApiUrl(); //I don't think this is the best way to initialize this;
+	public static final String TEST_API_URL = BASE_API_URL + "/libraryProjectTestEndPoint";
 	public static final String USERS_API_URL = BASE_API_URL + "/users";
 	public static final String BOOKS_API_URL = BASE_API_URL + "/books";
 	public static final String BOOK_COPIES_API_URL = BASE_API_URL + "/bookCopies";

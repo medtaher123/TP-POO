@@ -1,0 +1,77 @@
+This is the Library Project.
+It's a library management console application system. 
+
+I tried to use all the OOP concepts we saw in class, although the project is not typical.
+ 
+  
+
+
+HOW TO USE:
+	make sure to run the json-server before running the application:
+	open terminal in the jsonServer folder and run the command: "npx json-server --watch db.json"
+	
+	once the server is running check the port (by default it's 3000), if it's not 3000 then go to the DatabaseService class and modify BASE_API_URL
+	//TODO: save the address in an .ini file      
+	
+	And you are good to go.
+	
+	
+	
+Project Overview
+Provide a brief summary of your project, its objectives, and its significance.
+
+Development Choices
+
+-Json-server:
+I wanted to create some sort of database, so the easiest solution I came up with was a json-server as a backend.
+It's a fast solution since all the logic behind it is taken care of by the server (no need for database handling).
+And most importantly, it's easier to set up than a database for anyone who wants to try the application.
+  
+Explain the technologies, frameworks, or libraries you utilized.
+Justify why you chose them over alternatives.
+
+Design Patterns
+
+Describe any design patterns implemented in your project.
+Explain their usage and benefits in your context.
+
+Project Structure
+
+Explain the structure of your project.
+Describe the organization of classes, modules, and how they interconnect.
+
+Key Features
+
+List and describe the main features of your application.
+Highlight any innovative or challenging aspects.
+
+Challenges Faced
+
+The project structure was not very clear at the beginning. I tried many solutions before choosing this one. Especially for the Page system (ui).
+The project took a lot of time, but I enjoyed doing it.
+Discuss any obstacles or difficulties encountered during development.
+Explain how you overcame them or proposed solutions.
+
+Testing
+
+To test different functionalities of the application, you can browse the menus for different user types.
+And to simulate different scenarios, you can manually modify the db.json file, (the objects structures are self explanatory, just make sure there is no conflict _ there are no database checks).
+
+
+here are some accounts for testing:
+	ADMIN:
+		email: shellytalley@plasmox.com
+		password: incididuntincididunt
+	Employee:
+		email: maxwellthornton@frosnex.com
+		password: animirure
+	MEMBER: 
+		email: reesedale@gadtron.com
+		password: mollitnostrud
+			
+
+
+Conclusion
+
+Summarize the project's outcome.
+Reflect on the lessons learned and improvements made.

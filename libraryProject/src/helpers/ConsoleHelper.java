@@ -17,6 +17,7 @@ public class ConsoleHelper {
 
 	public static void printCenteredString(String inputString, char paddingChar) {
 		int consoleWidth = DEFAULT_CONSOLE_WIDTH; 
+		inputString = " " + inputString + " ";
         int stringLength = inputString.length();
         
         if (stringLength >= consoleWidth) {
@@ -45,7 +46,7 @@ public class ConsoleHelper {
 		Date date=null;
 		while (!success) {
 			try {
-				new Date(input(inputField));
+				date = new Date(input(inputField + " (MM/DD/YYYY)"));
 				success=true;
 			} catch (IllegalArgumentException e) {
 				System.out.println("invalid date, try again.");

@@ -129,7 +129,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new NotFoundPage());
+					PageManager.callPage(new BookBookingHistoryPage());
 					//TODO: Book history Page ;
 				}
 			}

@@ -7,6 +7,7 @@ import models.User;
 import services.BookCopiesService;
 import services.BookingsService;
 import services.DatabaseService;
+import services.ServerTestService;
 import services.UsersService;
 import ui.LoginPage;
 import ui.PageManager;
@@ -27,6 +28,7 @@ public class MainApplication {
 		//LoginPage loginPage = new LoginPage();
 		//loginPage.display();
 		//Booking[] b =  BookingsService.getUsersActiveBookings(null);
+		ServerTestService.checkForServer(); 
 		PageManager.restartApp();
 	
 		
