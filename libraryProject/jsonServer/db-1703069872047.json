@@ -13,6 +13,7 @@
   "users": [
     {
       "id": "65639da5de7bf101296adeca",
+      "guid": "197f1a6f-57d9-4c48-814c-ac378fe8e5df",
       "firstName": "Shelly",
       "lastName": "Talley",
       "birthDate": "1986-09-30",
@@ -24,11 +25,12 @@
       "address": "242 Lloyd Court, Fredericktown, Idaho, 4588",
       "password": "incididuntincididunt",
       "preferences": {
-        "dateFormat": "MMM dd YYYY"
+        "dateFormat": "yyyy-MM-dd"
       }
     },
     {
       "id": "65639da52dbada64bd3642ae",
+      "guid": "2e337e2c-87fe-4f43-a006-80c477298b37",
       "firstName": "Reese",
       "lastName": "Dale",
       "birthDate": "2016-05-23",
@@ -40,11 +42,11 @@
       "phone": "(944) 533-3417",
       "address": "900 Thomas Street, Lowell, Texas, 6796",
       "subscriptionExpirationDate": "2016-10-08",
-      "password": "mollitnostrud",
-      "preferences": {}
+      "password": "mollitnostrud"
     },
     {
       "id": "65639da592453e79fc3a3dfb",
+      "guid": "5954f76c-173a-4838-ac57-36773bf209cc",
       "firstName": "Maxwell",
       "lastName": "Thornton",
       "birthDate": "2013-04-19",
@@ -55,13 +57,11 @@
       "company": "UNDERTAP",
       "phone": "(933) 410-2278",
       "address": "801 Etna Street, Chical, New Jersey, 7296",
-      "password": "animirure",
-      "preferences": {
-        "dateFormat": "MM-dd-yyyy"
-      }
+      "password": "animirure"
     },
     {
       "id": "65639da555f7a9e97fde2926",
+      "guid": "f78ce920-a2e1-4a3b-8802-0826a0a504fd",
       "firstName": "Kennedy",
       "lastName": "Townsend",
       "birthDate": "2007-11-12",
@@ -73,13 +73,11 @@
       "phone": "(828) 505-3185",
       "address": "861 Sackett Street, Thornport, Maryland, 3498",
       "subscriptionExpirationDate": "2020-08-23",
-      "password": "temporexercitation",
-      "preferences": {
-        "dateFormat": "dd-MM-yyyy"
-      }
+      "password": "temporexercitation"
     },
     {
       "id": "65639da5d23f0d4efc05528f",
+      "guid": "58fc560e-3094-4d6d-a6d6-0fa8c26f29ac",
       "firstName": "Elena",
       "lastName": "Key",
       "birthDate": "2019-01-04",
@@ -90,13 +88,11 @@
       "company": "TECHMANIA",
       "phone": "(954) 533-2997",
       "address": "971 High Street, Onton, Indiana, 2425",
-      "password": "proidentqui",
-      "preferences": {
-        "dateFormat": "MM/dd/yyyy"
-      }
+      "password": "proidentqui"
     },
     {
       "id": "65639da5766c38d3e38a4913",
+      "guid": "6ac12955-47dd-4fe9-993d-871299efbc14",
       "firstName": "Pratt",
       "lastName": "Gaines",
       "birthDate": "1997-10-09",
@@ -107,11 +103,11 @@
       "company": "INCUBUS",
       "phone": "(963) 552-3469",
       "address": "787 Fenimore Street, Oretta, Kentucky, 2606",
-      "password": "mollitexcepteur",
-      "preferences": {}
+      "password": "mollitexcepteur"
     },
     {
       "id": "65639da5dd65fb3c9e3adc52",
+      "guid": "cf7576e7-8279-4544-854d-40d1878abbeb",
       "firstName": "Petersen",
       "lastName": "Fischer",
       "birthDate": "1984-10-21",
@@ -123,13 +119,11 @@
       "phone": "(870) 473-3135",
       "address": "808 Veranda Place, Belleview, Michigan, 1832",
       "subscriptionExpirationDate": "2018-04-17",
-      "password": "consequatcupidatat",
-      "preferences": {
-        "dateFormat": "EEEEE dd MMMMM yyyy"
-      }
+      "password": "consequatcupidatat"
     },
     {
       "id": "65639da50170361ff27bda35",
+      "guid": "531331d6-a9d1-432b-9ebf-2621ee2c85d6",
       "firstName": "Mia",
       "lastName": "Mcmahon",
       "birthDate": "2003-10-19",
@@ -140,13 +134,11 @@
       "company": "ACCUPHARM",
       "phone": "(967) 456-3299",
       "address": "846 Dean Street, Calverton, New Hampshire, 3522",
-      "password": "quiminim",
-      "preferences": {
-        "dateFormat": "dd/MM/yyyy"
-      }
+      "password": "quiminim"
     },
     {
       "id": "65639da5ea045e14f8e9f232",
+      "guid": "6a7128d0-a07c-4246-87f5-de96adb5ea3d",
       "firstName": "Holt",
       "lastName": "Pickett",
       "birthDate": "1990-08-24",
@@ -159,10 +151,13 @@
       "address": "755 Harrison Place, Baden, Missouri, 6915",
       "subscriptionExpirationDate": "2024-05-17",
       "password": "laboreduis",
-      "preferences": {}
+      "preferences": {
+        "dateFormat": "MMM dd YYYY"
+      }
     },
     {
       "id": "65639da5043fe6a5e491aeef",
+      "guid": "190355ff-8c39-448a-97ef-0e29b09b60aa",
       "firstName": "Leonor",
       "lastName": "Terrell",
       "birthDate": "1973-04-18",
@@ -173,8 +168,7 @@
       "company": "PODUNK",
       "phone": "(925) 421-2046",
       "address": "324 George Street, Flintville, Minnesota, 9168",
-      "password": "exdeserunt",
-      "preferences": {}
+      "password": "exdeserunt"
     },
     {
       "id": "65639da506c0099d7db07687",
@@ -188,13 +182,11 @@
       "phone": "(809) 487-3848",
       "address": "840 Schroeders Avenue, Goodville, Mississippi, 8867",
       "subscriptionExpirationDate": "2024-12-15",
-      "password": "temporeiusmod",
-      "preferences": {
-        "dateFormat": "MMM dd YYYY"
-      }
+      "password": "temporeiusmod"
     },
     {
       "id": "65639da5938ac771a432d9b7",
+      "guid": "6a3cbd8b-15c6-4a3f-ab9b-9258b171e107",
       "firstName": "Ann",
       "lastName": "Davenport",
       "birthDate": "1992-01-18",
@@ -206,11 +198,11 @@
       "phone": "(995) 423-3335",
       "address": "767 Lafayette Walk, Belmont, Rhode Island, 6511",
       "subscriptionExpirationDate": "2020-08-18",
-      "password": "nonaliqua",
-      "preferences": {}
+      "password": "nonaliqua"
     },
     {
       "id": "65639da5621178d93de5d4b3",
+      "guid": "a4eb9510-4d73-43bb-9670-7937456a021f",
       "firstName": "Melanie",
       "lastName": "Herrera",
       "birthDate": "2023-08-19",
@@ -221,13 +213,11 @@
       "company": "REVERSUS",
       "phone": "(881) 460-2996",
       "address": "441 Ashland Place, Holtville, Marshall Islands, 9020",
-      "password": "estnostrud",
-      "preferences": {
-        "dateFormat": "MM-dd-yyyy"
-      }
+      "password": "estnostrud"
     },
     {
       "id": "65639da56588903c3c77ea95",
+      "guid": "60ef1708-1729-4e81-8012-3c55397266a1",
       "firstName": "Katherine",
       "lastName": "Stokes",
       "birthDate": "1982-07-24",
@@ -239,108 +229,97 @@
       "phone": "(920) 483-2773",
       "address": "492 Pierrepont Street, Gibbsville, New Mexico, 9065",
       "subscriptionExpirationDate": "2014-08-16",
-      "password": "quiconsectetur",
-      "preferences": {
-        "dateFormat": "dd-MM-yyyy"
-      }
+      "password": "quiconsectetur"
     },
     {
-      "id": "qTXHlm7",
       "firstName": "p",
       "lastName": "p",
       "type": "M",
+      "registered": "2023-12-15",
       "gender": "m",
       "email": "p@k.ko",
       "company": "lk,l,",
       "phone": "123123",
       "address": "23",
-      "preferences": {
-        "dateFormat": "MM/dd/yyyy"
-      }
+      "id": "qTXHlm7"
     },
     {
-      "id": "mLRgeEi",
       "firstName": "a",
       "lastName": "a",
       "type": "M",
+      "registered": "2023-12-15",
       "gender": "a",
       "email": "sa@qd.qzd",
       "company": "a",
       "phone": "a",
       "address": "a",
-      "preferences": {}
+      "id": "mLRgeEi"
     },
     {
-      "id": "s8cthZ2",
       "firstName": "az",
       "lastName": "zd",
       "type": "M",
+      "registered": "2023-12-15",
       "gender": "m",
       "email": "12@zqd24.qdz",
       "company": "dqz dz",
       "phone": "13qz5d",
       "address": "123zqd dqz qz",
       "password": "0000",
-      "preferences": {
-        "dateFormat": "EEEEE dd MMMMM yyyy"
-      }
+      "id": "s8cthZ2"
     },
     {
-      "id": "cMYu6pG",
       "firstName": "1",
       "lastName": "2",
       "type": "M",
+      "registered": "2023-12-15",
       "gender": "zd",
       "email": "qzd24d@qzd2.qdz",
       "company": "zd",
       "phone": "zdq",
       "address": "qzd",
       "password": "0000",
-      "preferences": {
-        "dateFormat": "dd/MM/yyyy"
-      }
+      "id": "cMYu6pG"
     },
     {
-      "id": "xnsWk93",
       "firstName": "ll",
       "lastName": "l",
       "type": "M",
+      "registered": "2023-12-15",
       "gender": "m",
       "email": "igy@jij.ciu",
       "company": "m",
       "phone": "m",
       "address": "",
       "password": "0000",
-      "preferences": {}
+      "id": "xnsWk93"
     },
     {
-      "id": "Yg7AiAB",
       "firstName": "az",
       "lastName": "az",
       "type": "M",
+      "registered": "2023-12-16",
       "gender": "m",
       "email": "az@az.az",
       "company": "az",
       "phone": "az",
       "address": "az",
       "password": "0000",
-      "preferences": {}
+      "id": "Yg7AiAB"
     },
     {
       "id": "83ZRPt9",
       "firstName": "el mostaamel",
       "lastName": "5alles deja",
       "type": "M",
+      "registered": "2023-12-16",
       "gender": "M",
       "email": "enaElMostaamel@5allast.barcha",
       "company": "sdqzds",
       "phone": "qzdsdzd",
       "address": "qzdsqzd",
       "subscriptionExpirationDate": "2024-12-15",
-      "password": "0000",
-      "preferences": {
-        "dateFormat": "MMM dd YYYY"
-      }
+      "password": "0000"
     }
   ],
   "books": [

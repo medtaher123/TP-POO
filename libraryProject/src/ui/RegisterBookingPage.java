@@ -11,7 +11,6 @@ import models.User;
 
 public class RegisterBookingPage extends BackOnlyPage {
 
-	// TODO: class not tested
 	@Override
 	void printContent() {
 		User user = BarcodeScannerSimulator.scanUser();

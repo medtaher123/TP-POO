@@ -21,12 +21,12 @@ public class LoginPage extends Page {
 	@Override
 	public void printContent() {
 
-		try { //TODO to remove (just for testing)
+		/*try { //TODO to remove (just for testing)
 			System.out.println("automatic login!");
 			AuthenticationSystem.login("holtpickett@accupharm.com", "laboreduis");
 		} catch (AuthenticationException e1) {
 			e1.printStackTrace();
-		}
+		}*/
 	
 		while (!AuthenticationSystem.isLoggedIn()) {//SQL injection vulnerability xd (not really SQL)
 			String email = ConsoleHelper.input("email"); 

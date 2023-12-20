@@ -37,43 +37,33 @@ Provide a brief summary of your project, its objectives, and its significance.
 	(Please take into consideration that some of the secondary features are not fully developed since it's not a real life situation and they take a lot of time)
 	
 	-All persons with an account (users) can:
+		view available books (+ search option)
 		manage their account (modify name, password, institution ...)
+		see events (upcoming events and events history)
 
 	-Members (adherant) can:
-		view available book lists
-		view their booking history
+		view their active bookings and their booking history
 		
  	-Employees can:
  		view all users public data,
- 		handle subscriptions, (enregistre payement)
- 		add new user accounts (creation de comptes)
+ 		handle subscriptions, (register payement)
+ 		add new user accounts (only members accounts)
  		handle bookings and returns,
+ 		consult books booking history 
  		
  	-Admins can:
- 		view all data, modify some data, like fees
-		modify users passwords,
+ 		view all data, modify some data, like fees,
+ 		events creation
+ 		account creation and deletion,
+		modify users passwords (account recovery),
 		 		   
 Users have to pay for subscription, only subscribed users can book books.
 Users are not allowed to book if they have a non returned book, or reached the booking limit (maximum number of books at the same time).
 Fees are associated with late returns or lost/damaged books.
+Users have preferences stored in the database(like date format)
+the same email can't be used in 2 different accounts
+when creating a new account, the password is by default "0000". You have to change it manually (recommended)
 
-
-
-Development Choices
-
--I tried to use all the OOP concepts we saw in class, although the project is not typical.
-
--Json-server:
-I wanted to create some sort of database, so the easiest solution I came up with was a json-server as a backend.
-It's a fast solution since all the logic behind it is taken care of by the server (no need for database handling).
-And most importantly, it's easier to set up than a database for anyone who wants to try the application.
-
-
-	
-Design Patterns
-
-Describe any design patterns implemented in your project.
-Explain their usage and benefits in your context.
 
 Project Structure
 
@@ -94,10 +84,38 @@ Key Features
 List and describe the main features of your application.
 Highlight any innovative or challenging aspects.
 
+
+
+Development Choices
+
+-I tried to use all the OOP concepts we saw in class, although the project is not typical.
+
+-Json-server:
+I wanted to create some sort of database, so the easiest solution I came up with was a json-server as a backend.
+It's a fast solution since all the logic behind it is taken care of by the server (no need for database handling).
+And most importantly, it's easier to set up than a database for anyone who wants to try the application.
+
+(some of these notes are still present as comments in the code)
+-used an enum for userType for easier database manipulation. (instead of defining different classes for every userType extending the User Class)
+-created a BarodeScannerSimulator to simulate the scanning of a barcode of a book or user id in a real library
+-created a QueryParamsBuilder to facilitate https requests creation
+
+-chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
+-applied a filter function on some GET requests in the application because can't check for null or put a condition in query params for the json-server;
+-The LoremIpsumGenerator class was used to generate the descriptions of the books
+
+a test is run when the application first starts to check if the json server is running or not. I chose to create the test endPoint with an uncommon name "libraryProjectTestEndPoint" to identify my server to avoid having another server running on the specified port instead.
+I'm sure there are cleaner solutions, but this is the one I came up with!
+	
+Pages system:
+TODO: explain pages system: (page lifecycle: reset, onDestroy, printContent. Didn't have the occasion to use reset and onDestroy in this project)
+TODO: add to doc: explain why the use of Action and ActionMenu classes
+
 Challenges Faced
 
-The project took a lot of time, but I enjoyed doing it, I didn't encounter major difficultie,only small ones solved by a simple search on google (or chatgpt). 
+The project took a lot of time, but I enjoyed doing it, I didn't encounter major difficulties,only ones solved by a simple search on google (or chatgpt). 
 The project structure was not very clear at the beginning. I tried many solutions before choosing this one. Especially for the Page system (ui), then I kept adding and improving and I ended up with this final solution.
+
    
 
 
@@ -107,7 +125,7 @@ The project structure was not very clear at the beginning. I tried many solution
 
 Conclusion
 
-Summarize the project's outcome.
+TODO: Summarize the project's outcome.
 
 Along the way, I learned a lot of things:
 	- github (basic commands, branches, git bash ...)
@@ -116,4 +134,3 @@ Along the way, I learned a lot of things:
 	
 	what I didn't learn: 
 	- how to manage my time, I was carried away by the project and forgot other priorities. xd  
-Reflect on the lessons learned and improvements made.

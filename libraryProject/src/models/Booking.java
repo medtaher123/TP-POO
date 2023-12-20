@@ -30,7 +30,7 @@ public class Booking extends Model {
 
 	/*public static Booking newBooking(String userId, String bookId) {
 		return BookingsService.addBooking(new Booking(userId, bookId, new Date()));
-	}*/// TODO: add to doc: created a static method to create booking handling the
+	}*//// created a static method to create booking handling the
 		// instantiation process internally without exposing the constructor to add
 		// additional logic before initialization and because the final resulting object
 		// is the result of a request from the server (this allows the automatic

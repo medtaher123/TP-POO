@@ -16,9 +16,9 @@ public class User extends Model {
 	private String lastName;
 	private Date birthDate;
 	private UserType type;// member, employee, admin
-	// TODO: add to doc: used an enum for userType for easier database manipulation. (instead of defining different classes for every userType
+	// used an enum for userType for easier database manipulation. (instead of defining different classes for every userType
 	// extending the User Class )
-	private Date registered;
+	private Date registrationDate;
 	private String gender;
 	private String email;
 	private String company;
@@ -39,7 +39,7 @@ public class User extends Model {
 		this.lastName = lastName;
 		this.birthDate = birthDate;
 		this.type = type;
-		this.registered = registered;
+		this.registrationDate = registered;
 		this.gender = gender;
 		this.email = email;
 		this.company = company;
@@ -84,14 +84,6 @@ public class User extends Model {
 	/*public void setType(UserType type) {
 		this.type = type;
 	}*/
-
-	public Date getRegistered() {
-		return registered;
-	}
-
-	public void setRegistered(Date registered) {
-		this.registered = registered;
-	}
 
 	public String getGender() {
 		return gender;
@@ -152,6 +144,11 @@ public class User extends Model {
 		return preferences;
 	}
 
+	public void setPreferences(Preferences preferences) {
+		this.preferences = preferences;
+	}
+
+
 	public enum UserType {
 		@SerializedName("M")
 		MEMBER, 
@@ -167,6 +164,11 @@ public class User extends Model {
 		public String getDateFormat() {
 			return dateFormat;
 		}
+
+		public void setDateFormat(String dateFormat) {
+			this.dateFormat = dateFormat;
+		}
+		
 	}
 
 }

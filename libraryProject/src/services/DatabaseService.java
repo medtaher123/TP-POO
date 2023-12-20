@@ -15,9 +15,9 @@ import java.net.URL;
 import java.util.Arrays;
 import java.util.function.Predicate;
 
-public abstract class DatabaseService {
-	//TODO: add to doc(done): services are the classes that communicate with the database json-server
-	//TODO: add to doc: chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
+//Services are the classes that communicate with the database json-server
+public abstract class DatabaseService {	
+	//chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
 	public static final String BASE_API_URL =  IniFileReader.getBaseApiUrl(); //I don't think this is the best way to initialize this;
 	public static final String TEST_API_URL = BASE_API_URL + "/libraryProjectTestEndPoint";
 	public static final String USERS_API_URL = BASE_API_URL + "/users";

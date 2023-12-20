@@ -58,7 +58,6 @@ public class bookListPage extends Page {
 
 				@Override
 				public void execute() {
-					// System.out.println("TODO: show book details here!");
 					PageManager.callPage(new BookDetailsPage(b));
 				}
 			};

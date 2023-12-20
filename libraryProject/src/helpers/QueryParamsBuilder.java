@@ -3,7 +3,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class QueryParamsBuilder {
-	//TODO: add to doc: created a QueryParamsBuilder to facilitate https requests creation
     private Map<String, String> queryParams;
 
     public QueryParamsBuilder() {

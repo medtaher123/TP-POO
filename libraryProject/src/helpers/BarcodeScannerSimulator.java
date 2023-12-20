@@ -6,7 +6,7 @@ import services.BookCopiesService;
 import services.UsersService;
 
 public class BarcodeScannerSimulator {
-	//TODO: add to doc: created a BarodeScannerSimulator to simulate the scanning of a barcode of a book or user id in a real library
+	//Created this to simulate the scanning of a barcode of a book or user id in a real library
 	public static User scanUser() {
 		System.out.println("**Simulating a barcode scanner (users have their id on a barcode on their card)**\n**BIIP**\nyou can open the db.json file to get a user id for testing");
 		while(true) {

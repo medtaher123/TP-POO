@@ -3,12 +3,14 @@ import java.util.Random;
 
 import models.Book;
 import models.BookCopy;
+import models.User;
+import models.User.Preferences;
 import services.BookCopiesService;
 import services.BooksService;
+import services.UsersService;
 
 public class LoremIpsumGenerator {
 
-	//TODO: add to doc: The LoremIpsumGenerator class was used to generate the descriptions of the books
 	//this class was used to generate the descriptions of the books
     private static final String[] LOREM_IPSUM_WORDS = {
             "Lorem", "ipsum", "dolor", "sit", "amet", "consectetur", "adipiscing", "elit", "sed", "do", "eiusmod",
@@ -70,6 +72,26 @@ public class LoremIpsumGenerator {
         	    e.printStackTrace();
         	}
         }*/
+		/*
+    	String[] formats = {"MMM dd YYYY",null, "MM-dd-yyyy", "dd-MM-yyyy" , "MM/dd/yyyy",null,"EEEEE dd MMMMM yyyy", "dd/MM/yyyy",null,null};
+    	int i =0;
+        User[] users = UsersService.getAllUsers();
+        for(User user : users) {
+        	try {
+        	    Thread.sleep(200);
+        	    System.out.println(user.getShortDisplay());
+        	    Preferences preferences = new Preferences();
+        	    preferences.setDateFormat(formats[i%formats.length]);
+        	    user.setPreferences(preferences);
+        	    UsersService.UpdateUser(user);
+        	    System.out.println(user.getPreferences().getDateFormat());
+        	} catch (InterruptedException e) {
+        	    e.printStackTrace();
+        	}
+        	i++;
+        }
+        */
+        
     	
     }
 }

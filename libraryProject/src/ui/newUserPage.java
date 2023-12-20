@@ -46,7 +46,7 @@ public class newUserPage extends BackOnlyPage {
 		String address = ConsoleHelper.input("Address");
 		String company = "Library";
 		String password = "0000";
-		//TODO: add to doc: password is by default "0000". You have to change it manually (recommended)
+		//Password is by default "0000". You have to change it manually (recommended)
 
 		User newUser = UserManager.createNewUser(firstName, lastName, birthDate, userType, gender, email, company, phone, address, password, false);
 		

@@ -10,7 +10,6 @@ import helpers.ActionMenu;
 import helpers.ConsoleHelper;
 
 public class WelcomePage extends Page {
-	//TODO: add to doc: explain why the use of Action ActionMenu classes
 	
 	@Override
 	protected String getTitle() {

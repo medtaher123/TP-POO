@@ -11,7 +11,7 @@ import models.User;
 import services.UsersService;
 
 public class NewMemberPage extends BackOnlyPage {
-	// TODO: add to doc: the same email can't be used in 2 different accounts
+	
 	@Override
 	void printContent() {
 		System.out.println("User must pay " + SettingsManager.getSettings().getSubscriptionFee() + " dt for subscription.");
