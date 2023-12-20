@@ -1,7 +1,7 @@
 package ui;
 
-import Managers.BarcodeScannerSimulator;
 import authentification.AuthenticationSystem;
+import helpers.BarcodeScannerSimulator;
 import helpers.ConsoleHelper;
 import models.BookCopy;
 import models.Booking;

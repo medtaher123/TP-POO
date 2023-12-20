@@ -1,7 +1,5 @@
 This is the Library Project.
 It's a library management console application system. 
-
-I tried to use all the OOP concepts we saw in class, although the project is not typical.
  
   
 
@@ -10,26 +8,68 @@ HOW TO USE:
 	make sure to run the json-server before running the application:
 	open terminal in the jsonServer folder and run the command: "npx json-server --watch db.json"
 	
-	once the server is running check the port (by default it's 3000), if it's not 3000 then go to the DatabaseService class and modify BASE_API_URL
-	//TODO: save the address in an .ini file      
-	
-	And you are good to go.
+	once the server is running check the port (by default it's 3000), if it's not 3000 then modify it in the config.ini file
+	And you are good to go! Everything else is self explanatory.
 	
 	
+Testing
+
+	To test different functionalities of the application, you can browse the menus for different user types.
+	And to simulate different scenarios, feel free to manually modify the db.json file, (the objects structures are self explanatory, just make sure there is no conflict _ there are no database checks).
+	
+	
+	here are some accounts for testing:
+		ADMIN:
+			email: shellytalley@plasmox.com
+			password: incididuntincididunt
+		Employee:
+			email: maxwellthornton@frosnex.com
+			password: animirure
+		MEMBER: 
+			email: reesedale@gadtron.com
+			password: mollitnostrud
+					
+
 	
 Project Overview
 Provide a brief summary of your project, its objectives, and its significance.
+	This project is a library management console application system, featuring a login system with 3 types of users: Admins, Employees and Members.
+	(Please take into consideration that some of the secondary features are not fully developed since it's not a real life situation and they take a lot of time)
+	
+	-All persons with an account (users) can:
+		manage their account (modify name, password, institution ...)
+
+	-Members (adherant) can:
+		view available book lists
+		view their booking history
+		
+ 	-Employees can:
+ 		view all users public data,
+ 		handle subscriptions, (enregistre payement)
+ 		add new user accounts (creation de comptes)
+ 		handle bookings and returns,
+ 		
+ 	-Admins can:
+ 		view all data, modify some data, like fees
+		modify users passwords,
+		 		   
+Users have to pay for subscription, only subscribed users can book books.
+Users are not allowed to book if they have a non returned book, or reached the booking limit (maximum number of books at the same time).
+Fees are associated with late returns or lost/damaged books.
+
+
 
 Development Choices
+
+-I tried to use all the OOP concepts we saw in class, although the project is not typical.
 
 -Json-server:
 I wanted to create some sort of database, so the easiest solution I came up with was a json-server as a backend.
 It's a fast solution since all the logic behind it is taken care of by the server (no need for database handling).
 And most importantly, it's easier to set up than a database for anyone who wants to try the application.
-  
-Explain the technologies, frameworks, or libraries you utilized.
-Justify why you chose them over alternatives.
 
+
+	
 Design Patterns
 
 Describe any design patterns implemented in your project.
@@ -37,8 +77,17 @@ Explain their usage and benefits in your context.
 
 Project Structure
 
-Explain the structure of your project.
-Describe the organization of classes, modules, and how they interconnect.
+Models:
+chose to define Models as classes that don't have a logic on their own. They are structures that represent entities from the database. Any logic or treatment on these objects is implemented in other classes like Managers. Some attributes don't even have setters since every modification has to pass through the database first.
+
+Managers:
+Managers are classes that handle the logic behind Models, since Models are only structures. They are also the only classes that communicate with services (services are sometimes called directly from other classes in this project, this detail is corrected in the next project).
+
+Services:
+Services are the classes that communicate with the database json-server.
+
+Helpers:
+Helpers are classes with static methods only that provide functionalities to all parts of the application. Methods that would otherwise be defined in multiple classes resulting in redundant code.
 
 Key Features
 
@@ -47,31 +96,24 @@ Highlight any innovative or challenging aspects.
 
 Challenges Faced
 
-The project structure was not very clear at the beginning. I tried many solutions before choosing this one. Especially for the Page system (ui).
-The project took a lot of time, but I enjoyed doing it.
-Discuss any obstacles or difficulties encountered during development.
-Explain how you overcame them or proposed solutions.
-
-Testing
-
-To test different functionalities of the application, you can browse the menus for different user types.
-And to simulate different scenarios, you can manually modify the db.json file, (the objects structures are self explanatory, just make sure there is no conflict _ there are no database checks).
+The project took a lot of time, but I enjoyed doing it, I didn't encounter major difficultie,only small ones solved by a simple search on google (or chatgpt). 
+The project structure was not very clear at the beginning. I tried many solutions before choosing this one. Especially for the Page system (ui), then I kept adding and improving and I ended up with this final solution.
+   
 
 
-here are some accounts for testing:
-	ADMIN:
-		email: shellytalley@plasmox.com
-		password: incididuntincididunt
-	Employee:
-		email: maxwellthornton@frosnex.com
-		password: animirure
-	MEMBER: 
-		email: reesedale@gadtron.com
-		password: mollitnostrud
-			
+
+
 
 
 Conclusion
 
 Summarize the project's outcome.
+
+Along the way, I learned a lot of things:
+	- github (basic commands, branches, git bash ...)
+	- json-server
+	- how to structure a project
+	
+	what I didn't learn: 
+	- how to manage my time, I was carried away by the project and forgot other priorities. xd  
 Reflect on the lessons learned and improvements made.

@@ -1,5 +1,15 @@
 {
-  "libraryProjectTestEndPoint":{},
+  "libraryProjectTestEndPoint": {},
+  "settings": {
+    "defaultDateFormat": "yyyy-MM-dd",
+    "lateReturnFeePerDay": 1,
+    "damagedBookFee": 10,
+    "lostBookFee": 25,
+    "subscriptionDuration": 365,
+    "subscriptionFee": 10,
+    "bookingLimit": 5,
+    "bookingMaxDuration": 7
+  },
   "users": [
     {
       "id": "65639da5de7bf101296adeca",
@@ -132,7 +142,7 @@
       "firstName": "Holt",
       "lastName": "Pickett",
       "birthDate": "1990-08-24",
-      "type": "E",
+      "type": "A",
       "registrationDate": "2017-06-17",
       "gender": "male",
       "email": "holtpickett@accupharm.com",
@@ -298,6 +308,7 @@
       "id": "Yg7AiAB"
     },
     {
+      "id": "83ZRPt9",
       "firstName": "el mostaamel",
       "lastName": "5alles deja",
       "type": "M",
@@ -308,8 +319,7 @@
       "phone": "qzdsdzd",
       "address": "qzdsqzd",
       "subscriptionExpirationDate": "2024-12-15",
-      "password": "0000",
-      "id": "83ZRPt9"
+      "password": "0000"
     }
   ],
   "books": [
@@ -320,6 +330,7 @@
       "country": "Nigeria",
       "language": "English",
       "imageLink": "images/things-fall-apart.jpg",
+      "description": "Ut voluptate sunt ipsum exercitation sit ex culpa, voluptate laborum incididunt ad Lorem veniam ipsum in in id eu labore irure nulla velit eiusmod dolor in voluptate.",
       "pages": 209,
       "year": 1958,
       "link": "https://en.wikipedia.org/wiki/Things_Fall_Apart\n"
@@ -331,6 +342,7 @@
       "country": "Denmark",
       "language": "Danish",
       "imageLink": "images/fairy-tales.jpg",
+      "description": "Pariatur sed, aute ex magna tempor ut minim amet aliquip nostrud, eiusmod occaecat minim pariatur ut laborum esse nulla anim reprehenderit velit elit, nulla velit ad id ad labore cupidatat dolor cupidatat deserunt ut consectetur velit exercitation elit ea deserunt laboris in qui, quis labore irure.",
       "pages": 784,
       "year": 1836,
       "link": "https://en.wikipedia.org/wiki/Fairy_Tales_Told_for_Children._First_Collection.\n"
@@ -342,6 +354,7 @@
       "country": "Italy",
       "language": "Italian",
       "imageLink": "images/the-divine-comedy.jpg",
+      "description": "Quis magna adipiscing et et exercitation ullamco culpa eiusmod anim et cupidatat est commodo voluptate ut nulla eu reprehenderit qui minim, ullamco Lorem id pariatur dolor, cupidatat minim adipiscing eu veniam dolor ex laborum enim.",
       "pages": 928,
       "year": 1315,
       "link": "https://en.wikipedia.org/wiki/Divine_Comedy\n"
@@ -353,6 +366,7 @@
       "country": "Sumer and Akkadian Empire",
       "language": "Akkadian",
       "imageLink": "images/the-epic-of-gilgamesh.jpg",
+      "description": "Sed deserunt ipsum ipsum cillum aliqua do, adipiscing deserunt dolor magna eu ullamco est, eiusmod proident qui cillum, sint do.",
       "pages": 160,
       "year": -1700,
       "link": "https://en.wikipedia.org/wiki/Epic_of_Gilgamesh\n"
@@ -364,6 +378,7 @@
       "country": "Achaemenid Empire",
       "language": "Hebrew",
       "imageLink": "images/the-book-of-job.jpg",
+      "description": "Et elit deserunt proident ut dolor sint ut qui id nulla laboris sunt dolor Duis ut deserunt proident non, eu cillum culpa nisi non dolore est, dolore sint officia, enim, commodo.",
       "pages": 176,
       "year": -600,
       "link": "https://en.wikipedia.org/wiki/Book_of_Job\n"
@@ -375,17 +390,19 @@
       "country": "India/Iran/Iraq/Egypt/Tajikistan",
       "language": "Arabic",
       "imageLink": "images/one-thousand-and-one-nights.jpg",
+      "description": "Ad do non in exercitation culpa sunt occaecat in reprehenderit labore qui, exercitation ea non Excepteur eiusmod nulla, officia velit.",
       "pages": 288,
       "year": 1200,
       "link": "https://en.wikipedia.org/wiki/One_Thousand_and_One_Nights\n"
     },
     {
       "id": 7,
-      "title": "NjÃ¡l's Saga",
+      "title": "NjÃƒÂ¡l's Saga",
       "author": "Unknown",
       "country": "Iceland",
       "language": "Old Norse",
       "imageLink": "images/njals-saga.jpg",
+      "description": "Lorem Duis sint aute dolor sed et nisi, ea aute incididunt Duis Excepteur nisi id officia irure Excepteur exercitation ullamco et dolore sit aliquip proident minim qui ut, do tempor.",
       "pages": 384,
       "year": 1350,
       "link": "https://en.wikipedia.org/wiki/Nj%C3%A1ls_saga\n"
@@ -397,17 +414,19 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/pride-and-prejudice.jpg",
+      "description": "Aliquip cupidatat non laborum commodo consectetur cillum sed ex veniam do magna eu labore magna Ut, in consequat commodo proident ad dolore sed aliqua in sed in consequat.",
       "pages": 226,
       "year": 1813,
       "link": "https://en.wikipedia.org/wiki/Pride_and_Prejudice\n"
     },
     {
       "id": 9,
-      "title": "Le PÃ¨re Goriot",
-      "author": "HonorÃ© de Balzac",
+      "title": "Le PÃƒÂ¨re Goriot",
+      "author": "HonorÃƒÂ© de Balzac",
       "country": "France",
       "language": "French",
       "imageLink": "images/le-pere-goriot.jpg",
+      "description": "Dolore, pariatur fugiat, eu voluptate Ut adipiscing in consectetur reprehenderit officia consequat Ut pariatur proident non ut dolore culpa voluptate sint veniam in nisi irure consectetur ad sint exercitation commodo amet ex cupidatat adipiscing, irure.",
       "pages": 443,
       "year": 1835,
       "link": "https://en.wikipedia.org/wiki/Le_P%C3%A8re_Goriot\n"
@@ -419,6 +438,7 @@
       "country": "Republic of Ireland",
       "language": "French, English",
       "imageLink": "images/molloy-malone-dies-the-unnamable.jpg",
+      "description": "Esse irure in occaecat ut eu qui dolore anim magna dolor sit ut do nisi reprehenderit et, voluptate reprehenderit ad in dolor eiusmod mollit ex ipsum fugiat nisi deserunt officia tempor laboris consectetur exercitation non, voluptate veniam deserunt est reprehenderit est.",
       "pages": 256,
       "year": 1952,
       "link": "https://en.wikipedia.org/wiki/Molloy_(novel)\n"
@@ -430,6 +450,7 @@
       "country": "Italy",
       "language": "Italian",
       "imageLink": "images/the-decameron.jpg",
+      "description": "In occaecat elit occaecat anim Ut ea occaecat aliqua qui irure fugiat Ut nostrud nulla.",
       "pages": 1024,
       "year": 1351,
       "link": "https://en.wikipedia.org/wiki/The_Decameron\n"
@@ -441,6 +462,7 @@
       "country": "Argentina",
       "language": "Spanish",
       "imageLink": "images/ficciones.jpg",
+      "description": "Mollit irure aliqua consectetur sint ipsum Excepteur do do, Excepteur deserunt dolor labore occaecat dolor Ut reprehenderit anim laborum consectetur ullamco et dolor ullamco voluptate esse ea ut dolor minim voluptate cillum ut Ut reprehenderit fugiat exercitation.",
       "pages": 224,
       "year": 1965,
       "link": "https://en.wikipedia.org/wiki/Ficciones\n"
@@ -448,10 +470,11 @@
     {
       "id": 13,
       "title": "Wuthering Heights",
-      "author": "Emily BrontÃ«",
+      "author": "Emily BrontÃƒÂ«",
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/wuthering-heights.jpg",
+      "description": "Irure sed eiusmod, veniam sed amet Duis nostrud sed tempor veniam aliqua, eu nulla consectetur nulla velit aliqua veniam ut consequat ullamco ipsum do Duis consectetur non labore quis est in laboris in culpa ipsum tempor, consequat magna deserunt aute sunt pariatur cillum, commodo non et amet minim minim irure consectetur quis aliqua.",
       "pages": 342,
       "year": 1847,
       "link": "https://en.wikipedia.org/wiki/Wuthering_Heights\n"
@@ -463,6 +486,7 @@
       "country": "Algeria, French Empire",
       "language": "French",
       "imageLink": "images/l-etranger.jpg",
+      "description": "In, in Duis Duis anim quis incididunt quis, culpa dolore culpa et cillum incididunt sunt adipiscing sunt veniam incididunt dolor laboris pariatur incididunt exercitation, fugiat ex in veniam irure ad, exercitation et tempor ullamco sunt labore nisi proident ut cillum et mollit et sed consectetur non.",
       "pages": 185,
       "year": 1942,
       "link": "https://en.wikipedia.org/wiki/The_Stranger_(novel)\n"
@@ -474,6 +498,7 @@
       "country": "Romania, France",
       "language": "German",
       "imageLink": "images/poems-paul-celan.jpg",
+      "description": "Dolore aute aute do ex do laborum dolor ullamco, ex esse consectetur veniam dolore, labore voluptate ex commodo velit deserunt Duis ut sunt elit laboris id pariatur.",
       "pages": 320,
       "year": 1952,
       "link": "\n"
@@ -481,10 +506,11 @@
     {
       "id": 16,
       "title": "Journey to the End of the Night",
-      "author": "Louis-Ferdinand CÃ©line",
+      "author": "Louis-Ferdinand CÃƒÂ©line",
       "country": "France",
       "language": "French",
       "imageLink": "images/voyage-au-bout-de-la-nuit.jpg",
+      "description": "Ut deserunt magna voluptate ut adipiscing laborum Duis dolor Duis ipsum Ut, ut, in consequat non in ad veniam enim fugiat, laboris adipiscing occaecat consequat velit est irure minim fugiat sit culpa eiusmod eiusmod voluptate sunt Excepteur veniam ipsum cupidatat non adipiscing, eu.",
       "pages": 505,
       "year": 1932,
       "link": "https://en.wikipedia.org/wiki/Journey_to_the_End_of_the_Night\n"
@@ -496,6 +522,7 @@
       "country": "Spain",
       "language": "Spanish",
       "imageLink": "images/don-quijote-de-la-mancha.jpg",
+      "description": "Veniam, Ut occaecat qui reprehenderit qui eu ut amet dolor nostrud eu voluptate deserunt aute aute fugiat amet sunt dolore labore est laborum Duis ut, laborum nisi Lorem deserunt, in quis ex adipiscing Excepteur consectetur Duis in sit sunt, exercitation ullamco non fugiat nisi nulla veniam cupidatat anim.",
       "pages": 1056,
       "year": 1610,
       "link": "https://en.wikipedia.org/wiki/Don_Quixote\n"
@@ -507,6 +534,7 @@
       "country": "England",
       "language": "English",
       "imageLink": "images/the-canterbury-tales.jpg",
+      "description": "Proident veniam officia in et ipsum dolore voluptate dolore sit enim esse ut, sunt magna Duis deserunt dolore, Lorem sit laboris incididunt eiusmod sunt incididunt et, proident adipiscing eiusmod, aute culpa voluptate adipiscing enim proident Ut Duis dolore occaecat exercitation amet ullamco dolore.",
       "pages": 544,
       "year": 1450,
       "link": "https://en.wikipedia.org/wiki/The_Canterbury_Tales\n"
@@ -518,6 +546,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/stories-of-anton-chekhov.jpg",
+      "description": "Aliquip Duis aute, enim in, Lorem in, exercitation, tempor sunt ipsum amet est ullamco dolore elit adipiscing eiusmod.",
       "pages": 194,
       "year": 1886,
       "link": "https://en.wikipedia.org/wiki/List_of_short_stories_by_Anton_Chekhov\n"
@@ -529,6 +558,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/nostromo.jpg",
+      "description": "Magna tempor tempor, aliqua anim laborum pariatur aute id do labore consectetur aute veniam officia eu proident deserunt velit deserunt voluptate sit Lorem velit non, cillum in amet magna ut quis officia pariatur in Duis eiusmod veniam sit.",
       "pages": 320,
       "year": 1904,
       "link": "https://en.wikipedia.org/wiki/Nostromo\n"
@@ -540,6 +570,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/great-expectations.jpg",
+      "description": "Pariatur, in ex dolor sed enim dolore velit tempor officia pariatur et dolor sit dolore dolore, veniam laborum, Duis aliqua.",
       "pages": 194,
       "year": 1861,
       "link": "https://en.wikipedia.org/wiki/Great_Expectations\n"
@@ -551,6 +582,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/jacques-the-fatalist.jpg",
+      "description": "Ad sunt, amet nulla do, eu irure commodo, laborum consectetur elit ut nostrud cillum enim elit in.",
       "pages": 596,
       "year": 1796,
       "link": "https://en.wikipedia.org/wiki/Jacques_the_Fatalist\n"
@@ -558,10 +590,11 @@
     {
       "id": 23,
       "title": "Berlin Alexanderplatz",
-      "author": "Alfred DÃ¶blin",
+      "author": "Alfred DÃƒÂ¶blin",
       "country": "Germany",
       "language": "German",
       "imageLink": "images/berlin-alexanderplatz.jpg",
+      "description": "Enim sit sunt ullamco cupidatat, nisi sit non, proident dolor dolor mollit aliquip enim ea sit.",
       "pages": 600,
       "year": 1929,
       "link": "https://en.wikipedia.org/wiki/Berlin_Alexanderplatz\n"
@@ -573,6 +606,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/crime-and-punishment.jpg",
+      "description": "Proident consectetur adipiscing in sunt dolore dolore, consectetur pariatur tempor irure, ad consectetur, in occaecat Duis sunt commodo et, sint sed eu velit sint dolore.",
       "pages": 551,
       "year": 1866,
       "link": "https://en.wikipedia.org/wiki/Crime_and_Punishment\n"
@@ -584,6 +618,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/the-idiot.jpg",
+      "description": "Elit, dolore velit eiusmod enim Ut qui, mollit esse mollit consequat consectetur esse eiusmod eiusmod ad do dolor minim do culpa Lorem voluptate.",
       "pages": 656,
       "year": 1869,
       "link": "https://en.wikipedia.org/wiki/The_Idiot\n"
@@ -595,6 +630,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/the-possessed.jpg",
+      "description": "Velit Excepteur aliquip cillum in, irure id reprehenderit laboris labore sunt sit aliqua magna, dolor Excepteur anim qui eiusmod ex cupidatat non non ut esse laboris, dolor labore, quis labore exercitation anim veniam qui adipiscing aliqua tempor dolor Ut fugiat cupidatat non qui.",
       "pages": 768,
       "year": 1872,
       "link": "https://en.wikipedia.org/wiki/Demons_(Dostoyevsky_novel)\n"
@@ -606,6 +642,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/the-brothers-karamazov.jpg",
+      "description": "Incididunt quis ad laboris sint incididunt qui mollit do velit laborum dolore Duis irure eiusmod esse reprehenderit consequat nisi aliqua magna et Duis Duis culpa dolore Lorem in dolor non in dolore pariatur consequat adipiscing culpa consequat aliquip nostrud dolore sit qui aute fugiat amet amet Ut culpa.",
       "pages": 824,
       "year": 1880,
       "link": "https://en.wikipedia.org/wiki/The_Brothers_Karamazov\n"
@@ -617,6 +654,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/middlemarch.jpg",
+      "description": "Mollit, adipiscing eiusmod tempor adipiscing nostrud officia reprehenderit velit irure in aliqua cupidatat ut et, id et, consectetur incididunt dolore nostrud reprehenderit deserunt ipsum officia in cupidatat deserunt id cupidatat mollit aliqua.",
       "pages": 800,
       "year": 1871,
       "link": "https://en.wikipedia.org/wiki/Middlemarch\n"
@@ -628,6 +666,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/invisible-man.jpg",
+      "description": "Commodo dolor eiusmod ut, eiusmod deserunt reprehenderit anim cillum nostrud, ut labore incididunt elit Ut sit dolor, exercitation, reprehenderit aliquip, dolore minim, laboris dolor cupidatat dolor ut ut do adipiscing, enim culpa adipiscing quis velit, laboris id, proident proident aliquip exercitation tempor laboris.",
       "pages": 581,
       "year": 1952,
       "link": "https://en.wikipedia.org/wiki/Invisible_Man\n"
@@ -639,6 +678,7 @@
       "country": "Greece",
       "language": "Greek",
       "imageLink": "images/medea.jpg",
+      "description": "Ullamco consectetur dolor aute laborum dolore nostrud labore proident voluptate voluptate, cupidatat amet labore id fugiat eu voluptate non sed minim occaecat aute exercitation aute, pariatur ipsum sunt adipiscing Lorem nulla ex aliqua aliquip Ut sint nostrud consequat commodo nisi nostrud deserunt aliquip ut consectetur.",
       "pages": 104,
       "year": -431,
       "link": "https://en.wikipedia.org/wiki/Medea_(play)\n"
@@ -650,6 +690,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/absalom-absalom.jpg",
+      "description": "Reprehenderit adipiscing eiusmod deserunt ad tempor, minim tempor esse eu anim ullamco velit exercitation eiusmod dolore aliqua Lorem dolor adipiscing aliquip, ut in laboris amet, non mollit ullamco cupidatat Lorem laborum deserunt nisi elit tempor aliquip, est sunt laborum proident sit do pariatur deserunt Ut dolor est dolore consequat in aute.",
       "pages": 313,
       "year": 1936,
       "link": "https://en.wikipedia.org/wiki/Absalom,_Absalom!\n"
@@ -661,6 +702,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/the-sound-and-the-fury.jpg",
+      "description": "Minim magna velit mollit voluptate reprehenderit pariatur irure Duis nulla voluptate consequat sunt ut, mollit in dolor nulla sint nulla sunt do culpa, deserunt in voluptate, in ea, commodo Duis nulla eu incididunt id quis, officia, in ad, pariatur consectetur deserunt aliquip.",
       "pages": 326,
       "year": 1929,
       "link": "https://en.wikipedia.org/wiki/The_Sound_and_the_Fury\n"
@@ -672,6 +714,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/madame-bovary.jpg",
+      "description": "Do Ut mollit laborum fugiat sint pariatur reprehenderit dolore in minim cupidatat quis Lorem pariatur mollit ut commodo mollit, magna voluptate cupidatat ut sit dolor officia pariatur culpa ad esse Duis, fugiat nulla officia cupidatat exercitation, sint id.",
       "pages": 528,
       "year": 1857,
       "link": "https://en.wikipedia.org/wiki/Madame_Bovary\n"
@@ -683,6 +726,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/l-education-sentimentale.jpg",
+      "description": "Dolore do nisi incididunt culpa in ullamco, irure dolor mollit Ut ut dolore, nisi ullamco.",
       "pages": 606,
       "year": 1869,
       "link": "https://en.wikipedia.org/wiki/Sentimental_Education\n"
@@ -690,10 +734,11 @@
     {
       "id": 35,
       "title": "Gypsy Ballads",
-      "author": "Federico GarcÃ­a Lorca",
+      "author": "Federico GarcÃƒÂ­a Lorca",
       "country": "Spain",
       "language": "Spanish",
       "imageLink": "images/gypsy-ballads.jpg",
+      "description": "Id do veniam ut non labore irure ea reprehenderit velit culpa fugiat labore sed, labore dolore occaecat culpa minim, ipsum labore, in voluptate et incididunt enim nulla quis consequat commodo ea reprehenderit mollit reprehenderit nulla, Excepteur adipiscing velit.",
       "pages": 218,
       "year": 1928,
       "link": "https://en.wikipedia.org/wiki/Gypsy_Ballads\n"
@@ -701,10 +746,11 @@
     {
       "id": 36,
       "title": "One Hundred Years of Solitude",
-      "author": "Gabriel GarcÃ­a MÃ¡rquez",
+      "author": "Gabriel GarcÃƒÂ­a MÃƒÂ¡rquez",
       "country": "Colombia",
       "language": "Spanish",
       "imageLink": "images/one-hundred-years-of-solitude.jpg",
+      "description": "Laborum, sint Duis amet est fugiat tempor nostrud reprehenderit eu, in officia id elit ut aliqua sit, proident in do ut do aliqua laborum pariatur ex incididunt ipsum aute ullamco ut ut ut quis, deserunt, enim in eiusmod tempor sit nostrud.",
       "pages": 417,
       "year": 1967,
       "link": "https://en.wikipedia.org/wiki/One_Hundred_Years_of_Solitude\n"
@@ -712,10 +758,11 @@
     {
       "id": 37,
       "title": "Love in the Time of Cholera",
-      "author": "Gabriel GarcÃ­a MÃ¡rquez",
+      "author": "Gabriel GarcÃƒÂ­a MÃƒÂ¡rquez",
       "country": "Colombia",
       "language": "Spanish",
       "imageLink": "images/love-in-the-time-of-cholera.jpg",
+      "description": "Consectetur, deserunt exercitation sunt id id Ut reprehenderit, ipsum commodo dolore ullamco exercitation id sit qui proident do consequat sit Duis ut ipsum voluptate ipsum minim cupidatat quis nisi officia, Duis consequat.",
       "pages": 368,
       "year": 1985,
       "link": "https://en.wikipedia.org/wiki/Love_in_the_Time_of_Cholera\n"
@@ -727,6 +774,7 @@
       "country": "Saxe-Weimar",
       "language": "German",
       "imageLink": "images/faust.jpg",
+      "description": "Reprehenderit magna incididunt esse ex cupidatat officia id veniam, Lorem aute officia nisi pariatur ex, ut tempor enim et Ut nisi esse fugiat in non minim sint fugiat exercitation non amet elit aliquip incididunt eu reprehenderit Lorem labore exercitation non anim occaecat ad sed deserunt eu commodo.",
       "pages": 158,
       "year": 1832,
       "link": "https://en.wikipedia.org/wiki/Goethe%27s_Faust\n"
@@ -738,6 +786,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/dead-souls.jpg",
+      "description": "Incididunt, commodo consequat anim consectetur et amet dolore est incididunt sit in, Lorem esse enim.",
       "pages": 432,
       "year": 1842,
       "link": "https://en.wikipedia.org/wiki/Dead_Souls\n"
@@ -745,10 +794,11 @@
     {
       "id": 40,
       "title": "The Tin Drum",
-      "author": "GÃ¼nter Grass",
+      "author": "GÃƒÂ¼nter Grass",
       "country": "Germany",
       "language": "German",
       "imageLink": "images/the-tin-drum.jpg",
+      "description": "Duis eiusmod voluptate ad cillum Excepteur dolore amet veniam dolor enim proident Lorem velit anim consequat incididunt nulla qui Excepteur, dolore non, non id in minim.",
       "pages": 600,
       "year": 1959,
       "link": "https://en.wikipedia.org/wiki/The_Tin_Drum\n"
@@ -756,10 +806,11 @@
     {
       "id": 41,
       "title": "The Devil to Pay in the Backlands",
-      "author": "JoÃ£o GuimarÃ£es Rosa",
+      "author": "JoÃƒÂ£o GuimarÃƒÂ£es Rosa",
       "country": "Brazil",
       "language": "Portuguese",
       "imageLink": "images/the-devil-to-pay-in-the-backlands.jpg",
+      "description": "Dolore do, id sunt mollit aliquip eiusmod reprehenderit, commodo in dolore Ut laborum dolor Lorem quis ea esse Lorem, commodo ullamco dolore incididunt deserunt Duis commodo id elit amet id ullamco dolore sit exercitation dolor non laboris exercitation Lorem consequat, ex eu nisi culpa velit consequat cillum.",
       "pages": 494,
       "year": 1956,
       "link": "https://en.wikipedia.org/wiki/The_Devil_to_Pay_in_the_Backlands\n"
@@ -771,6 +822,7 @@
       "country": "Norway",
       "language": "Norwegian",
       "imageLink": "images/hunger.jpg",
+      "description": "Fugiat sed consequat labore non, officia Ut pariatur qui, nisi occaecat commodo est ad adipiscing eu non.",
       "pages": 176,
       "year": 1890,
       "link": "https://en.wikipedia.org/wiki/Hunger_(Hamsun_novel)\n"
@@ -782,6 +834,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/the-old-man-and-the-sea.jpg",
+      "description": "Nulla ut cupidatat consequat aliqua dolore sed velit Lorem veniam id elit pariatur sint in dolore velit ea adipiscing, nulla.",
       "pages": 128,
       "year": 1952,
       "link": "https://en.wikipedia.org/wiki/The_Old_Man_and_the_Sea\n"
@@ -793,6 +846,7 @@
       "country": "Greece",
       "language": "Greek",
       "imageLink": "images/the-iliad-of-homer.jpg",
+      "description": "Anim ipsum exercitation ad do dolore do cupidatat, laboris minim, nulla officia dolor aliqua fugiat non elit, adipiscing deserunt enim dolor dolore consequat cupidatat consectetur enim cupidatat enim commodo, dolore in amet dolore, culpa ea in, do mollit mollit amet, consequat adipiscing irure occaecat, veniam ex eu ullamco dolor Ut Ut voluptate.",
       "pages": 608,
       "year": -735,
       "link": "https://en.wikipedia.org/wiki/Iliad\n"
@@ -804,6 +858,7 @@
       "country": "Greece",
       "language": "Greek",
       "imageLink": "images/the-odyssey-of-homer.jpg",
+      "description": "Proident in id dolore reprehenderit incididunt exercitation Lorem sint do, quis, dolor eiusmod elit quis reprehenderit ea mollit dolor, in ut mollit, pariatur officia.",
       "pages": 374,
       "year": -800,
       "link": "https://en.wikipedia.org/wiki/Odyssey\n"
@@ -815,6 +870,7 @@
       "country": "Norway",
       "language": "Norwegian",
       "imageLink": "images/a-Dolls-house.jpg",
+      "description": "Velit commodo ex, aliqua id ut magna Duis tempor eu Ut proident Excepteur, occaecat sint esse, laboris tempor tempor ullamco eiusmod ex non ut aliquip et Duis labore in Lorem laboris voluptate Ut nisi, ullamco pariatur cupidatat, cupidatat aliquip velit dolor aute ut.",
       "pages": 68,
       "year": 1879,
       "link": "https://en.wikipedia.org/wiki/A_Doll%27s_House\n"
@@ -826,6 +882,7 @@
       "country": "Irish Free State",
       "language": "English",
       "imageLink": "images/ulysses.jpg",
+      "description": "Elit ut, culpa sed non Ut enim non deserunt exercitation fugiat velit qui id est ullamco, magna aliqua est culpa proident amet incididunt incididunt eiusmod, adipiscing sit sed nulla ea nisi.",
       "pages": 228,
       "year": 1922,
       "link": "https://en.wikipedia.org/wiki/Ulysses_(novel)\n"
@@ -837,6 +894,7 @@
       "country": "Czechoslovakia",
       "language": "German",
       "imageLink": "images/stories-of-franz-kafka.jpg",
+      "description": "Cupidatat, incididunt magna esse culpa nostrud veniam nostrud id nostrud qui labore cillum anim consectetur ut voluptate esse id sit elit sint cillum, magna ut sint reprehenderit et ipsum nostrud, ut Lorem minim dolore ut dolor culpa ad minim id reprehenderit reprehenderit reprehenderit do non in.",
       "pages": 488,
       "year": 1924,
       "link": "https://en.wikipedia.org/wiki/Franz_Kafka_bibliography#Short_stories\n"
@@ -848,6 +906,7 @@
       "country": "Czechoslovakia",
       "language": "German",
       "imageLink": "images/the-trial.jpg",
+      "description": "Excepteur proident in adipiscing ea sed, sit laboris est incididunt eu Duis cillum in do proident in ea ex veniam mollit non do, in exercitation irure magna fugiat enim, cillum eiusmod labore dolore anim ut velit anim enim dolore, ex dolor esse ex sint do proident consectetur dolor culpa, quis.",
       "pages": 160,
       "year": 1925,
       "link": "https://en.wikipedia.org/wiki/The_Trial\n"
@@ -859,6 +918,7 @@
       "country": "Czechoslovakia",
       "language": "German",
       "imageLink": "images/the-castle.jpg",
+      "description": "Consectetur in sint anim Duis et ex fugiat, ullamco quis in sint mollit proident cupidatat esse dolore dolore sint reprehenderit proident ut minim ad sunt anim in, non amet cupidatat est nostrud officia qui ad culpa ea ea.",
       "pages": 352,
       "year": 1926,
       "link": "https://en.wikipedia.org/wiki/The_Castle_(novel)\n"
@@ -866,10 +926,11 @@
     {
       "id": 51,
       "title": "The recognition of Shakuntala",
-      "author": "KÄ�lidÄ�sa",
+      "author": "KÃ„ï¿½lidÃ„ï¿½sa",
       "country": "India",
       "language": "Sanskrit",
       "imageLink": "images/the-recognition-of-shakuntala.jpg",
+      "description": "Incididunt ut, in magna adipiscing, incididunt, magna culpa labore Lorem enim exercitation sit irure, cupidatat eu laborum officia do nisi dolore.",
       "pages": 147,
       "year": 150,
       "link": "https://en.wikipedia.org/wiki/Abhij%C3%B1%C4%81na%C5%9B%C4%81kuntalam\n"
@@ -881,6 +942,7 @@
       "country": "Japan",
       "language": "Japanese",
       "imageLink": "images/the-sound-of-the-mountain.jpg",
+      "description": "Non laborum dolor ex laboris ipsum voluptate, in id pariatur esse cupidatat labore aliquip, et tempor dolore consequat consectetur dolor fugiat ipsum, nisi Lorem occaecat, eu ut exercitation in, nulla consectetur laborum reprehenderit minim dolore sit labore in occaecat enim minim est in.",
       "pages": 288,
       "year": 1954,
       "link": "https://en.wikipedia.org/wiki/The_Sound_of_the_Mountain\n"
@@ -892,6 +954,7 @@
       "country": "Greece",
       "language": "Greek",
       "imageLink": "images/zorba-the-greek.jpg",
+      "description": "Sint occaecat reprehenderit dolore voluptate labore, laboris dolore, exercitation Ut do sint et sint irure culpa pariatur sed ad, Excepteur est reprehenderit, Lorem aliqua dolore eu nisi laboris et aliquip dolor in amet sed sit, ullamco in non velit dolore Ut, dolor tempor esse, Lorem ea Excepteur, do dolore in in ut labore.",
       "pages": 368,
       "year": 1946,
       "link": "https://en.wikipedia.org/wiki/Zorba_the_Greek\n"
@@ -903,6 +966,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/sons-and-lovers.jpg",
+      "description": "Tempor elit consectetur consequat nostrud Lorem aute officia laborum enim Ut mollit aute, in ut veniam aliqua exercitation magna est fugiat dolor laborum occaecat commodo Ut eu aliqua ut amet fugiat, laborum et consequat minim amet qui elit Lorem labore aute Excepteur ut proident cillum dolore, et eu proident consectetur et.",
       "pages": 432,
       "year": 1913,
       "link": "https://en.wikipedia.org/wiki/Sons_and_Lovers\n"
@@ -910,10 +974,11 @@
     {
       "id": 55,
       "title": "Independent People",
-      "author": "HalldÃ³r Laxness",
+      "author": "HalldÃƒÂ³r Laxness",
       "country": "Iceland",
       "language": "Icelandic",
       "imageLink": "images/independent-people.jpg",
+      "description": "Commodo amet non aute minim, proident, et aliqua laboris laborum, velit proident labore esse ipsum cillum dolor eiusmod consectetur, nulla qui cillum deserunt sunt ex Lorem laboris elit reprehenderit cupidatat in Excepteur minim consectetur.",
       "pages": 470,
       "year": 1934,
       "link": "https://en.wikipedia.org/wiki/Independent_People\n"
@@ -925,6 +990,7 @@
       "country": "Italy",
       "language": "Italian",
       "imageLink": "images/poems-giacomo-leopardi.jpg",
+      "description": "Consectetur ad qui Excepteur sunt sunt aliqua ad sunt occaecat ullamco culpa sint id aliqua, laborum sit est non in.",
       "pages": 184,
       "year": 1818,
       "link": "\n"
@@ -936,6 +1002,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/the-golden-notebook.jpg",
+      "description": "Anim qui proident magna exercitation et commodo commodo ut nisi cupidatat sed, ullamco ad ex reprehenderit nulla pariatur.",
       "pages": 688,
       "year": 1962,
       "link": "https://en.wikipedia.org/wiki/The_Golden_Notebook\n"
@@ -947,6 +1014,7 @@
       "country": "Sweden",
       "language": "Swedish",
       "imageLink": "images/pippi-longstocking.jpg",
+      "description": "Mollit in Ut irure dolore mollit, sint in fugiat minim non sed adipiscing esse enim labore in ullamco magna ut, et consectetur eu, laborum voluptate ullamco Ut minim ex, nostrud labore irure mollit est nostrud pariatur occaecat eu eu nulla.",
       "pages": 160,
       "year": 1945,
       "link": "https://en.wikipedia.org/wiki/Pippi_Longstocking\n"
@@ -958,6 +1026,7 @@
       "country": "China",
       "language": "Chinese",
       "imageLink": "images/diary-of-a-madman.jpg",
+      "description": "Ut veniam fugiat ut elit, cupidatat ipsum ullamco do id laboris pariatur Excepteur id consectetur cupidatat.",
       "pages": 389,
       "year": 1918,
       "link": "https://en.wikipedia.org/wiki/A_Madman%27s_Diary\n"
@@ -969,6 +1038,7 @@
       "country": "Egypt",
       "language": "Arabic",
       "imageLink": "images/children-of-gebelawi.jpg",
+      "description": "Pariatur occaecat anim veniam Duis ullamco, occaecat ad quis deserunt in officia aute ullamco in nisi dolor anim ut quis minim in mollit exercitation minim enim reprehenderit dolor Excepteur proident elit esse Lorem mollit dolor amet.",
       "pages": 355,
       "year": 1959,
       "link": "https://en.wikipedia.org/wiki/Children_of_Gebelawi\n"
@@ -980,6 +1050,7 @@
       "country": "Germany",
       "language": "German",
       "imageLink": "images/buddenbrooks.jpg",
+      "description": "Amet in, do nisi, nisi Lorem do magna quis qui commodo aliquip fugiat irure reprehenderit, non Excepteur mollit consectetur eu nisi cillum, Excepteur est nostrud tempor, sed ut elit nostrud.",
       "pages": 736,
       "year": 1901,
       "link": "https://en.wikipedia.org/wiki/Buddenbrooks\n"
@@ -991,6 +1062,7 @@
       "country": "Germany",
       "language": "German",
       "imageLink": "images/the-magic-mountain.jpg",
+      "description": "Nostrud sit quis cupidatat do aliqua ut magna laboris amet, commodo pariatur eu nulla dolor ipsum occaecat nisi Ut occaecat culpa mollit proident cillum, Lorem dolore veniam fugiat amet voluptate sed voluptate quis tempor tempor exercitation anim.",
       "pages": 720,
       "year": 1924,
       "link": "https://en.wikipedia.org/wiki/The_Magic_Mountain\n"
@@ -1002,6 +1074,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/moby-dick.jpg",
+      "description": "Nulla dolore, ad Excepteur mollit Lorem ad cupidatat officia in esse elit, Excepteur ut quis quis anim dolore nulla qui dolore id aliqua ipsum, est consectetur, pariatur anim pariatur commodo dolor et, ut velit laborum qui do officia ea amet in labore dolore Duis ipsum anim est pariatur laborum tempor, cillum, occaecat nisi.",
       "pages": 378,
       "year": 1851,
       "link": "https://en.wikipedia.org/wiki/Moby-Dick\n"
@@ -1013,6 +1086,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/essais.jpg",
+      "description": "In exercitation reprehenderit sint velit ut ea nulla nulla dolor occaecat mollit qui incididunt id adipiscing sed pariatur sed qui occaecat nulla ex irure officia deserunt, Lorem id eiusmod qui in.",
       "pages": 404,
       "year": 1595,
       "link": "https://en.wikipedia.org/wiki/Essays_(Montaigne)\n"
@@ -1024,6 +1098,7 @@
       "country": "Italy",
       "language": "Italian",
       "imageLink": "images/history.jpg",
+      "description": "Aliquip ut, deserunt nisi Lorem in labore sunt, sed, Excepteur sunt Excepteur in esse dolor exercitation id amet.",
       "pages": 600,
       "year": 1974,
       "link": "https://en.wikipedia.org/wiki/History_(novel)\n"
@@ -1035,6 +1110,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/beloved.jpg",
+      "description": "Sit sit in, officia consectetur Excepteur culpa est eu pariatur ex fugiat Lorem cupidatat labore nisi incididunt laboris.",
       "pages": 321,
       "year": 1987,
       "link": "https://en.wikipedia.org/wiki/Beloved_(novel)\n"
@@ -1046,6 +1122,7 @@
       "country": "Japan",
       "language": "Japanese",
       "imageLink": "images/the-tale-of-genji.jpg",
+      "description": "Dolor cupidatat ad, elit veniam mollit, reprehenderit est est commodo in labore proident, eu ut occaecat mollit in laboris aliquip aliqua do aute do tempor proident qui esse eiusmod est in irure eu.",
       "pages": 1360,
       "year": 1006,
       "link": "https://en.wikipedia.org/wiki/The_Tale_of_Genji\n"
@@ -1057,6 +1134,7 @@
       "country": "Austria",
       "language": "German",
       "imageLink": "images/the-man-without-qualities.jpg",
+      "description": "Sit Ut ut sint ea laborum ex, aute ex consectetur sed consequat Excepteur do ex, reprehenderit proident Ut nostrud consectetur Lorem amet, adipiscing enim velit ut cillum elit ipsum in aliquip aliquip, id officia sint cillum tempor in quis deserunt sint ad tempor in quis dolore Excepteur officia cillum amet, pariatur.",
       "pages": 365,
       "year": 1931,
       "link": "https://en.wikipedia.org/wiki/The_Man_Without_Qualities\n"
@@ -1068,6 +1146,7 @@
       "country": "Russia/United States",
       "language": "English",
       "imageLink": "images/lolita.jpg",
+      "description": "Ea, adipiscing veniam occaecat amet reprehenderit officia, dolore nisi pariatur, Ut dolore velit pariatur officia culpa adipiscing.",
       "pages": 317,
       "year": 1955,
       "link": "https://en.wikipedia.org/wiki/Lolita\n"
@@ -1079,6 +1158,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/nineteen-eighty-four.jpg",
+      "description": "Sed Duis elit Lorem Excepteur sed consectetur, dolor cillum dolore adipiscing eiusmod nostrud ipsum ad dolor consectetur in proident ad et et cupidatat, ut et laboris dolor ea minim Lorem, in laboris magna Lorem voluptate dolore anim ea adipiscing mollit exercitation reprehenderit minim, sunt, culpa nisi sed mollit veniam.",
       "pages": 272,
       "year": 1949,
       "link": "https://en.wikipedia.org/wiki/Nineteen_Eighty-Four\n"
@@ -1090,6 +1170,7 @@
       "country": "Roman Empire",
       "language": "Classical Latin",
       "imageLink": "images/the-metamorphoses-of-ovid.jpg",
+      "description": "Cillum dolore consequat adipiscing ullamco enim voluptate sed reprehenderit do Ut, Excepteur, ut magna laborum occaecat in.",
       "pages": 576,
       "year": 100,
       "link": "https://en.wikipedia.org/wiki/Metamorphoses\n"
@@ -1101,6 +1182,7 @@
       "country": "Portugal",
       "language": "Portuguese",
       "imageLink": "images/the-book-of-disquiet.jpg",
+      "description": "Cupidatat quis cillum voluptate non ea qui, cupidatat sed in occaecat Excepteur laboris mollit, qui consequat, Ut labore irure culpa est officia aliqua adipiscing dolor est.",
       "pages": 272,
       "year": 1928,
       "link": "https://en.wikipedia.org/wiki/The_Book_of_Disquiet\n"
@@ -1112,6 +1194,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/tales-and-poems-of-edgar-allan-poe.jpg",
+      "description": "Et dolore voluptate, Lorem do officia commodo laboris sit sint quis minim, dolore reprehenderit magna qui veniam.",
       "pages": 842,
       "year": 1950,
       "link": "https://en.wikipedia.org/wiki/Edgar_Allan_Poe_bibliography#Tales\n"
@@ -1123,6 +1206,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/a-la-recherche-du-temps-perdu.jpg",
+      "description": "Sint proident occaecat, quis amet, ipsum ea est quis enim officia Lorem commodo qui in in Lorem cupidatat do deserunt ullamco occaecat.",
       "pages": 2408,
       "year": 1920,
       "link": "https://en.wikipedia.org/wiki/In_Search_of_Lost_Time\n"
@@ -1130,21 +1214,23 @@
     {
       "id": 75,
       "title": "Gargantua and Pantagruel",
-      "author": "FranÃ§ois Rabelais",
+      "author": "FranÃƒÂ§ois Rabelais",
       "country": "France",
       "language": "French",
       "imageLink": "images/gargantua-and-pantagruel.jpg",
+      "description": "Id, anim id ipsum esse, Duis velit sed eiusmod voluptate dolor dolor sed consectetur eu eu quis magna labore non ipsum non irure sed laborum cupidatat et, velit ad laborum adipiscing dolor eiusmod exercitation veniam quis ut sunt ullamco laborum dolor velit pariatur in.",
       "pages": 623,
       "year": 1533,
       "link": "https://en.wikipedia.org/wiki/Gargantua_and_Pantagruel\n"
     },
     {
       "id": 76,
-      "title": "Pedro PÃ¡ramo",
+      "title": "Pedro PÃƒÂ¡ramo",
       "author": "Juan Rulfo",
       "country": "Mexico",
       "language": "Spanish",
       "imageLink": "images/pedro-paramo.jpg",
+      "description": "In sed esse ipsum occaecat, officia enim nisi ut enim aliqua ut elit sunt do nisi sit, ut mollit culpa aute ut non, fugiat cupidatat.",
       "pages": 124,
       "year": 1955,
       "link": "https://en.wikipedia.org/wiki/Pedro_P%C3%A1ramo\n"
@@ -1156,6 +1242,7 @@
       "country": "Sultanate of Rum",
       "language": "Persian",
       "imageLink": "images/the-masnavi.jpg",
+      "description": "Qui irure veniam sed mollit occaecat, ullamco Ut consequat eiusmod Excepteur dolor minim labore consequat non in cupidatat Ut, in sed culpa Ut nisi officia in minim exercitation dolor cupidatat consequat anim consequat ut esse culpa esse eiusmod dolor do ea ut officia anim in adipiscing quis, incididunt est et sed dolor nostrud amet.",
       "pages": 438,
       "year": 1236,
       "link": "https://en.wikipedia.org/wiki/Masnavi\n"
@@ -1167,6 +1254,7 @@
       "country": "United Kingdom, India",
       "language": "English",
       "imageLink": "images/midnights-children.jpg",
+      "description": "Cupidatat fugiat tempor, labore ex reprehenderit in qui voluptate eiusmod, sunt aute aliquip Excepteur amet sunt nisi non incididunt anim non veniam ipsum magna deserunt est non Excepteur ut, tempor reprehenderit sint ad ipsum quis, sit, enim mollit culpa qui, irure nostrud voluptate nisi.",
       "pages": 536,
       "year": 1981,
       "link": "https://en.wikipedia.org/wiki/Midnight%27s_Children\n"
@@ -1178,6 +1266,7 @@
       "country": "Persia, Persian Empire",
       "language": "Persian",
       "imageLink": "images/bostan.jpg",
+      "description": "Ut commodo nisi sint elit cupidatat, commodo sunt incididunt in nostrud tempor ea anim occaecat pariatur irure cillum ex Duis in in nostrud nostrud.",
       "pages": 298,
       "year": 1257,
       "link": "https://en.wikipedia.org/wiki/Bustan_(book)\n"
@@ -1189,6 +1278,7 @@
       "country": "Sudan",
       "language": "Arabic",
       "imageLink": "images/season-of-migration-to-the-north.jpg",
+      "description": "Esse do occaecat Duis veniam Ut culpa ullamco ut nulla nulla, Ut sed proident reprehenderit, tempor commodo est consequat Duis sit nostrud laboris reprehenderit esse culpa nulla proident reprehenderit qui sint tempor in veniam eiusmod non exercitation qui ea veniam velit laboris, Ut dolore dolore ut magna incididunt est Duis sint magna anim.",
       "pages": 139,
       "year": 1966,
       "link": "https://en.wikipedia.org/wiki/Season_of_Migration_to_the_North\n"
@@ -1196,10 +1286,11 @@
     {
       "id": 81,
       "title": "Blindness",
-      "author": "JosÃ© Saramago",
+      "author": "JosÃƒÂ© Saramago",
       "country": "Portugal",
       "language": "Portuguese",
       "imageLink": "images/blindness.jpg",
+      "description": "Magna Lorem, esse, quis enim dolore, magna ipsum aliquip velit tempor in cupidatat ea nisi in, fugiat, mollit nulla esse culpa nulla sint officia reprehenderit.",
       "pages": 352,
       "year": 1995,
       "link": "https://en.wikipedia.org/wiki/Blindness_(novel)\n"
@@ -1211,6 +1302,7 @@
       "country": "England",
       "language": "English",
       "imageLink": "images/hamlet.jpg",
+      "description": "Deserunt occaecat cupidatat cupidatat occaecat, in anim incididunt Lorem eu ullamco et ipsum fugiat est, incididunt sunt labore ullamco eiusmod aliquip adipiscing anim, eu sit ut Lorem cillum, aute ullamco laborum aute irure Ut cillum do in nostrud labore, ut ipsum Duis minim dolor dolor non.",
       "pages": 432,
       "year": 1603,
       "link": "https://en.wikipedia.org/wiki/Hamlet\n"
@@ -1222,6 +1314,7 @@
       "country": "England",
       "language": "English",
       "imageLink": "images/king-lear.jpg",
+      "description": "Officia id nisi ut laborum occaecat dolor qui, sint in anim pariatur ut eu officia, irure eu et eiusmod cupidatat dolore exercitation dolor nulla velit sed Duis ex ipsum occaecat proident mollit sed id reprehenderit dolore, sunt laborum cupidatat est adipiscing, aute, id consectetur fugiat cupidatat, sed.",
       "pages": 384,
       "year": 1608,
       "link": "https://en.wikipedia.org/wiki/King_Lear\n"
@@ -1233,6 +1326,7 @@
       "country": "England",
       "language": "English",
       "imageLink": "images/othello.jpg",
+      "description": "Sed sit dolor id dolor esse dolor exercitation et sed consequat esse dolore ullamco exercitation tempor in nisi labore dolor Duis nostrud, velit, dolore officia culpa officia non fugiat Lorem est ea ipsum nulla, incididunt ut tempor sunt velit esse ad adipiscing quis consectetur sunt exercitation.",
       "pages": 314,
       "year": 1609,
       "link": "https://en.wikipedia.org/wiki/Othello\n"
@@ -1244,6 +1338,7 @@
       "country": "Greece",
       "language": "Greek",
       "imageLink": "images/oedipus-the-king.jpg",
+      "description": "Enim dolore, ex ut pariatur ea irure ea proident, dolor irure enim eu ad aliqua sed eiusmod proident voluptate ullamco et labore.",
       "pages": 88,
       "year": -430,
       "link": "https://en.wikipedia.org/wiki/Oedipus_the_King\n"
@@ -1255,6 +1350,7 @@
       "country": "France",
       "language": "French",
       "imageLink": "images/le-rouge-et-le-noir.jpg",
+      "description": "Laborum Ut Lorem culpa velit esse irure id occaecat labore sunt, labore sit amet, laboris voluptate voluptate occaecat.",
       "pages": 576,
       "year": 1830,
       "link": "https://en.wikipedia.org/wiki/The_Red_and_the_Black\n"
@@ -1266,6 +1362,7 @@
       "country": "England",
       "language": "English",
       "imageLink": "images/the-life-and-opinions-of-tristram-shandy.jpg",
+      "description": "Proident ut non eu sed occaecat occaecat sit quis officia culpa dolor, dolore proident amet ad ipsum eu id consequat occaecat esse labore ipsum culpa.",
       "pages": 640,
       "year": 1760,
       "link": "https://en.wikipedia.org/wiki/The_Life_and_Opinions_of_Tristram_Shandy,_Gentleman\n"
@@ -1277,6 +1374,7 @@
       "country": "Italy",
       "language": "Italian",
       "imageLink": "images/confessions-of-zeno.jpg",
+      "description": "Ipsum enim sit ut Ut ex irure in elit ut in, proident aute laboris reprehenderit sit laborum ullamco ut eu sit reprehenderit laborum, dolor incididunt occaecat officia ut eu est.",
       "pages": 412,
       "year": 1923,
       "link": "https://en.wikipedia.org/wiki/Zeno%27s_Conscience\n"
@@ -1288,6 +1386,7 @@
       "country": "Ireland",
       "language": "English",
       "imageLink": "images/gullivers-travels.jpg",
+      "description": "Dolor minim amet deserunt in non sit esse cupidatat non, consequat dolor commodo Excepteur et, aliqua eu dolor eiusmod in.",
       "pages": 178,
       "year": 1726,
       "link": "https://en.wikipedia.org/wiki/Gulliver%27s_Travels\n"
@@ -1299,6 +1398,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/war-and-peace.jpg",
+      "description": "Ex ex eu dolore et nostrud, cupidatat ipsum amet incididunt labore magna id ut sint ullamco sunt nulla minim ipsum incididunt ipsum cupidatat fugiat, cillum adipiscing qui eiusmod adipiscing sit, aute adipiscing magna aute, labore et do aliqua exercitation esse ut, enim sed velit do occaecat magna dolor sed deserunt aute.",
       "pages": 1296,
       "year": 1867,
       "link": "https://en.wikipedia.org/wiki/War_and_Peace\n"
@@ -1310,6 +1410,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/anna-karenina.jpg",
+      "description": "Anim dolor tempor tempor fugiat in nulla pariatur Ut in irure reprehenderit elit aliqua sunt irure enim aute, sint irure in dolore cupidatat minim do sunt labore nisi ex ut minim.",
       "pages": 864,
       "year": 1877,
       "link": "https://en.wikipedia.org/wiki/Anna_Karenina\n"
@@ -1321,6 +1422,7 @@
       "country": "Russia",
       "language": "Russian",
       "imageLink": "images/the-death-of-ivan-ilyich.jpg",
+      "description": "Et Duis dolor aliquip Duis, sint ipsum irure dolor, nostrud mollit proident, minim, culpa aute adipiscing eu sit nostrud eu velit ex.",
       "pages": 92,
       "year": 1886,
       "link": "https://en.wikipedia.org/wiki/The_Death_of_Ivan_Ilyich\n"
@@ -1332,6 +1434,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/the-adventures-of-huckleberry-finn.jpg",
+      "description": "Dolor nostrud labore minim aliquip dolor, aliqua ad est adipiscing in reprehenderit labore sunt nisi irure deserunt dolore anim dolor pariatur dolore quis id non, pariatur consectetur cillum adipiscing irure veniam nisi nisi amet dolore amet ut esse tempor.",
       "pages": 224,
       "year": 1884,
       "link": "https://en.wikipedia.org/wiki/Adventures_of_Huckleberry_Finn\n"
@@ -1343,6 +1446,7 @@
       "country": "India",
       "language": "Sanskrit",
       "imageLink": "images/ramayana.jpg",
+      "description": "Culpa ut anim do aute id exercitation sunt sunt enim est dolor anim minim aute dolore ad occaecat pariatur adipiscing amet elit sint reprehenderit Duis ut nisi veniam labore cillum ut Duis, aute ut, mollit tempor dolor, commodo ut ad ut Duis ex do dolor laborum dolor.",
       "pages": 152,
       "year": -450,
       "link": "https://en.wikipedia.org/wiki/Ramayana\n"
@@ -1354,6 +1458,7 @@
       "country": "Roman Empire",
       "language": "Classical Latin",
       "imageLink": "images/the-aeneid.jpg",
+      "description": "Officia ex, sunt magna eiusmod magna voluptate ut ut qui dolor, cupidatat sed cupidatat ut sit ut ex dolor eiusmod est veniam nulla quis occaecat et consequat eu in voluptate, sint ex in Ut mollit culpa cillum esse in Duis Excepteur adipiscing occaecat, ipsum Duis id occaecat ea eu labore ut Ut dolore voluptate.",
       "pages": 442,
       "year": -23,
       "link": "https://en.wikipedia.org/wiki/Aeneid\n"
@@ -1365,6 +1470,7 @@
       "country": "India",
       "language": "Sanskrit",
       "imageLink": "images/the-mahab-harata.jpg",
+      "description": "Eu exercitation ea sunt enim occaecat ipsum dolore velit veniam, qui consectetur reprehenderit consequat mollit sint et enim sunt labore mollit anim, esse dolore velit cupidatat nostrud ea laborum voluptate cillum, elit voluptate irure aliqua sit sunt labore et est sint dolor ex, Duis laboris ut ut adipiscing ex ex Lorem.",
       "pages": 276,
       "year": -700,
       "link": "https://en.wikipedia.org/wiki/Mahabharata\n"
@@ -1376,6 +1482,7 @@
       "country": "United States",
       "language": "English",
       "imageLink": "images/leaves-of-grass.jpg",
+      "description": "Ut ex cillum labore sit in in sunt qui dolore ipsum quis cupidatat labore amet officia consequat ut ipsum ex aute et esse esse sunt sit ut sunt in voluptate eiusmod tempor.",
       "pages": 152,
       "year": 1855,
       "link": "https://en.wikipedia.org/wiki/Leaves_of_Grass\n"
@@ -1385,9 +1492,10 @@
       "title": "Mrs Dalloway",
       "author": "Virginia Woolf",
       "country": "United Kingdom",
-      "pages": 216,
       "language": "English",
       "imageLink": "images/mrs-dalloway.jpg",
+      "description": "Eu incididunt irure ex magna quis tempor dolore mollit reprehenderit enim quis et do ad dolore in dolore ipsum ex magna ex Duis aliqua aliqua voluptate officia mollit anim aliquip, fugiat labore et eu enim nostrud enim tempor fugiat sunt.",
+      "pages": 216,
       "year": 1925,
       "link": "https://en.wikipedia.org/wiki/Mrs_Dalloway\n"
     },
@@ -1398,6 +1506,7 @@
       "country": "United Kingdom",
       "language": "English",
       "imageLink": "images/to-the-lighthouse.jpg",
+      "description": "Id est sint incididunt, ut mollit cupidatat do sint nisi voluptate culpa ut do cillum non irure magna quis Lorem laboris, et.",
       "pages": 209,
       "year": 1927,
       "link": "https://en.wikipedia.org/wiki/To_the_Lighthouse\n"
@@ -1409,6 +1518,7 @@
       "country": "France/Belgium",
       "language": "French",
       "imageLink": "images/memoirs-of-hadrian.jpg",
+      "description": "Tempor nostrud dolor labore pariatur Duis eiusmod aliqua anim quis mollit culpa pariatur laborum irure deserunt ad, ut dolore ad, Ut.",
       "pages": 408,
       "year": 1951,
       "link": "https://en.wikipedia.org/wiki/Memoirs_of_Hadrian\n"
@@ -1417,1349 +1527,1174 @@
   "bookCopies": [
     {
       "id": "6578cfb2c327789652f1e515",
-      "bookId": 86,
-      "isAvailable": true
+      "bookId": "86"
     },
     {
       "id": "6578cfb24d441b7e34e41554",
-      "bookId": 94,
-      "isAvailable": true
+      "bookId": "94"
     },
     {
       "id": "6578cfb2764765dd915f16c1",
-      "bookId": 11,
-      "isAvailable": true
+      "bookId": "11"
     },
     {
       "id": "6578cfb2131c5a09e0bd837d",
-      "bookId": 99,
-      "isAvailable": true
+      "bookId": "99"
     },
     {
       "id": "6578cfb2f17b2a364a759785",
-      "bookId": 60,
-      "isAvailable": true
+      "bookId": "60"
     },
     {
       "id": "6578cfb27fc30213eeb8b5f1",
-      "bookId": 66,
-      "isAvailable": true
+      "bookId": "66"
     },
     {
       "id": "6578cfb26eb4fca8d1636ae6",
-      "bookId": 45,
-      "isAvailable": true
+      "bookId": "45"
     },
     {
       "id": "6578cfb26878f43f51126bf7",
-      "bookId": 64,
-      "isAvailable": true
+      "bookId": "64"
     },
     {
       "id": "6578cfb2185919931941c63a",
-      "bookId": 43,
-      "isAvailable": true
+      "bookId": "43"
     },
     {
       "id": "6578cfb2361a56d4ea86258e",
-      "bookId": 11,
-      "isAvailable": true
+      "bookId": "11"
     },
     {
       "id": "6578cfb21a1ad30a2aeee5a8",
-      "bookId": 41,
-      "isAvailable": true
+      "bookId": "41"
     },
     {
       "id": "6578cfb223dc8a77bf3d6919",
-      "bookId": 52,
-      "isAvailable": true
+      "bookId": "52"
     },
     {
       "id": "6578cfb21c8105284b906ef9",
-      "bookId": 34,
-      "isAvailable": true
+      "bookId": "34"
     },
     {
       "id": "6578cfb26a877408b845a0f3",
-      "bookId": 43,
-      "isAvailable": true
+      "bookId": "43"
     },
     {
       "id": "6578cfb2f74a5ab4f3623580",
-      "bookId": 89,
-      "isAvailable": true
+      "bookId": "89"
     },
     {
       "id": "6578cfb20950842b6b306774",
-      "bookId": 54,
-      "isAvailable": true
+      "bookId": "54"
     },
     {
       "id": "6578cfb2674f52600f300fec",
-      "bookId": 67,
-      "isAvailable": true
+      "bookId": "67"
     },
     {
       "id": "6578cfb20a68b76aaccec17d",
-      "bookId": 52,
-      "isAvailable": true
+      "bookId": "52"
     },
     {
       "id": "6578cfb265e210f2568fb887",
-      "bookId": 4,
-      "isAvailable": true
+      "bookId": "4"
     },
     {
       "id": "6578cfb2d404b197601a8023",
-      "bookId": 16,
-      "isAvailable": true
+      "bookId": "16"
     },
     {
       "id": "6578cfb279506a12c3707d61",
-      "bookId": 95,
-      "isAvailable": true
+      "bookId": "95"
     },
     {
       "id": "6578cfb2d9d18d0ce2330e90",
-      "bookId": 17,
-      "isAvailable": true
+      "bookId": "17"
     },
     {
       "id": "6578cfb2774a7bc0213f8063",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb2d45476fd11e9f65c",
-      "bookId": 22,
-      "isAvailable": true
+      "bookId": "22"
     },
     {
       "id": "6578cfb2363b83af459e7c80",
-      "bookId": 24,
-      "isAvailable": true
+      "bookId": "24"
     },
     {
       "id": "6578cfb261595fb02e6d7462",
-      "bookId": 46,
-      "isAvailable": true
+      "bookId": "46"
     },
     {
       "id": "6578cfb2ab18d829bf68f30d",
-      "bookId": 29,
-      "isAvailable": true
+      "bookId": "29"
     },
     {
       "id": "6578cfb2295a0e804a0da97f",
-      "bookId": 62,
-      "isAvailable": true
+      "bookId": "62"
     },
     {
       "id": "6578cfb226873ef856e3c3f0",
-      "bookId": 75,
-      "isAvailable": true
+      "bookId": "75"
     },
     {
       "id": "6578cfb2cd77506f611ce44e",
-      "bookId": 98,
-      "isAvailable": true
+      "bookId": "98"
     },
     {
       "id": "6578cfb28bc9cff628adb69a",
-      "bookId": 73,
-      "isAvailable": true
+      "bookId": "73"
     },
     {
       "id": "6578cfb2c812541d49bfb6ee",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb23b2bde1d3a6d371c",
-      "bookId": 14,
-      "isAvailable": true
+      "bookId": "14"
     },
     {
       "id": "6578cfb23062ebcca73c972c",
-      "bookId": 49,
-      "isAvailable": true
+      "bookId": "49"
     },
     {
       "id": "6578cfb2084382f110b9e1bc",
-      "bookId": 21,
-      "isAvailable": true
+      "bookId": "21"
     },
     {
       "id": "6578cfb299bcd0789e6c1be1",
-      "bookId": 39,
-      "isAvailable": true
+      "bookId": "39"
     },
     {
       "id": "6578cfb26f64064e43711271",
-      "bookId": 33,
-      "isAvailable": true
+      "bookId": "33"
     },
     {
       "id": "6578cfb2ca5df213cec696a3",
-      "bookId": 20,
-      "isAvailable": true
+      "bookId": "20"
     },
     {
       "id": "6578cfb207f65bbe7ecf5b43",
-      "bookId": 76,
-      "isAvailable": true
+      "bookId": "76"
     },
     {
       "id": "6578cfb2ec41084c873718f0",
-      "bookId": 9,
-      "isAvailable": true
+      "bookId": "9"
     },
     {
       "id": "6578cfb23ade0192c08c9d0f",
-      "bookId": 56,
-      "isAvailable": true
+      "bookId": "56"
     },
     {
       "id": "6578cfb2a3837c39d673551a",
-      "bookId": 60,
-      "isAvailable": true
+      "bookId": "60"
     },
     {
       "id": "6578cfb2db7c796e044ca79a",
-      "bookId": 63,
-      "isAvailable": true
+      "bookId": "63"
     },
     {
       "id": "6578cfb29b6fde10543a59ec",
-      "bookId": 29,
-      "isAvailable": true
+      "bookId": "29"
     },
     {
       "id": "6578cfb25b44a61ec1fb7bf0",
-      "bookId": 51,
-      "isAvailable": true
+      "bookId": "51"
     },
     {
       "id": "6578cfb2a84c7289411b0dec",
-      "bookId": 68,
-      "isAvailable": true
+      "bookId": "68"
     },
     {
       "id": "6578cfb236a093fc9bfad7dd",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb28e64d8a1a60d8d4b",
-      "bookId": 77,
-      "isAvailable": true
+      "bookId": "77"
     },
     {
       "id": "6578cfb2fc6032c0bc84833d",
-      "bookId": 86,
-      "isAvailable": true
+      "bookId": "86"
     },
     {
       "id": "6578cfb24191d18ec2b7106f",
-      "bookId": 45,
-      "isAvailable": true
+      "bookId": "45"
     },
     {
       "id": "6578cfb296473a694b6784aa",
-      "bookId": 83,
-      "isAvailable": true
+      "bookId": "83"
     },
     {
       "id": "6578cfb2226febfa8c67635b",
-      "bookId": 66,
-      "isAvailable": true
+      "bookId": "66"
     },
     {
       "id": "6578cfb236f957487d9cae3f",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb2064700ae44ae9af1",
-      "bookId": 42,
-      "isAvailable": true
+      "bookId": "42"
     },
     {
       "id": "6578cfb22037430dfb73c8a9",
-      "bookId": 54,
-      "isAvailable": true
+      "bookId": "54"
     },
     {
       "id": "6578cfb281b0dad2d7a4de02",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb23fd77a0bbdb339fe",
-      "bookId": 87,
-      "isAvailable": true
+      "bookId": "87"
     },
     {
       "id": "6578cfb25470f150f69b0805",
-      "bookId": 71,
-      "isAvailable": true
+      "bookId": "71"
     },
     {
       "id": "6578cfb245814b3c4a90c499",
-      "bookId": 21,
-      "isAvailable": true
+      "bookId": "21"
     },
     {
       "id": "6578cfb223516858eeb3a1c4",
-      "bookId": 98,
-      "isAvailable": true
+      "bookId": "98"
     },
     {
       "id": "6578cfb2cc56323962b505e2",
-      "bookId": 80,
-      "isAvailable": true
+      "bookId": "80"
     },
     {
       "id": "6578cfb29cbb6f4b801f42c0",
-      "bookId": 40,
-      "isAvailable": true
+      "bookId": "40"
     },
     {
       "id": "6578cfb2dc1dddc9ba2035f2",
-      "bookId": 31,
-      "isAvailable": true
+      "bookId": "31"
     },
     {
       "id": "6578cfb269bc4ae6171c4ac7",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb20660f2395ad9e576",
-      "bookId": 21,
-      "isAvailable": true
+      "bookId": "21"
     },
     {
       "id": "6578cfb2d0212505f272b257",
-      "bookId": 94,
-      "isAvailable": true
+      "bookId": "94"
     },
     {
       "id": "6578cfb248bc454764326162",
-      "bookId": 96,
-      "isAvailable": true
+      "bookId": "96"
     },
     {
       "id": "6578cfb276f4099ea1871a31",
-      "bookId": 30,
-      "isAvailable": true
+      "bookId": "30"
     },
     {
       "id": "6578cfb29ea0570db125a8b6",
-      "bookId": 26,
-      "isAvailable": true
+      "bookId": "26"
     },
     {
       "id": "6578cfb2e815d69b0ddc96db",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb29024556bcd97c209",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb285ec0d91f553877a",
-      "bookId": 40,
-      "isAvailable": true
+      "bookId": "40"
     },
     {
       "id": "6578cfb214c8c41e8984febe",
-      "bookId": 30,
-      "isAvailable": true
+      "bookId": "30"
     },
     {
       "id": "6578cfb29fa208e36a898e4a",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb244d0ea7e387aa67b",
-      "bookId": 4,
-      "isAvailable": true
+      "bookId": "4"
     },
     {
       "id": "6578cfb23892b37944701b4d",
-      "bookId": 20,
-      "isAvailable": true
+      "bookId": "20"
     },
     {
       "id": "6578cfb23b7c25c055ffaee6",
-      "bookId": 4,
-      "isAvailable": true
+      "bookId": "4"
     },
     {
       "id": "6578cfb265b91c56bf121a36",
-      "bookId": 2,
-      "isAvailable": true
+      "bookId": "2"
     },
     {
       "id": "6578cfb2ae0a6cb76d40de3f",
-      "bookId": 65,
-      "isAvailable": true
+      "bookId": "65"
     },
     {
       "id": "6578cfb23dcdece32b6c4406",
-      "bookId": 64,
-      "isAvailable": true
+      "bookId": "64"
     },
     {
       "id": "6578cfb2c79fa7bd3e002110",
-      "bookId": 70,
-      "isAvailable": true
+      "bookId": "70"
     },
     {
       "id": "6578cfb2ea9c87d1098c8d4d",
-      "bookId": 14,
-      "isAvailable": true
+      "bookId": "14"
     },
     {
       "id": "6578cfb2e29ae74b162d367f",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb27ab2025991036319",
-      "bookId": 76,
-      "isAvailable": true
+      "bookId": "76"
     },
     {
       "id": "6578cfb2f4ba5371f07caafd",
-      "bookId": 76,
-      "isAvailable": true
+      "bookId": "76"
     },
     {
       "id": "6578cfb27420487153de7f0f",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb2ecd990cb036c1595",
-      "bookId": 64,
-      "isAvailable": true
+      "bookId": "64"
     },
     {
       "id": "6578cfb2e7d1320612791d6d",
-      "bookId": 43,
-      "isAvailable": true
+      "bookId": "43"
     },
     {
       "id": "6578cfb260b127607284724f",
-      "bookId": 22,
-      "isAvailable": true
+      "bookId": "22"
     },
     {
       "id": "6578cfb28174cc1d17b04406",
-      "bookId": 90,
-      "isAvailable": true
+      "bookId": "90"
     },
     {
       "id": "6578cfb2b37b456e42cdd468",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb24dad40bd4e0e5fed",
-      "bookId": 66,
-      "isAvailable": true
+      "bookId": "66"
     },
     {
       "id": "6578cfb2debb4039e8dc2585",
-      "bookId": 22,
-      "isAvailable": true
+      "bookId": "22"
     },
     {
       "id": "6578cfb2540248617b5d7730",
-      "bookId": 48,
-      "isAvailable": true
+      "bookId": "48"
     },
     {
       "id": "6578cfb20e7265d8e43777d1",
-      "bookId": 20,
-      "isAvailable": true
+      "bookId": "20"
     },
     {
       "id": "6578cfb2599bb70bd8342fc0",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb24f0f5e1b6e0bf7b1",
-      "bookId": 13,
-      "isAvailable": true
+      "bookId": "13"
     },
     {
       "id": "6578cfb274fa4f58bb410ed6",
-      "bookId": 42,
-      "isAvailable": true
+      "bookId": "42"
     },
     {
       "id": "6578cfb25c50701542018758",
-      "bookId": 55,
-      "isAvailable": true
+      "bookId": "55"
     },
     {
       "id": "6578cfb251965931d71badd3",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb27d7be67c727f9545",
-      "bookId": 60,
-      "isAvailable": true
+      "bookId": "60"
     },
     {
       "id": "6578cfb28bdb4105b4cb8eec",
-      "bookId": 77,
-      "isAvailable": true
+      "bookId": "77"
     },
     {
       "id": "6578cfb2994ecf9994451a39",
-      "bookId": 78,
-      "isAvailable": true
+      "bookId": "78"
     },
     {
       "id": "6578cfb2752e25d64785d52c",
-      "bookId": 40,
-      "isAvailable": true
+      "bookId": "40"
     },
     {
       "id": "6578cfb2240eec3c04c4f0b7",
-      "bookId": 60,
-      "isAvailable": true
+      "bookId": "60"
     },
     {
       "id": "6578cfb2d24c67e8068565b7",
-      "bookId": 38,
-      "isAvailable": true
+      "bookId": "38"
     },
     {
       "id": "6578cfb230523cd0aec1d268",
-      "bookId": 96,
-      "isAvailable": true
+      "bookId": "96"
     },
     {
       "id": "6578cfb2c7f75d02a2b441c9",
-      "bookId": 30,
-      "isAvailable": true
+      "bookId": "30"
     },
     {
       "id": "6578cfb2acfc0e838989f024",
-      "bookId": 9,
-      "isAvailable": true
+      "bookId": "9"
     },
     {
       "id": "6578cfb2319787a4df76d98f",
-      "bookId": 25,
-      "isAvailable": true
+      "bookId": "25"
     },
     {
       "id": "6578cfb28578282a52566be3",
-      "bookId": 1,
-      "isAvailable": true
+      "bookId": "1"
     },
     {
       "id": "6578cfb2f8eae6fb5b004dcf",
-      "bookId": 19,
-      "isAvailable": true
+      "bookId": "19"
     },
     {
       "id": "6578cfb24f52dee98954b2c4",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb2d5c259acbb8dc840",
-      "bookId": 55,
-      "isAvailable": true
+      "bookId": "55"
     },
     {
       "id": "6578cfb2fd3d1c98b717cdcc",
-      "bookId": 51,
-      "isAvailable": true
+      "bookId": "51"
     },
     {
       "id": "6578cfb22e4c784dec65f25b",
-      "bookId": 16,
-      "isAvailable": true
+      "bookId": "16"
     },
     {
       "id": "6578cfb2ed69137756a575fb",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb228cbf919b1f4741a",
-      "bookId": 54,
-      "isAvailable": true
+      "bookId": "54"
     },
     {
       "id": "6578cfb234dfc8a2da1a4e1c",
-      "bookId": 48,
-      "isAvailable": true
+      "bookId": "48"
     },
     {
       "id": "6578cfb2cd4dd04053bd27f3",
-      "bookId": 9,
-      "isAvailable": true
+      "bookId": "9"
     },
     {
       "id": "6578cfb2287cf1a5ddca7853",
-      "bookId": 9,
-      "isAvailable": true
+      "bookId": "9"
     },
     {
       "id": "6578cfb2453b984e45058809",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb26112851a03ef7231",
-      "bookId": 14,
-      "isAvailable": true
+      "bookId": "14"
     },
     {
       "id": "6578cfb2c59fbd68892b924a",
-      "bookId": 92,
-      "isAvailable": true
+      "bookId": "92"
     },
     {
       "id": "6578cfb2c8446dbc1f664fc2",
-      "bookId": 15,
-      "isAvailable": true
+      "bookId": "15"
     },
     {
       "id": "6578cfb298882aeb23a1f1ee",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb29050f6c63851de09",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb27ff7c23c55cb3751",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb233278e9721869bc2",
-      "bookId": 79,
-      "isAvailable": true
+      "bookId": "79"
     },
     {
       "id": "6578cfb28c72b7591aa3299a",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb2662ac8115e54a7cd",
-      "bookId": 73,
-      "isAvailable": true
+      "bookId": "73"
     },
     {
       "id": "6578cfb2ae3906f318ce6f53",
-      "bookId": 22,
-      "isAvailable": true
+      "bookId": "22"
     },
     {
       "id": "6578cfb299f19dcc99da5ec6",
-      "bookId": 37,
-      "isAvailable": true
+      "bookId": "37"
     },
     {
       "id": "6578cfb2941b4776eb83e3d8",
-      "bookId": 25,
-      "isAvailable": true
+      "bookId": "25"
     },
     {
       "id": "6578cfb2aecb1386c13da47b",
-      "bookId": 94,
-      "isAvailable": true
+      "bookId": "94"
     },
     {
       "id": "6578cfb28b6aa05facd89689",
-      "bookId": 99,
-      "isAvailable": true
+      "bookId": "99"
     },
     {
       "id": "6578cfb2a665c36ff1b740b4",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb24b3c812859cccbb1",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb27f691a3500abfd4d",
-      "bookId": 3,
-      "isAvailable": true
+      "bookId": "3"
     },
     {
       "id": "6578cfb2a2fb0b3e2f545843",
-      "bookId": 46,
-      "isAvailable": true
+      "bookId": "46"
     },
     {
       "id": "6578cfb2226f557f120f7e5a",
-      "bookId": 21,
-      "isAvailable": true
+      "bookId": "21"
     },
     {
       "id": "6578cfb2d3e674fcbc73792d",
-      "bookId": 54,
-      "isAvailable": true
+      "bookId": "54"
     },
     {
       "id": "6578cfb2a7bdcae2f33aa03f",
-      "bookId": 42,
-      "isAvailable": true
+      "bookId": "42"
     },
     {
       "id": "6578cfb266abbd6a27f9738f",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb2b85b9eb6257e47ee",
-      "bookId": 32,
-      "isAvailable": true
+      "bookId": "32"
     },
     {
       "id": "6578cfb27cff0f761803e5a9",
-      "bookId": 12,
-      "isAvailable": true
+      "bookId": "12"
     },
     {
       "id": "6578cfb2e7615d6247127bdf",
-      "bookId": 57,
-      "isAvailable": true
+      "bookId": "57"
     },
     {
       "id": "6578cfb2006ecf6ac06ff97d",
-      "bookId": 8,
-      "isAvailable": true
+      "bookId": "8"
     },
     {
       "id": "6578cfb2fd0e066217357f57",
-      "bookId": 55,
-      "isAvailable": true
+      "bookId": "55"
     },
     {
       "id": "6578cfb2ffd3181a17ee312c",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb2b734e6aea1e4cb94",
-      "bookId": 85,
-      "isAvailable": true
+      "bookId": "85"
     },
     {
       "id": "6578cfb2020a30599bbf4c54",
-      "bookId": 61,
-      "isAvailable": true
+      "bookId": "61"
     },
     {
       "id": "6578cfb21314dcfe4bf39556",
-      "bookId": 100,
-      "isAvailable": true
+      "bookId": "100"
     },
     {
       "id": "6578cfb24ca2994846288b76",
-      "bookId": 28,
-      "isAvailable": true
+      "bookId": "28"
     },
     {
       "id": "6578cfb2d37e19c1d689e2ee",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb202f7b95e599a4ebb",
-      "bookId": 34,
-      "isAvailable": true
+      "bookId": "34"
     },
     {
       "id": "6578cfb286b4bedca17063a9",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb20f5d96ec656eb94f",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb2c9f18d0174914f31",
-      "bookId": 7,
-      "isAvailable": true
+      "bookId": "7"
     },
     {
       "id": "6578cfb21571f7f5a59701b9",
-      "bookId": 97,
-      "isAvailable": true
+      "bookId": "97"
     },
     {
       "id": "6578cfb29e997e940c88816e",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb24fb5d1e73a68ea9f",
-      "bookId": 43,
-      "isAvailable": true
+      "bookId": "43"
     },
     {
       "id": "6578cfb2962abf950d4a898f",
-      "bookId": 98,
-      "isAvailable": true
+      "bookId": "98"
     },
     {
       "id": "6578cfb29d635029dff5906f",
-      "bookId": 89,
-      "isAvailable": true
+      "bookId": "89"
     },
     {
       "id": "6578cfb2ff1281c351e312ea",
-      "bookId": 62,
-      "isAvailable": true
+      "bookId": "62"
     },
     {
       "id": "6578cfb2939aaa9d2362537f",
-      "bookId": 78,
-      "isAvailable": true
+      "bookId": "78"
     },
     {
       "id": "6578cfb26a0956d1f09e3baa",
-      "bookId": 58,
-      "isAvailable": true
+      "bookId": "58"
     },
     {
       "id": "6578cfb2780ead22668b6887",
-      "bookId": 58,
-      "isAvailable": true
+      "bookId": "58"
     },
     {
       "id": "6578cfb20762c567de4509ca",
-      "bookId": 60,
-      "isAvailable": true
+      "bookId": "60"
     },
     {
       "id": "6578cfb2455d8d0c41933e2a",
-      "bookId": 6,
-      "isAvailable": true
+      "bookId": "6"
     },
     {
       "id": "6578cfb21d495d461ee1fe57",
-      "bookId": 40,
-      "isAvailable": true
+      "bookId": "40"
     },
     {
       "id": "6578cfb2821e2279e51041db",
-      "bookId": 86,
-      "isAvailable": true
+      "bookId": "86"
     },
     {
       "id": "6578cfb2fc72dd6bdbf8695c",
-      "bookId": 66,
-      "isAvailable": true
+      "bookId": "66"
     },
     {
       "id": "6578cfb265cfd3ce44420846",
-      "bookId": 79,
-      "isAvailable": true
+      "bookId": "79"
     },
     {
       "id": "6578cfb2bde22052939cd961",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb2ee12645b610be76c",
-      "bookId": 5,
-      "isAvailable": true
+      "bookId": "5"
     },
     {
       "id": "6578cfb201d138d9af236e8c",
-      "bookId": 99,
-      "isAvailable": true
+      "bookId": "99"
     },
     {
       "id": "6578cfb219b88f620b7976a2",
-      "bookId": 12,
-      "isAvailable": true
+      "bookId": "12"
     },
     {
       "id": "6578cfb2d8a4f9fb71efae98",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb2fc102895bdde7d6e",
-      "bookId": 95,
-      "isAvailable": true
+      "bookId": "95"
     },
     {
       "id": "6578cfb2bac72ef3c842d228",
-      "bookId": 24,
-      "isAvailable": true
+      "bookId": "24"
     },
     {
       "id": "6578cfb230b4485172fd0885",
-      "bookId": 83,
-      "isAvailable": true
+      "bookId": "83"
     },
     {
       "id": "6578cfb2372a134e4c09c035",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb2d79738996a01114c",
-      "bookId": 61,
-      "isAvailable": true
+      "bookId": "61"
     },
     {
       "id": "6578cfb224d2cabde6248d5f",
-      "bookId": 65,
-      "isAvailable": true
+      "bookId": "65"
     },
     {
       "id": "6578cfb2e495e1244bfd5454",
-      "bookId": 89,
-      "isAvailable": true
+      "bookId": "89"
     },
     {
       "id": "6578cfb22c833ce014ab6772",
-      "bookId": 59,
-      "isAvailable": true
+      "bookId": "59"
     },
     {
       "id": "6578cfb2b026a6463c469e69",
-      "bookId": 85,
-      "isAvailable": true
+      "bookId": "85"
     },
     {
       "id": "6578cfb2701a02d5db38bfd0",
-      "bookId": 32,
-      "isAvailable": true
+      "bookId": "32"
     },
     {
       "id": "6578cfb2e07f75f0f3205ee3",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb2df7477fc91baea77",
-      "bookId": 5,
-      "isAvailable": true
+      "bookId": "5"
     },
     {
       "id": "6578cfb27ac04fe2aab5f88f",
-      "bookId": 100,
-      "isAvailable": true
+      "bookId": "100"
     },
     {
       "id": "6578cfb26ae503ee1af887b7",
-      "bookId": 46,
-      "isAvailable": true
+      "bookId": "46"
     },
     {
       "id": "6578cfb23fa069b77726e181",
-      "bookId": 74,
-      "isAvailable": true
+      "bookId": "74"
     },
     {
       "id": "6578cfb2cd257d54e226afb8",
-      "bookId": 4,
-      "isAvailable": true
+      "bookId": "4"
     },
     {
       "id": "6578cfb217eb767d84cbe6e1",
-      "bookId": 99,
-      "isAvailable": true
+      "bookId": "99"
     },
     {
       "id": "6578cfb2855f55812f91eb02",
-      "bookId": 16,
-      "isAvailable": true
+      "bookId": "16"
     },
     {
       "id": "6578cfb2acb2d77142d95ec3",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb25264218eb24dead2",
-      "bookId": 13,
-      "isAvailable": true
+      "bookId": "13"
     },
     {
       "id": "6578cfb21b21aa99e7a3ed76",
-      "bookId": 70,
-      "isAvailable": true
+      "bookId": "70"
     },
     {
       "id": "6578cfb2cd873ff627905538",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb2a01660c57d3b960b",
-      "bookId": 20,
-      "isAvailable": true
+      "bookId": "20"
     },
     {
       "id": "6578cfb27d29d0f774b875f5",
-      "bookId": 88,
-      "isAvailable": true
+      "bookId": "88"
     },
     {
       "id": "6578cfb20160e079da440f44",
-      "bookId": 74,
-      "isAvailable": true
+      "bookId": "74"
     },
     {
       "id": "6578cfb2ebab38fd3a89dd72",
-      "bookId": 1,
-      "isAvailable": true
+      "bookId": "1"
     },
     {
       "id": "6578cfb23d197679358715b1",
-      "bookId": 73,
-      "isAvailable": true
+      "bookId": "73"
     },
     {
       "id": "6578cfb2d8d1981de17566dd",
-      "bookId": 30,
-      "isAvailable": true
+      "bookId": "30"
     },
     {
       "id": "6578cfb2a498dbd7838ada7d",
-      "bookId": 64,
-      "isAvailable": true
+      "bookId": "64"
     },
     {
       "id": "6578cfb27a4e6d893ab1ec11",
-      "bookId": 2,
-      "isAvailable": true
+      "bookId": "2"
     },
     {
       "id": "6578cfb2ae9dc7f10451582e",
-      "bookId": 24,
-      "isAvailable": true
+      "bookId": "24"
     },
     {
       "id": "6578cfb2c0ed7f0267ce7efe",
-      "bookId": 49,
-      "isAvailable": true
+      "bookId": "49"
     },
     {
       "id": "6578cfb27209d5f18c84e3e5",
-      "bookId": 1,
-      "isAvailable": true
+      "bookId": "1"
     },
     {
       "id": "6578cfb27f50a8d452ef88cd",
-      "bookId": 67,
-      "isAvailable": true
+      "bookId": "67"
     },
     {
       "id": "6578cfb2d89a8381e81cd810",
-      "bookId": 13,
-      "isAvailable": true
+      "bookId": "13"
     },
     {
       "id": "6578cfb23fac9f1299636811",
-      "bookId": 53,
-      "isAvailable": true
+      "bookId": "53"
     },
     {
       "id": "6578cfb207bc4ee7c1047b49",
-      "bookId": 84,
-      "isAvailable": true
+      "bookId": "84"
     },
     {
       "id": "6578cfb25ddd71966228b399",
-      "bookId": 17,
-      "isAvailable": true
+      "bookId": "17"
     },
     {
       "id": "6578cfb2c48870d436935b2a",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb29838ff9c09eb8cf0",
-      "bookId": 49,
-      "isAvailable": true
+      "bookId": "49"
     },
     {
       "id": "6578cfb2f368f575bbf985cd",
-      "bookId": 9,
-      "isAvailable": true
+      "bookId": "9"
     },
     {
       "id": "6578cfb2e14989bea34f08ba",
-      "bookId": 89,
-      "isAvailable": true
+      "bookId": "89"
     },
     {
       "id": "6578cfb26b95ecc63b9a2372",
-      "bookId": 37,
-      "isAvailable": true
+      "bookId": "37"
     },
     {
       "id": "6578cfb2da360aaeca8308d3",
-      "bookId": 8,
-      "isAvailable": true
+      "bookId": "8"
     },
     {
       "id": "6578cfb26c990cda64ea3227",
-      "bookId": 26,
-      "isAvailable": true
+      "bookId": "26"
     },
     {
       "id": "6578cfb2a518cf4626ed7ffb",
-      "bookId": 61,
-      "isAvailable": true
+      "bookId": "61"
     },
     {
       "id": "6578cfb264a728201cf7c199",
-      "bookId": 82,
-      "isAvailable": true
+      "bookId": "82"
     },
     {
       "id": "6578cfb2f0b2d439c2817e78",
-      "bookId": 86,
-      "isAvailable": true
+      "bookId": "86"
     },
     {
       "id": "6578cfb225cc8403ef61d02d",
-      "bookId": 62,
-      "isAvailable": true
+      "bookId": "62"
     },
     {
       "id": "6578cfb26ced2bb3766b2874",
-      "bookId": 50,
-      "isAvailable": true
+      "bookId": "50"
     },
     {
       "id": "6578cfb2617307183742c600",
-      "bookId": 93,
-      "isAvailable": true
+      "bookId": "93"
     },
     {
       "id": "6578cfb26c13ea1c228d9ae5",
-      "bookId": 62,
-      "isAvailable": true
+      "bookId": "62"
     },
     {
       "id": "6578cfb27bfccdbef1270d4f",
-      "bookId": 90,
-      "isAvailable": true
+      "bookId": "90"
     },
     {
       "id": "6578cfb26ff3ca1ccd9c6076",
-      "bookId": 28,
-      "isAvailable": true
+      "bookId": "28"
     },
     {
       "id": "6578cfb2dc270bbc40a0d11d",
-      "bookId": 83,
-      "isAvailable": true
+      "bookId": "83"
     },
     {
       "id": "6578cfb2e865e6a14e184eb7",
-      "bookId": 92,
-      "isAvailable": true
+      "bookId": "92"
     },
     {
       "id": "6578cfb29baddaac2b371b22",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb22ad62db732b21a2a",
-      "bookId": 6,
-      "isAvailable": true
+      "bookId": "6"
     },
     {
       "id": "6578cfb2060331cc1d0c07ed",
-      "bookId": 45,
-      "isAvailable": true
+      "bookId": "45"
     },
     {
       "id": "6578cfb224fab0944a971ca2",
-      "bookId": 11,
-      "isAvailable": true
+      "bookId": "11"
     },
     {
       "id": "6578cfb292dc756fb4e466d8",
-      "bookId": 2,
-      "isAvailable": true
+      "bookId": "2"
     },
     {
       "id": "6578cfb29e442284368926b9",
-      "bookId": 75,
-      "isAvailable": true
+      "bookId": "75"
     },
     {
       "id": "6578cfb256718b183008c643",
-      "bookId": 8,
-      "isAvailable": true
+      "bookId": "8"
     },
     {
       "id": "6578cfb2541be1a6d900a144",
-      "bookId": 72,
-      "isAvailable": true
+      "bookId": "72"
     },
     {
       "id": "6578cfb22eed5a2601eb5dd3",
-      "bookId": 73,
-      "isAvailable": true
+      "bookId": "73"
     },
     {
       "id": "6578cfb2257a0c15365ceef8",
-      "bookId": 85,
-      "isAvailable": true
+      "bookId": "85"
     },
     {
       "id": "6578cfb2c3fd2e832eb14b97",
-      "bookId": 98,
-      "isAvailable": true
+      "bookId": "98"
     },
     {
       "id": "6578cfb20d3aa8d3393d20d5",
-      "bookId": 33,
-      "isAvailable": true
+      "bookId": "33"
     },
     {
       "id": "6578cfb20c6a82fab7a22dfc",
-      "bookId": 46,
-      "isAvailable": true
+      "bookId": "46"
     },
     {
       "id": "6578cfb213e168e9c5963e8f",
-      "bookId": 91,
-      "isAvailable": true
+      "bookId": "91"
     },
     {
       "id": "6578cfb2441fefddf27b9121",
-      "bookId": 80,
-      "isAvailable": true
+      "bookId": "80"
     },
     {
       "id": "6578cfb222092ebe1a915f12",
-      "bookId": 28,
-      "isAvailable": true
+      "bookId": "28"
     },
     {
       "id": "6578cfb299fbe63f28970bc6",
-      "bookId": 32,
-      "isAvailable": true
+      "bookId": "32"
     },
     {
       "id": "6578cfb2d95ffc12a19e2db3",
-      "bookId": 23,
-      "isAvailable": true
+      "bookId": "23"
     },
     {
       "id": "6578cfb27325a51a9f93adbc",
-      "bookId": 81,
-      "isAvailable": true
+      "bookId": "81"
     },
     {
       "id": "6578cfb2429ecf2c0799e090",
-      "bookId": 18,
-      "isAvailable": true
+      "bookId": "18"
     },
     {
       "id": "6578cfb2a41ef9de706d38a4",
-      "bookId": 56,
-      "isAvailable": true
+      "bookId": "56"
     },
     {
       "id": "6578cfb2770c0f0326b988c1",
-      "bookId": 42,
-      "isAvailable": true
+      "bookId": "42"
     },
     {
       "id": "6578cfb261ca22ceb43f2fd4",
-      "bookId": 39,
-      "isAvailable": true
+      "bookId": "39"
     },
     {
       "id": "6578cfb2229606ba82b02135",
-      "bookId": 14,
-      "isAvailable": true
+      "bookId": "14"
     },
     {
       "id": "6578cfb20f136e97b6b38c30",
-      "bookId": 19,
-      "isAvailable": true
+      "bookId": "19"
     },
     {
       "id": "6578cfb2c457292c82ba5798",
-      "bookId": 98,
-      "isAvailable": true
+      "bookId": "98"
     },
     {
       "id": "6578cfb23d3395af98897707",
-      "bookId": 52,
-      "isAvailable": true
+      "bookId": "52"
     }
   ],
-  "bookings": [
+  "bookings": [],
+  "events": [
     {
-      "id": "qdldoidd231",
-      "userId": "65639da5ea045e14f8e9f232",
-      "bookId": "6578cfb2ab18d829bf68f30d",
-      "bookingDate": "2023-11-29",
-      "returnDeadline": "2023-12-01"
+      "id": "6581b0a47ce2cf95e8a1beb1",
+      "title": "Kidstock duis",
+      "date": "2014-01-17",
+      "about": "Aliqua in eu cillum nostrud commodo deserunt ex nulla officia. Id fugiat in ad velit officia dolore Lorem irure cupidatat velit labore qui occaecat pariatur. Voluptate nisi aliqua veniam dolore fugiat reprehenderit occaecat labore anim excepteur deserunt sunt. Ad et velit in dolor ex excepteur proident proident non ipsum Lorem anim.\r\n",
+      "organizer": "EURON",
+      "manager": "Kramer Soto",
+      "email": "kramersoto@euron.com",
+      "phone": "+216 (849) 433-2917"
     },
     {
-      "id": "kjbhjbdqz1d351dz",
-      "userId": "65639da5ea045e14f8e9f232",
-      "bookId": "6578cfb2c457292c82ba5798",
-      "bookingDate": "2023-11-29",
-      "returnDeadline": "2023-12-05",
-      "returnDate": "2023-12-10"
+      "id": "6581b0a4506964462cd68ac4",
+      "title": "Dognost minim",
+      "date": "2018-06-29",
+      "about": "Incididunt est magna qui est dolore exercitation id dolore velit consectetur laborum. Irure et sit nulla est officia eiusmod occaecat ut voluptate anim fugiat velit cupidatat. Cupidatat laboris ea sint velit laboris ad velit in eu proident. Irure excepteur labore nulla nulla et labore reprehenderit. Veniam commodo ex incididunt esse non sit Lorem laboris nisi pariatur sint consequat quis. Excepteur in sit labore voluptate esse cillum. Nostrud pariatur ut voluptate in enim veniam sit nostrud do.\r\n",
+      "organizer": "VIDTO",
+      "manager": "Fields Pittman",
+      "email": "fieldspittman@vidto.com",
+      "phone": "+216 (896) 456-2287"
     },
     {
-      "id": "xZSVes9d",
-      "userId": "65639da52dbada64bd3642ae",
-      "bookId": "6578cfb2229606ba82b02135",
-      "bookingDate": "2023-12-17",
-      "returnDeadline": "2020-12-24",
-      "returnDate": "2023-12-17",
-      "isDamaged": true
+      "id": "6581b0a4ba116cee8cc13bc2",
+      "title": "Futurity do",
+      "date": "2022-06-22",
+      "about": "Occaecat est irure nulla nisi proident culpa laboris dolor. Velit tempor ut do proident laborum cupidatat enim nostrud qui ipsum enim aliqua dolor reprehenderit. Veniam consectetur culpa consequat aute commodo occaecat nisi consectetur minim.\r\n",
+      "organizer": "ASSISTIA",
+      "manager": "Huber Chase",
+      "email": "huberchase@assistia.com",
+      "phone": "+216 (830) 416-2268"
+    },
+    {
+      "id": "6581b0a41837cae528df7eb6",
+      "title": "Biospan exercitation",
+      "date": "2024-12-10",
+      "about": "Aliquip et et fugiat officia eiusmod veniam occaecat nisi ipsum nisi minim minim duis. Dolor adipisicing ut cillum consectetur nisi ea laborum fugiat sint excepteur sint dolor occaecat non. Exercitation aliqua commodo consectetur adipisicing aute labore magna excepteur excepteur voluptate ea labore consectetur commodo. Ex labore et irure mollit laborum ex duis dolor esse quis commodo. Eu nisi dolore aliqua cupidatat consequat occaecat dolor culpa labore ex mollit. Aute esse mollit dolor eiusmod reprehenderit duis non.\r\n",
+      "organizer": "SILODYNE",
+      "manager": "Turner Clark",
+      "email": "turnerclark@silodyne.com",
+      "phone": "+216 (801) 533-2494"
+    },
+    {
+      "id": "6581b0a4f338f74318c1501f",
+      "title": "Globoil proident",
+      "date": "2024-01-24",
+      "about": "Ad laborum cupidatat culpa veniam Lorem excepteur labore veniam sunt eiusmod laboris dolore nostrud. Id commodo occaecat fugiat cupidatat tempor laboris irure. Ullamco cillum et nostrud minim ea esse nulla. Esse esse aliquip nisi quis.\r\n",
+      "organizer": "COREPAN",
+      "manager": "Emma Dunlap",
+      "email": "emmadunlap@corepan.com",
+      "phone": "+216 (800) 454-2735"
+    },
+    {
+      "id": "6581b0a4556c2408d520d010",
+      "title": "Inrt occaecat",
+      "date": "2022-09-03",
+      "about": "Culpa id mollit laborum incididunt id nisi sint ad pariatur veniam commodo consectetur enim. Dolore et adipisicing ea est sit nisi labore aute velit. Nisi pariatur esse id ea ex. Sint reprehenderit culpa in ut sint excepteur reprehenderit adipisicing adipisicing qui commodo nulla ea. Qui et adipisicing in dolor et duis labore incididunt sint cupidatat deserunt. Dolore ea pariatur commodo deserunt labore. Enim excepteur nisi dolore consequat do minim aute laborum qui tempor.\r\n",
+      "organizer": "ISOPLEX",
+      "manager": "Selma Salinas",
+      "email": "selmasalinas@isoplex.com",
+      "phone": "+216 (820) 482-3939"
+    },
+    {
+      "id": "6581b0a42112b107eac530b6",
+      "title": "Ginkogene quis",
+      "date": "2018-12-04",
+      "about": "Ipsum enim amet esse fugiat sunt minim aliqua deserunt elit commodo irure deserunt aute anim. Ullamco et nostrud dolor exercitation. Nisi ad nisi aliquip velit. Anim excepteur veniam ex excepteur anim dolore ea. Dolor voluptate velit laborum et.\r\n",
+      "organizer": "LYRICHORD",
+      "manager": "Compton Barlow",
+      "email": "comptonbarlow@lyrichord.com",
+      "phone": "+216 (845) 465-2924"
+    },
+    {
+      "id": "6581b0a4a33302be4872cbe7",
+      "title": "Portalis officia",
+      "date": "2019-11-12",
+      "about": "Deserunt eiusmod consectetur tempor cupidatat anim Lorem do mollit non mollit. Non mollit officia nisi ex duis eiusmod exercitation occaecat aliqua consequat. Nisi ad ipsum laborum qui nulla consectetur et culpa. Dolor non velit pariatur pariatur officia adipisicing ullamco duis magna non nostrud laboris. Mollit incididunt adipisicing eiusmod cupidatat et elit aliqua. Magna aliquip laboris sit exercitation duis dolore occaecat in duis pariatur eiusmod non enim fugiat.\r\n",
+      "organizer": "CEMENTION",
+      "manager": "Vazquez Oliver",
+      "email": "vazquezoliver@cemention.com",
+      "phone": "+216 (869) 581-3929"
+    },
+    {
+      "id": "6581b0a40113e3cbfc5fefc5",
+      "title": "Zuvy consequat",
+      "date": "2023-05-16",
+      "about": "Minim ea id officia eu aliquip ut laborum enim sunt ipsum ullamco eiusmod ad. Ea cillum sit est aliquip in velit cupidatat minim veniam consectetur eu mollit. Sunt id ad quis quis sit exercitation.\r\n",
+      "organizer": "DANCITY",
+      "manager": "Melissa Castro",
+      "email": "melissacastro@dancity.com",
+      "phone": "+216 (808) 578-3832"
+    },
+    {
+      "id": "6581b0a4ab731a6f5b907473",
+      "title": "Volax eiusmod",
+      "date": "2023-06-19",
+      "about": "Eiusmod irure eu amet dolor voluptate. Consectetur id veniam ut velit voluptate labore. Velit adipisicing id voluptate ea Lorem ex officia cillum quis tempor Lorem sit. Dolor non eu commodo occaecat magna eu nulla adipisicing et magna laborum elit exercitation. Tempor enim id duis aliquip. Commodo laboris aliquip ex dolore veniam anim labore.\r\n",
+      "organizer": "FISHLAND",
+      "manager": "Nash Rasmussen",
+      "email": "nashrasmussen@fishland.com",
+      "phone": "+216 (868) 452-2212"
+    },
+    {
+      "id": "6581b0a47dbe0d6c6d8183c2",
+      "title": "Hatology ad",
+      "date": "2014-02-24",
+      "about": "Veniam cillum consequat laboris duis tempor ad ut aliqua aliquip magna do non reprehenderit qui. Id duis laboris incididunt ut do nisi Lorem sint dolore. Esse anim minim et aliquip irure. Elit occaecat dolor reprehenderit nisi labore nisi.\r\n",
+      "organizer": "ELEMANTRA",
+      "manager": "Madeleine Livingston",
+      "email": "madeleinelivingston@elemantra.com",
+      "phone": "+216 (892) 435-3627"
+    },
+    {
+      "id": "6581b0a43f721459cf86a2fb",
+      "title": "Polaria id",
+      "date": "2017-02-24",
+      "about": "Irure voluptate proident ullamco consectetur nisi nulla minim. Ex sunt aute ex sint esse dolor labore laboris sint qui enim. Officia quis elit nisi magna qui tempor exercitation magna. Magna non non adipisicing commodo ut duis Lorem sunt consequat sunt.\r\n",
+      "organizer": "MARVANE",
+      "manager": "Powell Riggs",
+      "email": "powellriggs@marvane.com",
+      "phone": "+216 (953) 413-3768"
     }
-  ],
-  "settings": {
-    "defaultDateFormat": "yyyy-MM-dd",
-    "lateReturnFeePerDay": 1,
-    "damagedBookFee": 10,
-    "lostBookFee": 25,
-    "subscriptionDuration": 365,
-    "subscriptionFee": 10,
-    "bookingLimit": 5,
-    "bookingMaxDuration": 7
-  }
+  ]
 }

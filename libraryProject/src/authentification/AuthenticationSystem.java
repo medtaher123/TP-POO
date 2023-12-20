@@ -46,7 +46,9 @@ public class AuthenticationSystem {
     }
     
     private static Object crypt(String password) {
-		return password;
+		return password; 
+		// TODO: implement a real encryption algorithm here (not done to facilitate
+		// testing and connect to users easily)
 	}
     
 	public static class AuthenticationException extends Exception {

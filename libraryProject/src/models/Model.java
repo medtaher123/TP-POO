@@ -4,7 +4,7 @@ import com.google.gson.Gson;
 
 public abstract class Model {
 
-	// TODO: add to doc: chose to define models as classes that don't have a logic
+	// TODO: add to doc(done): chose to define Models as classes that don't have a logic
 	// on their own. They are structures that represent entities from the database.
 	// Any logic or treatment on these objects is implemented in other classes like
 	// Managers. Most of the attributes have only getters since every modification

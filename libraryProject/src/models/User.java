@@ -7,13 +7,17 @@ import com.google.gson.annotations.SerializedName;
 import helpers.DateHelper;
 
 public class User extends Model {
+	public void setPassword(String password) {
+		this.password = password;
+	}
+
 	private String id;
 	private String firstName;
 	private String lastName;
 	private Date birthDate;
 	private UserType type;// member, employee, admin
-	// TODO: add to doc: used an enum for userType instead of different classes
-	// extending the User Class for easier database manipulation
+	// TODO: add to doc: used an enum for userType for easier database manipulation. (instead of defining different classes for every userType
+	// extending the User Class )
 	private Date registered;
 	private String gender;
 	private String email;
@@ -79,7 +83,7 @@ public class User extends Model {
 
 	/*public void setType(UserType type) {
 		this.type = type;
-	}*/ //TODO: to remove all setters
+	}*/
 
 	public Date getRegistered() {
 		return registered;
@@ -138,8 +142,7 @@ public class User extends Model {
 	}
 
 	public String getCryptedPassword() {
-		return password;// TODO: implement a real encryption algorithm here (not done to facilitate
-						// testing and connect to users easily)
+		return password;
 	}
 
 	public boolean isSubscribed() {

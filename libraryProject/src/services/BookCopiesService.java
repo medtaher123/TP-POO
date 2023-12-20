@@ -3,7 +3,6 @@ package services;
 import com.google.gson.Gson;
 
 import helpers.QueryParamsBuilder;
-import models.Book;
 import models.BookCopy;
 
 public class BookCopiesService extends DatabaseService {
@@ -35,12 +34,12 @@ public class BookCopiesService extends DatabaseService {
 		return getAllBookCopies(params.toString());
 	} 
 	
-	public static BookCopy UpdateBookCopy(Book book) {
+	public static BookCopy UpdateBookCopy(BookCopy book) {
 		Gson gson = new Gson();
 		return gson.fromJson(DatabaseService.sendHttpRequest("PUT", DatabaseService.BOOK_COPIES_API_URL + "/" + book.getId(),book), BookCopy.class);
 	}
 	
-	public static BookCopy addBookCopy(Book newBookCopy) {
+	public static BookCopy addBookCopy(BookCopy newBookCopy) {
 		return new Gson().fromJson(DatabaseService.sendHttpRequest("POST", DatabaseService.BOOK_COPIES_API_URL, newBookCopy), BookCopy.class);
 	}
 	

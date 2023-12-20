@@ -12,9 +12,11 @@ import java.io.InputStreamReader;
 import java.io.OutputStream;
 import java.net.HttpURLConnection;
 import java.net.URL;
+import java.util.Arrays;
+import java.util.function.Predicate;
 
 public abstract class DatabaseService {
-	//TODO: add to doc: services are the classes that communicate with the database json-server
+	//TODO: add to doc(done): services are the classes that communicate with the database json-server
 	//TODO: add to doc: chose to define the API_URLs in the DatabaseService parent class instead of the subclasses (each subclass with it's own URL) for easier manipulation (constants are grouped together)  
 	public static final String BASE_API_URL =  IniFileReader.getBaseApiUrl(); //I don't think this is the best way to initialize this;
 	public static final String TEST_API_URL = BASE_API_URL + "/libraryProjectTestEndPoint";
@@ -22,6 +24,7 @@ public abstract class DatabaseService {
 	public static final String BOOKS_API_URL = BASE_API_URL + "/books";
 	public static final String BOOK_COPIES_API_URL = BASE_API_URL + "/bookCopies";
 	public static final String BOOKINGS_API_URL = BASE_API_URL + "/bookings";
+	public static final String EVENTS_API_URL = BASE_API_URL + "/events";
 	public static final String SETTINGS_API_URL = BASE_API_URL + "/settings";
 	
 	private static final Gson gson = new GsonBuilder().setDateFormat("yyyy-MM-dd").create();
@@ -74,5 +77,16 @@ public abstract class DatabaseService {
 	public static String sendHttpRequest(String requestMethod, String apiUrl) {
 		return sendHttpRequest(requestMethod,apiUrl,(String) null);
 	}
+	
+	protected static <T> T[] filter(T[] elements, Predicate<? super T> predicate) {
+	    Object[] filtered = Arrays.stream(elements)
+	                              .filter(predicate)
+	                              .toArray();
+
+	    @SuppressWarnings("unchecked")
+	    T[] filteredElements = (T[]) Arrays.copyOf(filtered, filtered.length, elements.getClass());
+	    return filteredElements;
+	}
+
 
 }

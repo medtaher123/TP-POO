@@ -1,6 +1,6 @@
 https://json-generator.com/
 
-
+users:
 [
   '{{repeat(10, 15)}}',
   {
@@ -30,5 +30,20 @@ bookCopies:
     id: '{{objectId()}}',
     bookId: '{{integer(1,100)}}',
     isAvailable: 'true',
+  }
+]
+
+events:
+[
+  '{{repeat(12,18 )}}',
+  {
+    id: '{{objectId()}}',
+    title:'{{company() + " " + lorem(1, "words")}}',
+    date: '{{date(new Date(2014, 0, 1), new Date(2025,0,1), "YYYY-MM-dd")}}',
+    about: '{{lorem(1, "paragraphs")}}',
+    organizer: '{{company().toUpperCase()}}',
+    manager: '{{firstName()}} {{surname()}}',
+    email: '{{email()}}',
+    phone: '+216 {{phone()}}'
   }
 ]

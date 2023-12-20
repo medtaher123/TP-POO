@@ -4,6 +4,7 @@ import java.io.File;
 import java.nio.file.ClosedFileSystemException;
 import java.util.Arrays;
 
+import Managers.PageManager;
 import authentification.AuthenticationSystem;
 import authentification.AuthenticationSystem.AuthenticationException;
 import helpers.ConsoleHelper;
@@ -34,6 +35,7 @@ public class LoginPage extends Page {
 				AuthenticationSystem.login(email, password);
 			} catch (AuthenticationException e) {
 				System.out.println(e.getMessage());
+				System.out.println("if you forgot your email or password, contact an Admin to restore your account");
 			}
 		}
 		System.out.println("sucsesfully logged in!!");

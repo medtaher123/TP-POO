@@ -7,7 +7,7 @@ import java.util.Date;
 import authentification.AuthenticationSystem;
 
 public class DateHelper {
-	// TODO: add to doc: Helpers are classes with static methods only that provide
+	// TODO: add to doc(done): Helpers are classes with static methods only that provide
 	// functionalities to all parts of the application. Methods that would otherwise
 	// be defined in multiple classes resulting in redundant code
 	public final static String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";

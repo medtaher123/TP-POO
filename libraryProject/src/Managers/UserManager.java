@@ -9,7 +9,7 @@ import services.BookingsService;
 import services.UsersService;
 
 public class UserManager {
-	//TODO: add to doc: Managers are classes that handle the logic behind Models, since Models are only structures 
+	//TODO: add to doc(done): Managers are classes that handle the logic behind Models, since Models are only structures 
 
 	public static User renewSubscription(User user) {
 		Date expirationDate = DateHelper.addDays(new Date(), SettingsManager.getSettings().getSubscriptionDuration());
@@ -33,5 +33,9 @@ public class UserManager {
 
 	public static boolean reachedBookingLimit(User user) {
 		return BookingsService.getUsersActiveBookings(user.getId()).length >= SettingsManager.getSettings().getBookingLimit() ;
+	}
+	
+	public static boolean deleteUser(User user) {
+		return UsersService.DeleteUserById(user.getId());
 	}
 }

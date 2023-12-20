@@ -48,10 +48,9 @@ public class BookingsService extends DatabaseService {
 		return b.length == 0 ? null : b[0];
 	}
 
-	private static Booking[] filter(Booking[] bookings, Predicate<? super Booking> predicate) {
+	/*private static Booking[] filter0(Booking[] bookings, Predicate<? super Booking> predicate) {
 		Object[] z = Arrays.stream(bookings).filter(predicate).toArray();
-		// TODO: add to doc: filter in application because can't check for null in query
-		// params
+		// TODO: add to doc: filter in application because can't check for null in query params
 		Booking[] filteredBookings;
 		if (z != null) {
 			filteredBookings = Arrays.copyOf(z, z.length, Booking[].class);
@@ -59,8 +58,8 @@ public class BookingsService extends DatabaseService {
 			filteredBookings = new Booking[0];
 		}
 		return filteredBookings;
-	}
-
+	}*/
+	
 	public static Booking getBookingById(String id) {
 		Gson gson = new Gson();
 		return gson.fromJson(DatabaseService.sendHttpRequest("GET", DatabaseService.BOOKINGS_API_URL + "/" + id),

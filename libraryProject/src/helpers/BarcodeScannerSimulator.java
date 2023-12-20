@@ -1,6 +1,5 @@
-package Managers;
+package helpers;
 
-import helpers.ConsoleHelper;
 import models.BookCopy;
 import models.User;
 import services.BookCopiesService;

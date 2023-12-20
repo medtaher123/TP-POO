@@ -59,6 +59,7 @@ npx json-server --watch db.json
 		
 add bookings history of book
 
+generate description
 
 To implement in next version:		
 	_save the address in an .ini file

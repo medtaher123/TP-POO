@@ -1,13 +1,10 @@
-package ui;
+package helpers;
 
 import java.util.List;
 import java.util.Scanner;
 
-interface Action {
-	String getDescription();
+import Managers.PageManager;
 
-	void execute();
-}
 
 public class ActionMenu {
 	private Action[] actions;

@@ -3,9 +3,11 @@ package ui;
 import java.util.Arrays;
 import java.util.Scanner;
 
+import Managers.PageManager;
 import authentification.AuthenticationSystem;
+import helpers.Action;
+import helpers.ActionMenu;
 import helpers.ConsoleHelper;
-import ui.Action;
 
 public class WelcomePage extends Page {
 	//TODO: add to doc: explain why the use of Action ActionMenu classes
@@ -19,7 +21,7 @@ public class WelcomePage extends Page {
 		new Action() {
 			@Override
 			public String getDescription() {
-				return "books";
+				return "Books";
 			}
 	
 			@Override
@@ -30,7 +32,7 @@ public class WelcomePage extends Page {
 		new Action() {
 			@Override
 			public String getDescription() {
-				return "search book";
+				return "Search book";
 			}
 	
 			@Override
@@ -47,6 +49,28 @@ public class WelcomePage extends Page {
 			@Override
 			public void execute() {
 				PageManager.callPage(new ManageAccountPage());
+			}
+		},
+		new Action() {
+			@Override
+			public String getDescription() {
+				return "Upcoming Events";
+			}
+	
+			@Override
+			public void execute() {
+				PageManager.callPage(new EventsListPage(false));
+			}
+		},
+		new Action() {
+			@Override
+			public String getDescription() {
+				return "Events History";
+			}
+	
+			@Override
+			public void execute() {
+				PageManager.callPage(new EventsListPage(true));
 			}
 		},
 	};
@@ -84,7 +108,7 @@ public class WelcomePage extends Page {
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new newMemberPage());
+					PageManager.callPage(new NewMemberPage());
 				}
 			},
 			new Action() {
@@ -101,7 +125,7 @@ public class WelcomePage extends Page {
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "register booking";
+					return "Register booking";
 				}
 
 				@Override
@@ -112,25 +136,23 @@ public class WelcomePage extends Page {
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "register book return";
+					return "Register book return";
 				}
 
 				@Override
 				public void execute() {
 					PageManager.callPage(new BookingReturnPage());
-					//TODO: book return Page ;
 				}
 			},
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "consult Book bookings history";
+					return "Consult Book bookings history";
 				}
 
 				@Override
 				public void execute() {
 					PageManager.callPage(new BookBookingHistoryPage());
-					//TODO: Book history Page ;
 				}
 			}
 	};
@@ -138,7 +160,18 @@ public class WelcomePage extends Page {
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "manage settings";
+					return "New Event";
+				}
+		
+				@Override
+				public void execute() {
+					PageManager.callPage(new NotFoundPage());
+				}
+			},
+			new Action() {
+				@Override
+				public String getDescription() {
+					return "Manage settings";
 				}
 
 				@Override
@@ -150,37 +183,34 @@ public class WelcomePage extends Page {
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "account recovery";
+					return "Account recovery";
 				}
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new NotFoundPage());
-					//TODO: account recovery Page ;
+					PageManager.callPage(new AccountRecoveryPage());
 				}
 			},
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "new account";
+					return "New account";
 				}
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new NotFoundPage());
-					//TODO: new account Page ;
+					PageManager.callPage(new newUserPage());
 				}
 			},
 			new Action() {
 				@Override
 				public String getDescription() {
-					return "delete account";
+					return "Delete account";
 				}
 
 				@Override
 				public void execute() {
-					PageManager.callPage(new NotFoundPage());
-					//TODO: delete account Page ;
+					PageManager.callPage(new DeleteUserPage());
 				}
 			}
 	};

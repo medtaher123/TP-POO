@@ -2,9 +2,9 @@ package ui;
 
 import java.util.Date;
 
-import Managers.BarcodeScannerSimulator;
 import Managers.SettingsManager;
 import Managers.UserManager;
+import helpers.BarcodeScannerSimulator;
 import helpers.ConsoleHelper;
 import helpers.DateHelper;
 import models.User;

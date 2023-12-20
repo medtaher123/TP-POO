@@ -1,11 +1,32 @@
 package ui;
 
+import Managers.PageManager;
 import authentification.AuthenticationSystem;
+import helpers.Action;
+import helpers.ActionMenu;
+import helpers.ConsoleHelper;
 import helpers.DateHelper;
 import models.User;
 
 public class ManageAccountPage extends Page {
 
+	Action[] actions = {
+			new Action() {
+
+				@Override
+				public String getDescription() {
+					return "Edit Account";
+				}
+
+				@Override
+				public void execute() {
+					//PageManager.callPage(new EditAccountPage());
+					PageManager.callPage(new NotFoundPage());
+					
+				}
+			}
+	};
+	
 	@Override
 	void printContent() {
 		User user = AuthenticationSystem.getActiveUser();
@@ -26,8 +47,10 @@ public class ManageAccountPage extends Page {
 			}
 		}
 		System.out.println("PREFERENCES: ");
-		System.out.println("Date Format: "+ user.getPreferences().getDateFormat());
+		System.out.println("Date Format: "+ user.getPreferences().getDateFormat());	
+		ConsoleHelper.printNewLines(2);
 		
+		new ActionMenu(actions,ActionMenu.PREV_PAGE_ACTION).execute();
 	}
 
 	@Override

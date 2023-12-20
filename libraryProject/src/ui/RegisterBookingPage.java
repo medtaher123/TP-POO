@@ -1,10 +1,10 @@
 package ui;
 
-import Managers.BarcodeScannerSimulator;
 import Managers.BookCopyManager;
 import Managers.BookingManager;
 import Managers.SettingsManager;
 import Managers.UserManager;
+import helpers.BarcodeScannerSimulator;
 import models.BookCopy;
 import models.Booking;
 import models.User;

@@ -5,11 +5,9 @@ package Managers;
 import java.util.Date;
 
 import helpers.DateHelper;
-import models.Book;
 import models.BookCopy;
 import models.Booking;
 import models.User;
-import services.BookCopiesService;
 import services.BookingsService;
 
 public class BookingManager {

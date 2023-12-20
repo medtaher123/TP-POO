@@ -24,9 +24,7 @@ public class BookDetailsPage extends BackOnlyPage {
 		System.out.println("pages: "+book.getPages());
 		System.out.println("year:"+book.getYear());
 		System.out.println("link: "+book.getLink());
-		System.out.println("available Copies: "+book.getNumberOfAvailableCopies());
-		
-				
+		System.out.println("available Copies: "+book.getNumberOfAvailableCopies());	
 	}
 
 }

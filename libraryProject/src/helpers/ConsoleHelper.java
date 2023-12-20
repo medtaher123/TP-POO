@@ -7,6 +7,8 @@ import java.io.InputStreamReader;
 import java.util.Date;
 import java.util.Scanner;
 
+import models.User.UserType;
+
 public class ConsoleHelper {
 	public final static int DEFAULT_CONSOLE_WIDTH=80; 
 	public static Scanner scanner = new Scanner(System.in);
@@ -54,6 +56,23 @@ public class ConsoleHelper {
 		}
 		return date;
 
+	}
+
+	public static UserType readUserType() {
+		String userType=null;
+		while(true) {
+			userType = input("User Type ('M':member ,'E': employee,'A': admin)");
+			switch(userType.charAt(0)) {
+			case 'M':
+				return UserType.MEMBER;
+			case 'E':
+				return UserType.EMPLOYEE;
+			case 'A':
+				return UserType.ADMIN;
+			default:
+				System.out.println("invalid input");
+			}
+		}
 	}
 }
 

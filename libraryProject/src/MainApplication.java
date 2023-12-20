@@ -2,6 +2,7 @@ import java.util.Date;
 
 import com.google.gson.Gson;
 
+import Managers.PageManager;
 import models.Booking;
 import models.User;
 import services.BookCopiesService;
@@ -10,7 +11,6 @@ import services.DatabaseService;
 import services.ServerTestService;
 import services.UsersService;
 import ui.LoginPage;
-import ui.PageManager;
 
 public class MainApplication {
 	public static void main(String[] args) {
