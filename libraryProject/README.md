@@ -30,6 +30,7 @@ Use the provided accounts for testing different functionalities of the applicati
 
 This console application aims to manage library operations efficiently. Users, based on their roles, can perform various tasks like viewing available books, managing accounts, handling subscriptions, and tracking bookings.
 
+
 ## Features
 
 - **All Users:**
@@ -42,12 +43,12 @@ This console application aims to manage library operations efficiently. Users, b
 
 - **Employees:**
   - View public data of all users.
-  - Handle subscriptions, payment registration.
-  - Add new user accounts (limited to members), manage bookings and returns.
+  - Handle subscriptions and payment registration.
+  - Add new user accounts (limited to members), and manage bookings and returns.
 
 - **Admins:**
   - View and modify system data including fees.
-  - Create events, manage accounts, modify passwords.
+  - Create events, manage accounts, and modify passwords.
 
 ## Project Structure
 
@@ -55,7 +56,7 @@ This console application aims to manage library operations efficiently. Users, b
 Chose to define Models as classes that don't have a logic on their own. They are structures that represent entities from the database. Any logic or treatment on these objects is implemented in other classes like Managers. Some attributes don't even have setters since every modification has to pass through the database first.
 
 ### Managers:
-Managers are classes that handle the logic behind Models, since Models are only structures. They are also the only classes that communicate with services (services are sometimes called directly from other classes in this project, this detail is corrected in the next project).
+Managers are classes that handle the logic behind Models since Models are only structures. They are also the only classes that communicate with services (services are sometimes called directly from other classes in this project, this detail is corrected in the next project).
 
 ### Services:
 Services are the classes that communicate with the database JSON server.
@@ -73,7 +74,10 @@ Helpers are classes with static methods only that provide functionalities to all
 
 - **Enum for UserType:**
   Utilized an enum for UserType to simplify database manipulation instead of defining different classes for each UserType by extending the User Class.
-
+  
+- **ConsoleHelper:**
+  The console helper class has only static methods that, you guessed it, help with console-related operations.  
+  
 - **BarcodeScannerSimulator:**
   Created the BarcodeScannerSimulator class to simulate the scanning of barcodes for books or user IDs, replicating real library scenarios.
 
