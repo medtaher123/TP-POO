@@ -1,0 +1,39 @@
+
+
+users:
+    •View available books with a search option.
+    •Manage account details like name, password, institution, etc.
+
+
+Customer:
+    view cart
+    view wishlist
+
+
+ADMIN:
+    view statistics
+    create coupons
+    •View and modify system data.
+    •manage accounts, modify passwords.
+
+
+
+
+
+
+FEATURES:
+    coupons (-% or -dt)
+    Tips
+    shipping methods: leldar (blech l akther men 500Dt), leldar express, lel debbou (reservation w barra, blech)
+
+
+add missing products attributes to database
+
+
+shippment blech pour  > 500dt + express fees
+check stock
+
+wishlist
+
+
+
