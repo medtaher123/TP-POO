@@ -1,10 +1,12 @@
 package ui;
 
+import Managers.CartManager;
 import Managers.PageManager;
 import authentication.AccessLevel;
 import authentication.AuthenticationSystem;
 import helpers.Action;
 import helpers.ActionMenu;
+import helpers.ConsoleColors;
 import helpers.ConsoleHelper;
 
 
@@ -98,50 +100,51 @@ public class WelcomePage extends Page {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Blank action";
+                    return "Go to cart" + ConsoleColors.getColoredString( " (" + CartManager.getCart().size() + ")" , NUMBER_TAG_COLOR);
                 }
 
                 @Override
                 public Object execute() {
-                    PageManager.callPage(new NotFoundPage());
+                    PageManager.callPage(new CartPage());
                     return null;
                 }
             },
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Blank action";
+                    return "Wishlist" + ConsoleColors.getColoredString( " (" + AuthenticationSystem.getActiveUser().getWishList().size() + ")" , NUMBER_TAG_COLOR);
                 }
 
                 @Override
                 public Object execute() {
-                    PageManager.callPage(new NotFoundPage());
+                    PageManager.callPage(new WishlistPage());
+                    return null;
+                }
+            },
+            new Action() {
+                @Override
+                public String getDescription() {
+                    return "Purchase History";
+                }
+
+                @Override
+                public Object execute() {
+                    PageManager.callPage(new PurchaseHistoryPage());
                     return null;
                 }
             }
+
     };
     Action[] adminActions = {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "All Products";
+                    return "Manage Products";
                 }
 
                 @Override
                 public Object execute() {
-                    PageManager.callPage(new ProductListPage());
-                    return null;
-                }
-            },
-            new Action() {
-                @Override
-                public String getDescription() {
-                    return "Search Product";
-                }
-
-                @Override
-                public Object execute() {
-                    PageManager.callPage(new ProductListPage(ConsoleHelper.input("search")));
+                    PageManager.callPage(new ManageProductsPage());
                     return null;
                 }
             },
@@ -172,12 +175,12 @@ public class WelcomePage extends Page {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Blank action";
+                    return "Account Recovery";
                 }
 
                 @Override
                 public Object execute() {
-                    PageManager.callPage(new NotFoundPage());
+                    PageManager.callPage(new AccountRecoveryPage());
                     return null;
                 }
             }

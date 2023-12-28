@@ -43,7 +43,7 @@ public class ProductAdapter extends TypeAdapter<Product> {
             // Parse the JSON into the corresponding class
             return gson.fromJson(productObject, productClass);
         } else {
-            System.out.println("Unknown category: " + category); //TODO: to remove
+            System.out.println("Unknown category: " + category + "\nThis is not supposed to happen, the database is possibly corrupted");
             return new Gson().fromJson(productObject, Product.class);
         }
     }

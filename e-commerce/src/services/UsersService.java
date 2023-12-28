@@ -1,13 +1,6 @@
 package services;
 
-import java.text.DateFormat;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-
 import adapters.GsonInstance;
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
-import com.google.gson.JsonElement;
 
 import models.User;
 
@@ -26,7 +19,7 @@ public class UsersService extends DatabaseService {
 		return GsonInstance.gson.fromJson(DatabaseService.sendHttpRequest("GET", DatabaseService.USERS_API_URL + "/" + id), User.class);
 	}
 	
-	public static User UpdateUser(User user) {
+	public static User updateUser(User user) {
 		return GsonInstance.gson.fromJson(DatabaseService.sendHttpRequest("PUT", DatabaseService.USERS_API_URL + "/" + user.getId(),user), User.class);
 	}
 	

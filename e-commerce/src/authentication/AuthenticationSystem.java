@@ -36,8 +36,15 @@ public class AuthenticationSystem {
 		return password; 
 		// TODO: implement a real encryption algorithm here (not done to facilitate testing and connect to users easily)
 	}
-    
-	public static class AuthenticationException extends Exception {
+    public static void reloadActiveUser() {
+    	activeUser = UsersService.getUserById(activeUser.getId());
+    }
+    public static User updateActiveUser() {
+    	activeUser = UsersService.updateUser(activeUser);
+        return activeUser;
+    }
+
+    public static class AuthenticationException extends Exception {
 	    public AuthenticationException(String message) {
 	        super(message);
 	    }
@@ -54,4 +61,5 @@ public class AuthenticationSystem {
             super(message);
         }
     }
+
 }

@@ -48,7 +48,7 @@ public class LoginPage extends Page {
 				System.out.println("if you forgot your email or password, contact an Admin to restore your account");
 			}
 		}
-		System.out.println("sucsesfully logged in!!");
+		ConsoleHelper.printSuccess("successfully logged in!!\n");
 		//ConsoleHelper.sleep(1000);
 
         PageManager.callPage(new WelcomePage());

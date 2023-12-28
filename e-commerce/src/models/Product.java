@@ -2,36 +2,54 @@ package models;
 
 import helpers.DataFormatter;
 
+import java.util.HashMap;
 import java.util.List;
 
-public class Product extends Model{
+public abstract class Product extends Model {
 
     private String title;
     private String description;
     private double price;
-    //private double discountPercentage;
-    //private double rating;
-    //private int stock;
+    private int stock;
     private String brand;
     private String category;
     private String thumbnail;
     private List<String> images;
+    private HashMap<String, String> otherDetails; //TODO: add to doc: key: detail name, value: detail value (json supports maps), any detail can be added to any product, regardless of category
+
+    private boolean supportsSerialNumbers = false;
 
     @Override
-    public String getShortDisplay(){
+    public String getShortDisplay() {
         return title + " _ " + brand;
     }
 
     @Override
-    public String getLongDisplay(){
+    public String getLongDisplay() {
         return "Title: " + title + "\n" +
-                "Description: " + description + "\n" +
-                "Price: " + DataFormatter.formatPrice(price) + "\n" +
-                "Brand: " + brand + "\n" +
-                "Category: " + category + "\n" +
-                "Thumbnail: " + thumbnail + "\n" +
-                "Images: " + images;
+                ((description != null && !description.isEmpty()) ? "Description: " + description + "\n" : "")
+                + (price > 0 ? "Price: " + DataFormatter.formatPrice(price) + "\n" : "")
+                + (brand != null && !brand.isEmpty() ? "Brand: " + brand + "\n" : "")
+                + (category != null && !category.isEmpty() ? "Category: " + category + "\n" : "")
+                + getCategorySpecificDetails()
+                + getOtherDetails()
+                + (thumbnail != null && !thumbnail.isEmpty() ? "Thumbnail: " + thumbnail + "\n" : "")
+                + (images != null && !images.isEmpty() ? "Images: " + String.join(", ", images) + "\n" : "");
     }
+
+    private String getOtherDetails() {
+        StringBuilder sb = new StringBuilder();
+        if(otherDetails != null && !otherDetails.isEmpty()){
+            sb.append("Other details: \n");
+            for (String key : otherDetails.keySet()) {
+                sb.append(key).append(": ").append(otherDetails.get(key)).append("\n");
+            }
+        }
+        return sb.toString();
+    }
+
+
+    protected abstract String getCategorySpecificDetails();
 
     public String getTitle() {
         return title;
@@ -87,5 +105,28 @@ public class Product extends Model{
 
     public void setImages(List<String> images) {
         this.images = images;
+    }
+
+    public Boolean getSupportsSerialNumbers() {
+        return supportsSerialNumbers;
+    }
+
+    public void setSupportsSerialNumbers(Boolean supportsSerialNumbers) {
+        this.supportsSerialNumbers = supportsSerialNumbers;
+    }
+
+    public int getStock() {
+        return stock;
+    }
+
+    public void setStock(int stock) {
+        this.stock = stock;
+    }
+
+    public void setOtherDetails(String key, String value) {
+        if(otherDetails == null){
+            otherDetails = new HashMap<>();
+        }
+        otherDetails.put(key,value);
     }
 }

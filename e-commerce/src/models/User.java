@@ -1,16 +1,20 @@
 package models;
 
+import adapters.Proxy;
 import authentication.AuthenticationSystem;
 import com.google.gson.annotations.SerializedName;
+import services.ProductsService;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class User extends Model {
 	private String firstName;
 	private String lastName;
 	private Date birthDate;
 	private UserType type;// customer, admin
-	// used an enum for userType for easier database manipulation. (instead of defining different classes for every userType
+	//TODO doc: used an enum for userType for easier database manipulation. (instead of defining different classes for every userType
 	// extending the User Class )
 	private Date registrationDate;
 	private String gender;
@@ -20,6 +24,8 @@ public class User extends Model {
 	private String address;
 	private String password;
 	private Preferences preferences;
+
+	private List<Proxy<Product>> wishList;
 
 	public String getShortDisplay(){
 		return firstName + " " + lastName;
@@ -115,8 +121,8 @@ public class User extends Model {
 		this.address = address;
 	}
 
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPassword(String notCryptedPassword) {
+		this.password= AuthenticationSystem.crypt(notCryptedPassword);
 	}
 
 	public String getCryptedPassword() { //the password in the database is crypted
@@ -133,6 +139,43 @@ public class User extends Model {
 		this.preferences = preferences;
 	}
 
+	public List<Product> getUnwrappedWishList() {
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		return Proxy.unwrap(wishList, ProductsService::getProductById);
+	}
+	public List<Proxy<Product>> getWishList() {
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		return wishList;
+	}
+	public void addToWishlist(Product product){
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		wishList.add(new Proxy<>(product.getId()));
+	}
+	public boolean isInWishlist(Product product){
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		return wishList.contains(new Proxy<>(product.getId()));
+	}
+	public void removeFromWishList(Product product){
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		wishList.remove(new Proxy<>(product.getId()));
+	}
+
+	public void removeFromWishlist(int index) {
+		if(wishList==null || wishList.size()<=index)
+			throw new IllegalArgumentException("Invalid index");
+
+		wishList.remove(index);
+	}
+	public void removeFromWishlist(Product product) {
+		if(wishList==null)
+			wishList = new ArrayList<>();
+		wishList.remove(new Proxy<>(product.getId()));
+	}
 
 	public enum UserType {
 		@SerializedName("C")

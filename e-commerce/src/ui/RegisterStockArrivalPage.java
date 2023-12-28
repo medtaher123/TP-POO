@@ -34,9 +34,10 @@ public class RegisterStockArrivalPage extends Page {
         System.out.println("product: "+product.getShortDisplay());
         int quantity = ConsoleHelper.readPositiveInt("Quantity: ");
         if(quantity>0){
-            InventoryManager.addProductInstances(product.getId(),quantity);
+            InventoryManager.addStock(product,quantity);
         }
-        new ActionMenu(registerAgainAction,ActionMenu.PREV_PAGE_ACTION,"");
+        ConsoleHelper.printNewLines(2);
+        new ActionMenu(registerAgainAction,ActionMenu.PREV_PAGE_ACTION,"").execute();
     }
 
     private Action[] mapActions(Product[] products) {

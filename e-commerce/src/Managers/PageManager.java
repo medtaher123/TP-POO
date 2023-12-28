@@ -21,7 +21,6 @@ public class PageManager {
         callPage(new LoginPage());
     }
 
-    //TODO: add back to home
     public static void callPage(Page page) {
         // Always check for authentication
         if (AccessLevel.isAuthorized(page.getAccessLevel())) {

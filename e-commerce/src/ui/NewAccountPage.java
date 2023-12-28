@@ -44,11 +44,12 @@ public class NewAccountPage extends Page {
         }
 
         if(AuthenticationSystem.isLoggedIn()){
-            System.out.println( "New Account created successfully.");
+            ConsoleHelper.printSuccess( "New Account created successfully.\n");
             new ActionMenu(null,ActionMenu.BACK_TO_HOMEPAGE_ACTION,"").execute();
         }
         else{
-            System.out.println( "Account creation Failed. Please try again. If the problem persists please contact your system administrator.");
+            ConsoleHelper.printError("Account creation Failed.");
+            System.out.println(" Please try again. If the problem persists please contact your system administrator.");
             new ActionMenu(null,ActionMenu.LOGIN_PAGE,"").execute();
         }
     }
@@ -58,15 +59,15 @@ public class NewAccountPage extends Page {
         while(true){
             password = ConsoleHelper.input("Enter password");
             if (!isStrongPassword(password)) {
-                System.out.println("Password is not strong enough. It should be at least 8 characters long "
-                        + "and contain at least one digit and one special character.");
+                ConsoleHelper.printWarning("Password is not strong enough. It should be at least 8 characters long "
+                        + "and contain at least one digit and one special character.\n");
                 continue;
             }
 
             String confirmPassword = ConsoleHelper.input("Confirm password");
 
             if (!password.equals(confirmPassword)) {
-                System.out.println("Passwords do not match. Please try again.");
+                ConsoleHelper.printError("Passwords do not match. Please try again.\n");
             } else return password;
         }
     }
@@ -78,11 +79,11 @@ public class NewAccountPage extends Page {
         while (true) {
             email = ConsoleHelper.input("Email");
             if (!emailIsValid(email)) {
-                System.out.println("Email Not Valid!");
+                ConsoleHelper.printError("Email Not Valid!\n");
                 continue;
             }
             if (!UserManager.EmailIsAvailable(email)) {
-                System.out.println("Email already used by another account!");
+                ConsoleHelper.printError("Email already used by another account!");
                 continue;
             }
             return email;

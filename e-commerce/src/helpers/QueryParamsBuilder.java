@@ -19,6 +19,9 @@ public class QueryParamsBuilder {
                 addQueryParam(filter.getParamName(),filter.getParamValue());
         }
     }
+    public void addLimitParam(int limit) {
+        addQueryParam("_limit", limit+"");
+    }
 
     public String toString() {
         StringBuilder result = new StringBuilder();

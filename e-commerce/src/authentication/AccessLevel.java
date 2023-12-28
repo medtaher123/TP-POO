@@ -2,7 +2,7 @@ package authentication;
 
 import models.User;
 
-//TODO: add to doc: explain access levels,  every page has an access level,
+//TODO: add to doc: explain access levels, every page has an access level,
 public class AccessLevel {
     public static final int GUEST = 1;//no account needed
     public static final int ADMIN = 1 << 1;

@@ -34,7 +34,7 @@ public class ProductFilters {
 
         for (Filter filter:filters) {
             if (!first) {
-                result.append("\n y");
+                result.append("\n ");
             }
             result.append(filter.toString());
             first = false;

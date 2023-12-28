@@ -4,6 +4,7 @@ import Managers.PageManager;
 
 
 public class ActionMenu {
+	private static final String MENU_INDEX_COLOR = ConsoleColors.DEFAULT_DIM;
 	private Action[] actions;
 	private Action closingAction;
 	private String message;
@@ -78,14 +79,15 @@ public class ActionMenu {
 
 	private void displayActions() {
 		// System.out.println("Available Actions:");
-		int indexLength = ((actions.length+1)+"").length();
+		int indexLength = 1;
 		if (actions != null) {
+			indexLength = ((actions.length+1)+"").length();
 			for (int i = 0; i < actions.length; i++) {
-				System.out.println(ConsoleHelper.getPaddedString((i + 1)+"",indexLength) + ": " + actions[i].getDescription());
+				System.out.println(ConsoleColors.getColoredString(ConsoleHelper.getPaddedString((i + 1)+"",indexLength) + ": ", MENU_INDEX_COLOR) + actions[i].getDescription());
 			}
 		}
 		if (closingAction != null)
-			System.out.println("\n"+ConsoleHelper.getPaddedString("0",indexLength) +": " + closingAction.getDescription() + "\n");
+			System.out.println("\n"+ConsoleColors.getColoredString(ConsoleHelper.getPaddedString("0",indexLength) +": ", MENU_INDEX_COLOR) + closingAction.getDescription() + "\n");
 	}
 
 	private Object executeAction(int index) {

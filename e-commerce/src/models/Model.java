@@ -6,7 +6,7 @@ import java.util.Objects;
 
 public abstract class Model {
 
-	// TODO: add to doc: chose to define Models as classes that don't have a logic
+	// TODO doc: chose to define Models as classes that don't have a logic
 	//  on their own. They are structures that represent entities from the database.
 	//  Any logic or treatment on these objects is implemented in other classes like
 	//  Managers. Some attributes have only getters since every modification

@@ -3,18 +3,21 @@ package ui;
 import Managers.PageManager;
 import Managers.ProductsManager;
 import authentication.AccessLevel;
+import authentication.AuthenticationSystem;
 import helpers.*;
 import models.Product;
+import models.User;
 import services.ProductsService;
 
 import java.util.Map;
 
 public class ProductListPage extends Page {
-    private ProductFilters.SearchFilter searchFilter=null;
-    private ProductFilters.AttributeFilter categoryFilter=null;
+    private ProductFilters.SearchFilter searchFilter = null;
+    private ProductFilters.AttributeFilter categoryFilter = null;
 
-    private int minPrice= -1;
-    private int maxPrice= -1;
+    private int minPrice = -1;
+    private int maxPrice = -1;
+
     public ProductListPage(String search) {
         super();
     }
@@ -24,10 +27,10 @@ public class ProductListPage extends Page {
     }
 
     private ProductListPage(ProductFilters.SearchFilter searchFilter, ProductFilters.AttributeFilter categoryFilter, int minPrice, int maxPrice) {
-        this.searchFilter=searchFilter;
-        this.categoryFilter=categoryFilter;
-        this.minPrice=minPrice;
-        this.maxPrice=maxPrice;
+        this.searchFilter = searchFilter;
+        this.categoryFilter = categoryFilter;
+        this.minPrice = minPrice;
+        this.maxPrice = maxPrice;
     }
 
     @Override
@@ -43,16 +46,18 @@ public class ProductListPage extends Page {
     @Override
     protected void printContent() {
         Product[] products;
-        ProductFilters filters = new ProductFilters(searchFilter,categoryFilter);
+        ProductFilters filters = new ProductFilters(searchFilter, categoryFilter);
         if (filtersAreActive()) {
-            System.out.print("search results for:\n " + filters );
-            if(minPrice>0) System.out.print("\n minPrice: "+DataFormatter.formatPrice(minPrice));//fast fix (without using filters)
-            if(maxPrice>0) System.out.print("\n minPrice: "+DataFormatter.formatPrice(maxPrice));
-            ConsoleHelper.printNewLines(2);
+            System.out.println("search results for:");
+            if (!filters.getFilters().isEmpty()) System.out.println(" " + filters);
+            if (minPrice > 0)
+                System.out.println(" Min price: " + DataFormatter.formatPrice(minPrice));//TODO doc: (without using filters mainly because filters are applied directly to the http request, but the price range filter are applied locally since json-server doesn't support >(=) and <(=) operations )
+            if (maxPrice > 0) System.out.println(" Max price: " + DataFormatter.formatPrice(maxPrice));
+            ConsoleHelper.printNewLines(1);
 
             QueryParamsBuilder params = new QueryParamsBuilder();
             params.addQueryParam(filters);
-            products = ProductsService.getAllProducts(params.toString());
+            products = ProductsService.getAllProductsInPriceRange(minPrice, maxPrice, params.toString());
         } else {
             products = ProductsService.getAllProducts();
         }
@@ -61,7 +66,7 @@ public class ProductListPage extends Page {
         }
         Action[] actions = mapActions(products);
 
-        new ActionMenu(actions, goBack_editFilter_action , "choose a product!:").execute();
+        new ActionMenu(actions, goBack_editFilter_action, "choose a product!:").execute();
     }
 
     private Action[] mapActions(Product[] products) {
@@ -71,7 +76,11 @@ public class ProductListPage extends Page {
             actions[i] = new Action() {
                 @Override
                 public String getDescription() {
-                    return p.getShortDisplay() + " | " + DataFormatter.formatPrice(p.getPrice());
+                    return p.getShortDisplay() + " | "
+                            + DataFormatter.formatPrice(p.getPrice())
+                            + (AuthenticationSystem.getActiveUser().getType() == User.UserType.ADMIN ?
+                            ConsoleColors.getColoredString(" (" + p.getStock() + " in stock)", ConsoleColors.DEFAULT_DIM) : "")
+                            + (p.getStock() == 0 ? ConsoleColors.getColoredString(" (out of stock)", ConsoleColors.PURPLE) : "");
                 }
 
                 @Override
@@ -108,7 +117,7 @@ public class ProductListPage extends Page {
                     @Override
                     public Object execute() {
                         readSearchFilter();
-                        PageManager.redirect(new ProductListPage(searchFilter,categoryFilter, minPrice ,maxPrice));
+                        PageManager.redirect(new ProductListPage(searchFilter, categoryFilter, minPrice, maxPrice));
                         return null;
                     }
                 },
@@ -121,7 +130,7 @@ public class ProductListPage extends Page {
                     @Override
                     public Object execute() {
                         readCategory();
-                        PageManager.redirect(new ProductListPage(searchFilter,categoryFilter, minPrice ,maxPrice));
+                        PageManager.redirect(new ProductListPage(searchFilter, categoryFilter, minPrice, maxPrice));
                         return null;
                     }
                 },
@@ -133,7 +142,7 @@ public class ProductListPage extends Page {
 
                     @Override
                     public Object execute() {
-                        PageManager.redirect(new ProductListPage(searchFilter,categoryFilter, ConsoleHelper.readInt("min price: ",-1),maxPrice));
+                        PageManager.redirect(new ProductListPage(searchFilter, categoryFilter, ConsoleHelper.readInt("Min price: ", -1), maxPrice));
                         return null;
                     }
                 },
@@ -145,7 +154,7 @@ public class ProductListPage extends Page {
 
                     @Override
                     public Object execute() {
-                        PageManager.redirect(new ProductListPage(searchFilter,categoryFilter,minPrice,ConsoleHelper.readInt("min price: ",-1)));
+                        PageManager.redirect(new ProductListPage(searchFilter, categoryFilter, minPrice, ConsoleHelper.readInt("Max price: ", -1)));
                         return null;
                     }
                 },
@@ -162,7 +171,8 @@ public class ProductListPage extends Page {
                     }
                 }
         };
-      new ActionMenu(actions,ActionMenu.PREV_PAGE_ACTION).execute();
+        ConsoleHelper.printNewLines(2);
+        new ActionMenu(actions, ActionMenu.PREV_PAGE_ACTION).execute();
     }
 
     private void readCategory() {
@@ -178,13 +188,13 @@ public class ProductListPage extends Page {
                 return null;
             }
         };
-        new ActionMenu(mapCategoriesActions(),clearFilterAction,"choose a category:").execute();
+        new ActionMenu(mapCategoriesActions(), clearFilterAction, "choose a category:").execute();
     }
 
     private Action[] mapCategoriesActions() {
         Action[] actions = new Action[ProductsManager.categoriesClassesMap.size()];
-        int i=0;
-        for (Map.Entry<String, Class<? extends Product>> entry :  ProductsManager.categoriesClassesMap.entrySet()){
+        int i = 0;
+        for (Map.Entry<String, Class<? extends Product>> entry : ProductsManager.categoriesClassesMap.entrySet()) {
             actions[i] = new Action() {
                 @Override
                 public String getDescription() {
@@ -204,8 +214,8 @@ public class ProductListPage extends Page {
 
     private void readSearchFilter() {
         String input = ConsoleHelper.input("search filter (press enter to remove filter)");
-        if(input.length()==0){
-            searchFilter=null;
+        if (input.length() == 0) {
+            searchFilter = null;
             return;
         }
         searchFilter = new ProductFilters.SearchFilter(input);
@@ -213,7 +223,6 @@ public class ProductListPage extends Page {
     }
 
     private boolean filtersAreActive() {
-        return searchFilter!=null || categoryFilter!=null || minPrice>0 || maxPrice>0;
+        return searchFilter != null || categoryFilter != null || minPrice > 0 || maxPrice > 0;
     }
-
 }

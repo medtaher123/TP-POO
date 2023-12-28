@@ -36,4 +36,21 @@ check stock
 wishlist
 
 
+hashmap other details | done
+Handle scenarios where items are low or out of stock. done
+CRUD products | done
+user transactions. done
+wishlist | done
+continue with colors | done
+review | done
+test getOtherDetails() in Product
+consult order/purchase history
 
+remove cart for admin | done
+add (out of stock) to list of products | done
+add more details to admin | done
+add colors to table
+
+
+
+//TODO: add to doc: do not change product quantity manually from the database, unless "supportsSerialNumbers" is false (or undefined)

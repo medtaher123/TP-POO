@@ -1,14 +1,14 @@
 package helpers;
 
+import authentication.AuthenticationSystem;
+
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 
-import authentication.AuthenticationSystem;
-
-// Helpers are classes with static methods only that provide
-// functionalities to all parts of the application. Methods that would otherwise
-// be defined in multiple classes resulting in redundant code
+// TODO doc: Helpers are classes with static methods only that provide
+//  functionalities to all parts of the application. Methods that would otherwise
+//  be defined in multiple classes resulting in redundant code
 public class DateHelper {
 	
 	public final static String DEFAULT_DATE_FORMAT = "yyyy-MM-dd";
