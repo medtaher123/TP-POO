@@ -1,8 +1,9 @@
 package services;
 
 import adapters.GsonInstance;
-
 import models.User;
+
+import java.util.Locale;
 
 public class UsersService extends DatabaseService {
 
@@ -24,7 +25,7 @@ public class UsersService extends DatabaseService {
 	}
 	
 	public static User getUserByEmail(String email) {
-		User[] t = getAllUsers("email="+email);
+		User[] t = getAllUsers("email="+email.toLowerCase(Locale.ROOT));
 		return t.length>0? t[0]:null;
 	}
 	public static User addUser(User newUser) {
@@ -35,9 +36,6 @@ public class UsersService extends DatabaseService {
 		DatabaseService.sendHttpRequest("DELETE", DatabaseService.USERS_API_URL + "/" + id);
 		return true; //TODO: return status instead
 	}
-	
-	
-	
 	
 	
 	

@@ -9,7 +9,6 @@ import authentication.AuthenticationSystem;
 import helpers.*;
 
 public class PaymentPage extends Page {
-    //TODO: add to doc: explain payment page
     //TODO doc: no real input validation here. This is just a dummy page to simulate a payment process.
     @Override
     protected String getTitle() {
@@ -33,7 +32,7 @@ public class PaymentPage extends Page {
         boolean captchaPassed = CaptchaTest.run();
 
         if (captchaPassed) {
-            PaymentProcessor paymentProcessor = new PaymentProcessor(); //TODO: add purchase confirmation
+            PaymentProcessor paymentProcessor = new PaymentProcessor();
             boolean purchaseConfirmed = confirmPurchase();
             if(purchaseConfirmed) {
                 boolean paymentSuccess = paymentProcessor.processPayment(creditCardNumber, expirationDate, cvv, billingAddress);

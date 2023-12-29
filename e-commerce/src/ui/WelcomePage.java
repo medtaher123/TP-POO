@@ -26,8 +26,8 @@ public class WelcomePage extends Page {
         System.out.println("what can I do for you today\n");
 
 
-        Action[] userSpecificActions=null;
-        switch(AuthenticationSystem.getActiveUser().getType()) {
+        Action[] userSpecificActions = null;
+        switch (AuthenticationSystem.getActiveUser().getType()) {
             case CUSTOMER:
                 userSpecificActions = customerActions;
                 break;
@@ -39,7 +39,7 @@ public class WelcomePage extends Page {
         }
 
         //Action[] actions = concatenateArrays(generalActions,userSpecificActions);
-        new ActionMenu(userSpecificActions,ActionMenu.LOGOUT_ACTION).execute();
+        new ActionMenu(userSpecificActions, ActionMenu.LOGOUT_ACTION).execute();
 
     }
 
@@ -88,19 +88,7 @@ public class WelcomePage extends Page {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Manage Account";
-                }
-
-                @Override
-                public Object execute() {
-                    PageManager.callPage(new ManageAccountPage());
-                    return null;
-                }
-            },
-            new Action() {
-                @Override
-                public String getDescription() {
-                    return "Go to cart" + ConsoleColors.getColoredString( " (" + CartManager.getCart().size() + ")" , NUMBER_TAG_COLOR);
+                    return "Go to cart" + ConsoleColors.getColoredString(" (" + CartManager.getCart().size() + ")", NUMBER_TAG_COLOR);
                 }
 
                 @Override
@@ -112,12 +100,24 @@ public class WelcomePage extends Page {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Wishlist" + ConsoleColors.getColoredString( " (" + AuthenticationSystem.getActiveUser().getWishList().size() + ")" , NUMBER_TAG_COLOR);
+                    return "Wishlist" + ConsoleColors.getColoredString(" (" + AuthenticationSystem.getActiveUser().getWishList().size() + ")", NUMBER_TAG_COLOR);
                 }
 
                 @Override
                 public Object execute() {
                     PageManager.callPage(new WishlistPage());
+                    return null;
+                }
+            },
+            new Action() {
+                @Override
+                public String getDescription() {
+                    return "Manage Account";
+                }
+
+                @Override
+                public Object execute() {
+                    PageManager.callPage(new ManageAccountPage());
                     return null;
                 }
             },
@@ -151,18 +151,6 @@ public class WelcomePage extends Page {
             new Action() {
                 @Override
                 public String getDescription() {
-                    return "Manage Account";
-                }
-
-                @Override
-                public Object execute() {
-                    PageManager.callPage(new ManageAccountPage());
-                    return null;
-                }
-            },
-            new Action() {
-                @Override
-                public String getDescription() {
                     return "registerStockArrival";
                 }
 
@@ -181,6 +169,18 @@ public class WelcomePage extends Page {
                 @Override
                 public Object execute() {
                     PageManager.callPage(new AccountRecoveryPage());
+                    return null;
+                }
+            },
+            new Action() {
+                @Override
+                public String getDescription() {
+                    return "Manage Account";
+                }
+
+                @Override
+                public Object execute() {
+                    PageManager.callPage(new ManageAccountPage());
                     return null;
                 }
             }

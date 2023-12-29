@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ProductFilters {
-    //TODO: add to doc: this class is used to handle filter on different attributes in the ProductListPage, but only used with title and category.
+    //TODO doc: this class is used to handle filter on different attributes in the ProductListPage, but only used with title and category.
     // This structure makes the filter feature easily scalable, but in this the current situation, it's a little over engineered for just Category and title
     private List<Filter> filters;
 

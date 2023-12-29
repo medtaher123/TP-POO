@@ -1,5 +1,8 @@
 package models;
 
+import Managers.ReviewsManager;
+import helpers.ConsoleColors;
+import helpers.ConsoleHelper;
 import helpers.DataFormatter;
 
 import java.util.HashMap;
@@ -15,7 +18,7 @@ public abstract class Product extends Model {
     private String category;
     private String thumbnail;
     private List<String> images;
-    private HashMap<String, String> otherDetails; //TODO: add to doc: key: detail name, value: detail value (json supports maps), any detail can be added to any product, regardless of category
+    private HashMap<String, String> otherDetails; //TODO doc: key: detail name, value: detail value (json supports maps), any detail can be added to any product, regardless of category
 
     private boolean supportsSerialNumbers = false;
 
@@ -26,6 +29,7 @@ public abstract class Product extends Model {
 
     @Override
     public String getLongDisplay() {
+        double rating = getRating();
         return "Title: " + title + "\n" +
                 ((description != null && !description.isEmpty()) ? "Description: " + description + "\n" : "")
                 + (price > 0 ? "Price: " + DataFormatter.formatPrice(price) + "\n" : "")
@@ -34,7 +38,8 @@ public abstract class Product extends Model {
                 + getCategorySpecificDetails()
                 + getOtherDetails()
                 + (thumbnail != null && !thumbnail.isEmpty() ? "Thumbnail: " + thumbnail + "\n" : "")
-                + (images != null && !images.isEmpty() ? "Images: " + String.join(", ", images) + "\n" : "");
+                + (images != null && !images.isEmpty() ? "Images: " + String.join(", ", images) + "\n" : "")
+                + ConsoleColors.getColoredString("Rating: " + (rating > 0 ? rating + "/5\n" : "no ratings\n"), ConsoleHelper.HINT_COLOR);
     }
 
     private String getOtherDetails() {
@@ -128,5 +133,8 @@ public abstract class Product extends Model {
             otherDetails = new HashMap<>();
         }
         otherDetails.put(key,value);
+    }
+    public double getRating() {
+        return ReviewsManager.getRating(this);
     }
 }

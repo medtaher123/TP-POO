@@ -13,7 +13,7 @@ import services.ProductsService;
 import java.util.List;
 
 public class WishlistPage extends Page {
-//TODO: add to doc: wishtlist is a list of products that the user wants to buy in the future
+//TODO doc: wishtlist is a list of products that the user wants to buy in the future
 
     @Override
         protected String getTitle() {

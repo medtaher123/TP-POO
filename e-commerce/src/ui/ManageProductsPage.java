@@ -7,7 +7,7 @@ import helpers.*;
 import models.Product;
 import services.ProductsService;
 
-//TODO: not tested
+
 public class ManageProductsPage extends Page {
 
     @Override

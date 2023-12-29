@@ -5,6 +5,7 @@ import Managers.PageManager;
 import authentication.AccessLevel;
 import authentication.AuthenticationSystem;
 import authentication.AuthenticationSystem.AuthenticationException;
+import helpers.CaptchaTest;
 import helpers.ConsoleHelper;
 
 public class LoginPage extends Page {
@@ -29,23 +30,27 @@ public class LoginPage extends Page {
 			return;
 		}
 
-		try { //TODO to remove (just for testing)
+		/*try { //TODO to remove (just for testing)
 			System.out.println("automatic login!");
 			AuthenticationSystem.login("holtpickett@accupharm.com", "laboreduis");
 		} catch (AuthenticationException e1) {
 			e1.printStackTrace();
-		}
+		}*/
 
 
 
 		while (!AuthenticationSystem.isLoggedIn()) {//SQL injection vulnerability xd (not really SQL)
 			String email = ConsoleHelper.input("email"); 
-			String password = ConsoleHelper.input("password"); 
+			String password = ConsoleHelper.input("password");
+			boolean captchaPassed = CaptchaTest.run();
+			if (!captchaPassed) {
+				continue;
+			}
 			try {
 				AuthenticationSystem.login(email, password);
 			} catch (AuthenticationException e) {
-				System.out.println(e.getMessage());
-				System.out.println("if you forgot your email or password, contact an Admin to restore your account");
+				e.printMessage();
+				System.out.println("if you forgot your email or password, contact an Admin to recover your account");
 			}
 		}
 		ConsoleHelper.printSuccess("successfully logged in!!\n");

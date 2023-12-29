@@ -185,7 +185,7 @@ public class EditAccountPage extends Page {
         while (true) {
             email = ConsoleHelper.input("Email");
             if (!emailIsValid(email)) {
-                ConsoleHelper.printError("Email Not Valid!\n");
+                ConsoleHelper.printError("Email Not Valid!");
                 continue;
             }
             if (!UserManager.EmailIsAvailable(email)) {

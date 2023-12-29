@@ -369,6 +369,20 @@
       "address": "dz",
       "password": "azertyui123@",
       "id": "kwg7_ay"
+    },
+    {
+      "firstName": "MT",
+      "lastName": "BH",
+      "birthDate": "May 12, 2004, 12:00:00 AM",
+      "type": "C",
+      "registrationDate": "Dec 29, 2023, 1:11:55 AM",
+      "gender": "male",
+      "email": "mtbh@gmail.com",
+      "company": "INSAT",
+      "phone": "12345678",
+      "address": "tunis",
+      "password": "azertyui@123",
+      "id": "6SNHSx2"
     }
   ],
   "products": [
@@ -1093,7 +1107,16 @@
       "id": 3
     }
   ],
-  "reviews": [],
+  "reviews": [
+    {
+      "userId": "6SNHSx2",
+      "productId": "12",
+      "rating": 4,
+      "review": "good sent",
+      "date": "Dec 29, 2023, 1:29:30 AM",
+      "id": 1
+    }
+  ],
   "serialNumbers": [
     {
       "productId": "1",

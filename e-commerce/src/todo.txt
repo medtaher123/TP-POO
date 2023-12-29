@@ -52,5 +52,3 @@ add more details to admin | done
 add colors to table
 
 
-
-//TODO: add to doc: do not change product quantity manually from the database, unless "supportsSerialNumbers" is false (or undefined)

@@ -27,7 +27,6 @@ public class ProductsService extends DatabaseService{
     public static boolean DeleteProductById(String id) {
         DatabaseService.sendHttpRequest("DELETE", DatabaseService.PRODUCTS_API_URL + "/" + id);
         return true;
-        //TODO: delete also all instances in the inventory
     }
 
 

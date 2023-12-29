@@ -180,7 +180,7 @@ public class ConsoleHelper {
 		printInColor(message+"\n",WARNING_COLOR);
 	}
 	public static void printSuccess(String message){
-		printInColor(message+"\n",SUCCESS_COLOR); //TODO: remove "\n" from all calls to this method
+		printInColor(message+"\n",SUCCESS_COLOR);
 	}
 
 	public static void printHint(String message) {

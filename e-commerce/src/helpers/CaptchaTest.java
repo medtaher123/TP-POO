@@ -5,7 +5,6 @@ import java.util.Random;
 import static helpers.ConsoleHelper.scanner;
 
 public class CaptchaTest {
-//TODO: add to doc: explain CAPTCHA system
 //TODO doc: this class is used to simulate a CAPTCHA system, it's not a real CAPTCHA system, it's just a simple math question.
     public static boolean run() {
 
@@ -20,13 +19,13 @@ public class CaptchaTest {
             userInput = Integer.parseInt(scanner.nextLine().trim());
 
             if (userInput == num1 + num2) {
-                ConsoleHelper.printSuccess("CAPTCHA passed. Proceed.\n");
+                ConsoleHelper.printSuccess("CAPTCHA passed. Proceed.");
                 return true;
             } else {
-                ConsoleHelper.printError("CAPTCHA failed. Access denied.\n");
+                ConsoleHelper.printError("CAPTCHA failed. Access denied.");
             }
         } catch (NumberFormatException e) {
-            ConsoleHelper.printError("Invalid input. Please enter a number.\n");
+            ConsoleHelper.printError("Invalid input. Please enter a number.");
         }
         return false;
     }

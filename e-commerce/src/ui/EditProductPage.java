@@ -8,7 +8,6 @@ import helpers.ConsoleHelper;
 import models.Product;
 import services.ProductsService;
 
-//TODO: not tested
 public class EditProductPage extends Page {
     private Product product;
 

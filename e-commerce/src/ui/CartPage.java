@@ -15,7 +15,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class CartPage extends Page {
-//TODO: add to doc: shipping methods (normal delivery, free delivery for purchases over a fixed amount and extra fees for express delivery)
+//TODO doc: shipping methods (normal delivery, free delivery for purchases over a fixed amount and extra fees for express delivery)
 
     @Override
     protected String getTitle() {
@@ -28,7 +28,7 @@ public class CartPage extends Page {
     }
 
     @Override
-    protected void printContent() { //TODO: maybe do a table display here
+    protected void printContent() {
         int i = 0;
         if (CartManager.cartIsEmpty()) {
             ConsoleHelper.printWarning("--- Cart is empty ---\n\n");

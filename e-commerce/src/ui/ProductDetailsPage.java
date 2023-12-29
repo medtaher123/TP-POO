@@ -43,7 +43,7 @@ public class ProductDetailsPage extends Page {
     private void printStockMessage() {
         if (product.getStock() <= 0) {
             ConsoleHelper.printNewLines(1);
-            ConsoleHelper.printError("This product is out of stock!\n");
+            ConsoleHelper.printError("This product is out of stock!");
         } else if (product.getStock() < 10) {
             ConsoleHelper.printNewLines(1);
             ConsoleHelper.printWarning("Only " + product.getStock() + " left in stock!\n");

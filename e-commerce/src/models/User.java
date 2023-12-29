@@ -8,6 +8,7 @@ import services.ProductsService;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import java.util.Locale;
 
 public class User extends Model {
 	private String firstName;
@@ -40,7 +41,7 @@ public class User extends Model {
 		this.type = type;
 		this.registrationDate = registrationDate;
 		this.gender = gender;
-		this.email = email;
+		setEmail(email);
 		this.company = company;
 		this.phone = phone;
 		this.address = address;
@@ -94,7 +95,7 @@ public class User extends Model {
 	}
 
 	public void setEmail(String email) {
-		this.email = email;
+		this.email = email.toLowerCase(Locale.ROOT); //TODO doc: email is case insensitive
 	}
 
 	public String getCompany() {

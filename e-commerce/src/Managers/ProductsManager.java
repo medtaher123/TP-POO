@@ -61,4 +61,6 @@ public class ProductsManager {
     public static void deleteAllSerialNumbers(String id) {
         //not implemented
     }
+
+
 }

@@ -21,7 +21,7 @@ public class OrdersService extends DatabaseService {
 
     public static Order[] getOrdersByUserId(String userId) {
         QueryParamsBuilder params = new QueryParamsBuilder();
-        params.addQueryParam("userId", userId);
+        params.addQueryParam("UserId", userId);
         return getAllOrders(params.toString());
     }
 

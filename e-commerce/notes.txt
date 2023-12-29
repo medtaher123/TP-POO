@@ -1,0 +1,7 @@
+I used this template for TODOs (TODO: add to doc: | TODO doc: ) whenever I have a note to add to the final documentation.
+But some of these notes will not make it into the documentation since they are not important.
+So I chose to leave them in my code instead of deleting them.
+So keep an eye on green comments (or whatever color your editor uses)
+
+
+Do not change product quantity manually from the database, unless "supportsSerialNumbers" is false (or undefined)

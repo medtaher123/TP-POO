@@ -7,7 +7,6 @@ import java.util.List;
 import java.util.regex.Matcher;
 
 public class TableLayout {
-    //TODO add to doc: explain TableLayout class
     //TODO doc: the biggest challenge was to support ANSI escape codes, since they are invisible characters that affect the length of the string
 
     private static final String CORNER_CHAR = ConsoleColors.getColoredString("+", "", true, false);//ConsoleColors.PURPLE_BACKGROUND) ; // "-" for no corners

@@ -1,5 +1,6 @@
 package authentication;
 
+import helpers.ConsoleHelper;
 import models.User;
 import services.UsersService;
 
@@ -48,6 +49,9 @@ public class AuthenticationSystem {
 	    public AuthenticationException(String message) {
 	        super(message);
 	    }
+        public void printMessage() {
+            ConsoleHelper.printError(getMessage());
+        }
 	}
 	
     static class InvalidEmailException extends AuthenticationException {

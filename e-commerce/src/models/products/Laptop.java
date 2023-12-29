@@ -3,9 +3,11 @@ package models.products;
 import Managers.ProductsManager;
 import models.Product;
 
+
+//TODO doc: chose wrapper classes over primitive types to support null values for non essential fields
 public class Laptop extends Product {
     private String processor;
-    private String ram; //TODO: add to doc: chose Integer over int to support null value (in the database, nothing is stored instead of 0)
+    private String ram;
     private String storage;
     private String displaySize;
     private String operatingSystem;
