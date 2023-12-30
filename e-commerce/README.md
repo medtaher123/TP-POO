@@ -8,7 +8,8 @@ To get started:
 
 1. Run the JSON server before using the application: Open the terminal in the `jsonServer` folder and run the command: `npx json-server --watch db.json`.
 2. Update the port configuration in the `config.ini` file if it hasn't been set to match the active port, which defaults to 3000.
-3. And you are good to go!
+3. Run the main method in the Main class of your preferred Java IDE or command line interface.
+4. And you are good to go!
 
 ### Testing
 
@@ -59,10 +60,10 @@ The E-Commerce Console Application is a comprehensive system built to emulate an
 Chose to define Models as classes that don't have a logic on their own. They are structures that represent entities from the database. Any logic or treatment on these objects is implemented in other classes like Managers. Some attributes don't even have setters since every modification has to pass through the database first.
 
 ### Managers:
-Managers are classes that handle the logic behind Models, since Models are only structures. They are also the only classes that communicate with services (services are sometimes called directly from other classes in this project, this detail is corrected in the next project).
+Managers are classes that handle the logic behind Models, since Models are only structures. They are also the classes that communicate with services.
 
 ### Services:
-Services are the classes that communicate with the database JSON server.
+Services are the only classes that communicate with the database JSON server.
 
 ### Helpers:
 Helpers are classes with static methods only that provide functionalities to all parts of the application. Methods that would otherwise be defined in multiple classes resulting in redundant code.
@@ -104,7 +105,7 @@ A test runs upon application startup to verify the JSON server's status. Created
 
 
 - **Filtered https requests:**  
-  Simple filters are implemented by a simple query parameter in the URL. However, due to limitations in checking for null or applying conditions in query parameters for the JSON server, more complex filters are implemented by fetching all objects and filtering them locally. This approach is less efficient but it's the only way to implement more complex filters.
+  Simple filters are implemented by a simple query parameter in the URL. However, due to limitations in checking for null or applying conditions in query parameters for the JSON server, more complex filters are implemented by fetching all objects and filtering them locally. This approach is less efficient, but it's the only way to implement more complex filters.
 
 
 - **Null values in JSON:**   
