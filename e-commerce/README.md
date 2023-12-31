@@ -57,18 +57,18 @@ The E-Commerce Console Application is a comprehensive system built to emulate an
 ## Project Structure
 
 ### Models:
-Chose to define Models as classes that don't have a logic on their own. They are structures that represent entities from the database. Any logic or treatment on these objects is implemented in other classes like Managers. Some attributes don't even have setters since every modification has to pass through the database first.
+Chose to define [Models](diagrams/Models1.png) as classes that don't have a logic on their own. They are structures that represent entities from the database. Any logic or treatment on these objects is implemented in other classes like Managers. Some attributes don't even have setters since every modification has to pass through the database first.
 
 ### Managers:
-Managers are classes that handle the logic behind Models, since Models are only structures. They are also the classes that communicate with services.
+[Managers](diagrams/Managers.png) are classes that handle the logic behind Models, since Models are only structures. They are also the classes that communicate with services.
 
 ### Services:
-Services are the only classes that communicate with the database JSON server.
+[Services](diagrams/Services.png) are the only classes that communicate with the database JSON server.
 
 ### Helpers:
-Helpers are classes with static methods only that provide functionalities to all parts of the application. Methods that would otherwise be defined in multiple classes resulting in redundant code.
+[Helpers](diagrams/Helpers.png) are classes with static methods only that provide functionalities to all parts of the application. Methods that would otherwise be defined in multiple classes resulting in redundant code.
 
-
+Class diagrams are available in the [diagrams](diagrams) folder.
 ## Development Choices
 
   I aimed to utilize various Object-Oriented Programming (OOP) concepts covered in our class, adapting them to the project's unique requirements, even though it's not a typical project setup.
@@ -85,11 +85,11 @@ A test runs upon application startup to verify the JSON server's status. Created
 
 
 - **Type Adapters:**   
-  I used Type Adapters to convert JSON objects to Java objects and vice-versa. This approach is more flexible than using the Gson library's default implementation, allowing for more control over the conversion process.
+  I used [Type Adapters](src/adapters) to convert JSON objects to Java objects and vice-versa. This approach is more flexible than using the Gson library's default implementation, allowing for more control over the conversion process.
 
 
 - **GsonInstance:**  
-  I created a GsonInstance class holding a static preconfigured Gson object to avoid creating multiple Gson objects throughout the application and configuring them every time. This approach is more efficient and allows for easier manipulation of the Gson object.
+  I created a [GsonInstance](src/adapters/GsonInstance.java) class holding a static preconfigured Gson object to avoid creating multiple Gson objects throughout the application and configuring them every time. This approach is more efficient and allows for easier manipulation of the Gson object.
 
   
 - **Proxy:**  
